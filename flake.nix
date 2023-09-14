@@ -75,6 +75,7 @@
         };
 
         devenv.shells.default = {
+          containers = pkgs.lib.mkForce {};
           packages = with pkgs; [nvfetcher];
           pre-commit.hooks = {
             alejandra.enable = true;
@@ -84,7 +85,7 @@
         formatter = pkgs.alejandra;
 
         packages.default = config.neovim.final;
-        packages.tree-sitter = pkgs.callPackage ./pkgs/tree-sitter {};
+        packages.nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter {};
       };
     };
 
