@@ -1,13 +1,13 @@
 {
   config = {
     perSystem = {
-      pkgs,
       inputs',
+      pkgs,
       ...
     }: {
       neovim = {
-        env = {};
-
+        # NB: neovim-nightly is currently broken on darwin
+        # see https://github.com/NixOS/nixpkgs/issues/229275
         package =
           if pkgs.stdenv.isDarwin
           then pkgs.neovim-unwrapped
