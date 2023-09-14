@@ -1,0 +1,2161 @@
+{
+    "alpha-nvim": {
+        "cargoLocks": null,
+        "date": "2023-09-07",
+        "extract": null,
+        "name": "alpha-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "goolord",
+            "repo": "alpha-nvim",
+            "rev": "712dc1dccd4fd515ef8bd126b3718f79d3e23b0d",
+            "sha256": "sha256-l3USyUSdOMyvaTYXviLtorYBSTICJok2nv4CZp1Wp7w=",
+            "type": "github"
+        },
+        "version": "712dc1dccd4fd515ef8bd126b3718f79d3e23b0d"
+    },
+    "asyncrun-vim": {
+        "cargoLocks": null,
+        "date": "2023-08-21",
+        "extract": null,
+        "name": "asyncrun-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "skywind3000",
+            "repo": "asyncrun.vim",
+            "rev": "42385d54b8546c163b946fd50eed2103ef7993c9",
+            "sha256": "sha256-PjTlZPkT+u9uRURo3/n9UH/rqUHOI7Gl5pn8EoZ5OK8=",
+            "type": "github"
+        },
+        "version": "42385d54b8546c163b946fd50eed2103ef7993c9"
+    },
+    "asynctasks-vim": {
+        "cargoLocks": null,
+        "date": "2023-09-13",
+        "extract": null,
+        "name": "asynctasks-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "skywind3000",
+            "repo": "asynctasks.vim",
+            "rev": "829ba93fc7cbd117d2a6be87354729e57086bc7d",
+            "sha256": "sha256-xHB1YSRAlHUJhgnt++tzUkAROtDBzjDUyNsKS8v9VVw=",
+            "type": "github"
+        },
+        "version": "829ba93fc7cbd117d2a6be87354729e57086bc7d"
+    },
+    "auto-dark-mode": {
+        "cargoLocks": null,
+        "date": "2023-08-13",
+        "extract": null,
+        "name": "auto-dark-mode",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "f-person",
+            "repo": "auto-dark-mode.nvim",
+            "rev": "7cbf30c95c793e06c7df2dbfe6713cf3205c4b59",
+            "sha256": "sha256-ofZSRYaSdgpS0Q8MLnCnt1/vq1vnFSWx+RfWQpNKp5M=",
+            "type": "github"
+        },
+        "version": "7cbf30c95c793e06c7df2dbfe6713cf3205c4b59"
+    },
+    "bufferline": {
+        "cargoLocks": null,
+        "date": "2023-08-29",
+        "extract": null,
+        "name": "bufferline",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "akinsho",
+            "repo": "bufferline.nvim",
+            "rev": "9961d87bb3ec008213c46ba14b3f384a5f520eb5",
+            "sha256": "sha256-Wo6oAbqG0SOJ4dKjg85s/IJGe1Z6XnyjVPzQZ00Lojw=",
+            "type": "github"
+        },
+        "version": "9961d87bb3ec008213c46ba14b3f384a5f520eb5"
+    },
+    "catppuccin": {
+        "cargoLocks": null,
+        "date": "2023-09-11",
+        "extract": null,
+        "name": "catppuccin",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "catppuccin",
+            "repo": "nvim",
+            "rev": "85e93601e0f0b48aa2c6bbfae4d0e9d7a1898280",
+            "sha256": "sha256-86tK098391f4XhJ9JbD03jrqnTmMSIU566SeQPqArzE=",
+            "type": "github"
+        },
+        "version": "85e93601e0f0b48aa2c6bbfae4d0e9d7a1898280"
+    },
+    "cmp-buffer": {
+        "cargoLocks": null,
+        "date": "2022-08-10",
+        "extract": null,
+        "name": "cmp-buffer",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hrsh7th",
+            "repo": "cmp-buffer",
+            "rev": "3022dbc9166796b644a841a02de8dd1cc1d311fa",
+            "sha256": "sha256-dG4U7MtnXThoa/PD+qFtCt76MQ14V1wX8GMYcvxEnbM=",
+            "type": "github"
+        },
+        "version": "3022dbc9166796b644a841a02de8dd1cc1d311fa"
+    },
+    "cmp-cmdline": {
+        "cargoLocks": null,
+        "date": "2023-06-09",
+        "extract": null,
+        "name": "cmp-cmdline",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hrsh7th",
+            "repo": "cmp-cmdline",
+            "rev": "8ee981b4a91f536f52add291594e89fb6645e451",
+            "sha256": "sha256-W8v/XhPjbvKSwCrfOAPihO2N9PEVnH5Cp/Fa25lNRw4=",
+            "type": "github"
+        },
+        "version": "8ee981b4a91f536f52add291594e89fb6645e451"
+    },
+    "cmp-git": {
+        "cargoLocks": null,
+        "date": "2023-05-30",
+        "extract": null,
+        "name": "cmp-git",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "petertriho",
+            "repo": "cmp-git",
+            "rev": "f900a4cf117300fdc3ba31d26f8b6223ccd9c574",
+            "sha256": "sha256-McIYDGXu+tSaY/U6eu1XouSHto/mSpJ/i4Z4UKYa+mk=",
+            "type": "github"
+        },
+        "version": "f900a4cf117300fdc3ba31d26f8b6223ccd9c574"
+    },
+    "cmp-nvim-lsp": {
+        "cargoLocks": null,
+        "date": "2023-06-23",
+        "extract": null,
+        "name": "cmp-nvim-lsp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hrsh7th",
+            "repo": "cmp-nvim-lsp",
+            "rev": "44b16d11215dce86f253ce0c30949813c0a90765",
+            "sha256": "sha256-mU0soCz79erJXMMqD/FyrJZ0mu2n6fE0deymPzQlxts=",
+            "type": "github"
+        },
+        "version": "44b16d11215dce86f253ce0c30949813c0a90765"
+    },
+    "cmp-path": {
+        "cargoLocks": null,
+        "date": "2022-10-03",
+        "extract": null,
+        "name": "cmp-path",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hrsh7th",
+            "repo": "cmp-path",
+            "rev": "91ff86cd9c29299a64f968ebb45846c485725f23",
+            "sha256": "sha256-thppiiV3wjIaZnAXmsh7j3DUc6ceSCvGzviwFUnoPaI=",
+            "type": "github"
+        },
+        "version": "91ff86cd9c29299a64f968ebb45846c485725f23"
+    },
+    "cmp_luasnip": {
+        "cargoLocks": null,
+        "date": "2022-10-28",
+        "extract": null,
+        "name": "cmp_luasnip",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "saadparwaiz1",
+            "repo": "cmp_luasnip",
+            "rev": "18095520391186d634a0045dacaa346291096566",
+            "sha256": "sha256-Z5SPy3j2oHFxJ7bK8DP8Q/oRyLEMlnWyIfDaQcNVIS0=",
+            "type": "github"
+        },
+        "version": "18095520391186d634a0045dacaa346291096566"
+    },
+    "color-picker": {
+        "cargoLocks": null,
+        "date": "2023-05-21",
+        "extract": null,
+        "name": "color-picker",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ziontee113",
+            "repo": "color-picker.nvim",
+            "rev": "06cb5f853535dea529a523e9a0e8884cdf9eba4d",
+            "sha256": "sha256-a1hpKKvBG8ey/+gbfFEK8CPawEK9EdcQbnIfi7X0C9I=",
+            "type": "github"
+        },
+        "version": "06cb5f853535dea529a523e9a0e8884cdf9eba4d"
+    },
+    "comment": {
+        "cargoLocks": null,
+        "date": "2023-08-07",
+        "extract": null,
+        "name": "comment",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "numtostr",
+            "repo": "comment.nvim",
+            "rev": "0236521ea582747b58869cb72f70ccfa967d2e89",
+            "sha256": "sha256-+dF1ZombrlO6nQggufSb0igXW5zwU++o0W/5ZA07cdc=",
+            "type": "github"
+        },
+        "version": "0236521ea582747b58869cb72f70ccfa967d2e89"
+    },
+    "copilot-lua": {
+        "cargoLocks": null,
+        "date": "2023-09-05",
+        "extract": null,
+        "name": "copilot-lua",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zbirenbaum",
+            "repo": "copilot.lua",
+            "rev": "2c942f33ba5c621c906e625e00a1bb504b65e2f0",
+            "sha256": "sha256-YTq8bcPXKHT96sm+Ov5MulDvWzlK8BI3ehu8q4XDmzc=",
+            "type": "github"
+        },
+        "version": "2c942f33ba5c621c906e625e00a1bb504b65e2f0"
+    },
+    "crates": {
+        "cargoLocks": null,
+        "date": "2023-09-11",
+        "extract": null,
+        "name": "crates",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "saecki",
+            "repo": "crates.nvim",
+            "rev": "db629b5cfb2aa8de9e44efb795657297ee95ca91",
+            "sha256": "sha256-zBp7hOLJUsZ889qHZZSDSu5txO40kCexJgSAA5R7zQI=",
+            "type": "github"
+        },
+        "version": "db629b5cfb2aa8de9e44efb795657297ee95ca91"
+    },
+    "diffview": {
+        "cargoLocks": null,
+        "date": "2023-08-21",
+        "extract": null,
+        "name": "diffview",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "sindrets",
+            "repo": "diffview.nvim",
+            "rev": "7e5a85c186027cab1e825d018f07c350177077fc",
+            "sha256": "sha256-ifLLzNFSRvqXLNM513pna0Q54CIaIPbK/lzG1dDM9Es=",
+            "type": "github"
+        },
+        "version": "7e5a85c186027cab1e825d018f07c350177077fc"
+    },
+    "dressing": {
+        "cargoLocks": null,
+        "date": "2023-09-05",
+        "extract": null,
+        "name": "dressing",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "stevearc",
+            "repo": "dressing.nvim",
+            "rev": "c1e1d5fa44fe08811b6ef4aadac2b50e602f9504",
+            "sha256": "sha256-6mTq4DnCcZeXKcNqPB2bAQdEDvQ3MJ2UergLSsmgqk8=",
+            "type": "github"
+        },
+        "version": "c1e1d5fa44fe08811b6ef4aadac2b50e602f9504"
+    },
+    "editorconfig": {
+        "cargoLocks": null,
+        "date": "2023-01-10",
+        "extract": null,
+        "name": "editorconfig",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "gpanders",
+            "repo": "editorconfig.nvim",
+            "rev": "5b9e303e1d6f7abfe616ce4cc8d3fffc554790bf",
+            "sha256": "sha256-pR57tITdVGF4luEmmRYv/XFb35E3KDfcgYRijkPAc+Y=",
+            "type": "github"
+        },
+        "version": "5b9e303e1d6f7abfe616ce4cc8d3fffc554790bf"
+    },
+    "fidget": {
+        "cargoLocks": null,
+        "date": "2023-07-18",
+        "extract": null,
+        "name": "fidget",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "j-hui",
+            "repo": "fidget.nvim",
+            "rev": "89b633f3bd0b7187f070236b348697de176860e2",
+            "sha256": "sha256-gmpRk1b/fpNRPUPBA9UnYbmiGRoW5otzW9Nfcfvju74=",
+            "type": "github"
+        },
+        "version": "89b633f3bd0b7187f070236b348697de176860e2"
+    },
+    "flash": {
+        "cargoLocks": null,
+        "date": "2023-08-29",
+        "extract": null,
+        "name": "flash",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "flash.nvim",
+            "rev": "8a8e74922a383c253b7f92e042b749150140c8d1",
+            "sha256": "sha256-tA2QDr2XOxcXzd/U3KX6IVIiuB9E74zv6UVGAimJQaU=",
+            "type": "github"
+        },
+        "version": "8a8e74922a383c253b7f92e042b749150140c8d1"
+    },
+    "friendly-snippets": {
+        "cargoLocks": null,
+        "date": "2023-09-02",
+        "extract": null,
+        "name": "friendly-snippets",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rafamadriz",
+            "repo": "friendly-snippets",
+            "rev": "ebf6d6e83494cdd88a54a429340256f4dbb6a052",
+            "sha256": "sha256-V4seHHt0PdvS3IBWCajNyUuVj8tTHQ72Yp52Qxbu5Ac=",
+            "type": "github"
+        },
+        "version": "ebf6d6e83494cdd88a54a429340256f4dbb6a052"
+    },
+    "gitsigns": {
+        "cargoLocks": null,
+        "date": "2023-09-12",
+        "extract": null,
+        "name": "gitsigns",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lewis6991",
+            "repo": "gitsigns.nvim",
+            "rev": "907ae8636016aab2f283576fc60d46ca3427e579",
+            "sha256": "sha256-GwCMj/R6pUIsfTLY8YKjdf2Bv/qaYcvN/S53jCGcUWw=",
+            "type": "github"
+        },
+        "version": "907ae8636016aab2f283576fc60d46ca3427e579"
+    },
+    "glance": {
+        "cargoLocks": null,
+        "date": "2023-08-26",
+        "extract": null,
+        "name": "glance",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dnlhc",
+            "repo": "glance.nvim",
+            "rev": "8ed5cf3b3b1231ea696d88c9efd977027429d869",
+            "sha256": "sha256-oyfZUQiVGLSOkMnJF+V+IF4mGUiKbAN4YXq3gwxOVmQ=",
+            "type": "github"
+        },
+        "version": "8ed5cf3b3b1231ea696d88c9efd977027429d869"
+    },
+    "go": {
+        "cargoLocks": null,
+        "date": "2023-09-07",
+        "extract": null,
+        "name": "go",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ray-x",
+            "repo": "go.nvim",
+            "rev": "5e9e083f4927402eab6ab233e970b397daa2e826",
+            "sha256": "sha256-Il2hUJ52FRzM4+7T9i6lMHuqA2d781xOlCj0r1StDlc=",
+            "type": "github"
+        },
+        "version": "5e9e083f4927402eab6ab233e970b397daa2e826"
+    },
+    "guihua-lua": {
+        "cargoLocks": null,
+        "date": "2023-08-15",
+        "extract": null,
+        "name": "guihua-lua",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ray-x",
+            "repo": "guihua.lua",
+            "rev": "5ad8dba19ce9b9fd8965598984dfdc9c119f97e4",
+            "sha256": "sha256-MF30YevxZUreW88RX/Tn9i/5GpqXqKcmH1tbDmsnoZY=",
+            "type": "github"
+        },
+        "version": "5ad8dba19ce9b9fd8965598984dfdc9c119f97e4"
+    },
+    "headlines": {
+        "cargoLocks": null,
+        "date": "2023-07-27",
+        "extract": null,
+        "name": "headlines",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lukas-reineke",
+            "repo": "headlines.nvim",
+            "rev": "74a083a3c32a08be24f7dfcc6f448ecf47857f46",
+            "sha256": "sha256-35OgSoSf9sy5urwHZ3IxZPS/tWnUEhz7NZsClkqQZ6o=",
+            "type": "github"
+        },
+        "version": "74a083a3c32a08be24f7dfcc6f448ecf47857f46"
+    },
+    "indent-blankline": {
+        "cargoLocks": null,
+        "date": "2023-08-22",
+        "extract": null,
+        "name": "indent-blankline",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "lukas-reineke",
+            "repo": "indent-blankline.nvim",
+            "rev": "9637670896b68805430e2f72cf5d16be5b97a22a",
+            "sha256": "sha256-1EpjFIJ5GK9NXS6dTMJ71w/AtLtR6Q5HrAXCIRNOBAY=",
+            "type": "github"
+        },
+        "version": "9637670896b68805430e2f72cf5d16be5b97a22a"
+    },
+    "lazy": {
+        "cargoLocks": null,
+        "date": "2023-08-26",
+        "extract": null,
+        "name": "lazy",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "lazy.nvim",
+            "rev": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01",
+            "sha256": "sha256-03dFvXeQ1rTK2ESP9VcssIP+PF7ipcGUnrpS+TFOgAU=",
+            "type": "github"
+        },
+        "version": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01"
+    },
+    "lsp-status": {
+        "cargoLocks": null,
+        "date": "2022-08-03",
+        "extract": null,
+        "name": "lsp-status",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-lua",
+            "repo": "lsp-status.nvim",
+            "rev": "54f48eb5017632d81d0fd40112065f1d062d0629",
+            "sha256": "sha256-gmLeVnDyL8Zf5ZG92tP3mb/LAt438BxFtAi/Xax2zLI=",
+            "type": "github"
+        },
+        "version": "54f48eb5017632d81d0fd40112065f1d062d0629"
+    },
+    "lspkind": {
+        "cargoLocks": null,
+        "date": "2023-05-05",
+        "extract": null,
+        "name": "lspkind",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "onsails",
+            "repo": "lspkind.nvim",
+            "rev": "57610d5ab560c073c465d6faf0c19f200cb67e6e",
+            "sha256": "sha256-S+qZm51hw/cRujIfHV/1x1fYyCKI4XQ0utSL8uy4l6I=",
+            "type": "github"
+        },
+        "version": "57610d5ab560c073c465d6faf0c19f200cb67e6e"
+    },
+    "ltex-extra": {
+        "cargoLocks": null,
+        "date": "2023-07-28",
+        "extract": null,
+        "name": "ltex-extra",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "barreiroleo",
+            "repo": "ltex-extra.nvim",
+            "rev": "9bed99b2b8488cc2daf66c76d2e0cf051ee80d13",
+            "sha256": "sha256-LzgAICiGuaHfYkQq7/4bRJ1M5KopFBcSTVTHrb3rm+w=",
+            "type": "github"
+        },
+        "version": "9bed99b2b8488cc2daf66c76d2e0cf051ee80d13"
+    },
+    "lualine": {
+        "cargoLocks": null,
+        "date": "2023-08-03",
+        "extract": null,
+        "name": "lualine",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-lualine",
+            "repo": "lualine.nvim",
+            "rev": "45e27ca739c7be6c49e5496d14fcf45a303c3a63",
+            "sha256": "sha256-v8finXk+sLNaFMA7pSHhEu0WF5mhPYWHEKhl0IKBv8c=",
+            "type": "github"
+        },
+        "version": "45e27ca739c7be6c49e5496d14fcf45a303c3a63"
+    },
+    "luasnip": {
+        "cargoLocks": null,
+        "date": "2023-08-31",
+        "extract": null,
+        "name": "luasnip",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "L3MON4D3",
+            "repo": "LuaSnip",
+            "rev": "ea7d7ea510c641c4f15042becd27f35b3e5b3c2b",
+            "sha256": "sha256-d/P1PO/VUuIXNQx2QKDDQpeEvpL8Ut5TjolksD2Fb6o=",
+            "type": "github"
+        },
+        "version": "ea7d7ea510c641c4f15042becd27f35b3e5b3c2b"
+    },
+    "markdown-preview": {
+        "cargoLocks": null,
+        "date": "2022-05-13",
+        "extract": null,
+        "name": "markdown-preview",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "iamcco",
+            "repo": "markdown-preview.nvim",
+            "rev": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96",
+            "sha256": "sha256-e1Buvu/lkEt9V5LVDFKWTasnSX6EdtRgWyVDZA8LpUE=",
+            "type": "github"
+        },
+        "version": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96"
+    },
+    "neodev": {
+        "cargoLocks": null,
+        "date": "2023-09-13",
+        "extract": null,
+        "name": "neodev",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "neodev.nvim",
+            "rev": "b07f1c4c0d5f0d077f29c776df3fd8c98c70e2f7",
+            "sha256": "sha256-37lYSujYZhPX4YJ9X20P/viZBGIgr/3VhjUTwhhcevA=",
+            "type": "github"
+        },
+        "version": "b07f1c4c0d5f0d077f29c776df3fd8c98c70e2f7"
+    },
+    "neogit": {
+        "cargoLocks": null,
+        "date": "2023-09-12",
+        "extract": null,
+        "name": "neogit",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NeogitOrg",
+            "repo": "neogit",
+            "rev": "50b3e1d9c600deb4027af117cca660bee88223a4",
+            "sha256": "sha256-0l18Wfn0COsjS4uj7A4i2tQc2B7tY35ZqeUXQEAxx9Q=",
+            "type": "github"
+        },
+        "version": "50b3e1d9c600deb4027af117cca660bee88223a4"
+    },
+    "neorg": {
+        "cargoLocks": null,
+        "date": "2023-09-13",
+        "extract": null,
+        "name": "neorg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-neorg",
+            "repo": "neorg",
+            "rev": "ba958b0f03692052042deb66fd2af05df04a2847",
+            "sha256": "sha256-yvoxk6wlRJRG3uUum5pc5f/8TsWy2yeoZFvQN6zPnRc=",
+            "type": "github"
+        },
+        "version": "ba958b0f03692052042deb66fd2af05df04a2847"
+    },
+    "neovim-session-manager": {
+        "cargoLocks": null,
+        "date": "2023-09-05",
+        "extract": null,
+        "name": "neovim-session-manager",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "Shatur",
+            "repo": "neovim-session-manager",
+            "rev": "df544e17798dd0e6e33ecf0991dfde9174367837",
+            "sha256": "sha256-9z974T4Wu0+WXnrrijS9ySZNWCF/s8588k9lBGhg0/k=",
+            "type": "github"
+        },
+        "version": "df544e17798dd0e6e33ecf0991dfde9174367837"
+    },
+    "null-ls": {
+        "cargoLocks": null,
+        "date": "2023-08-11",
+        "extract": null,
+        "name": "null-ls",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jose-elias-alvarez",
+            "repo": "null-ls.nvim",
+            "rev": "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7",
+            "sha256": "sha256-cWA0rzkOp/ekVKaFee7iea1lhnqKtWUIU+fW5M950wI=",
+            "type": "github"
+        },
+        "version": "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7"
+    },
+    "nvim-autopairs": {
+        "cargoLocks": null,
+        "date": "2023-09-08",
+        "extract": null,
+        "name": "nvim-autopairs",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "windwp",
+            "repo": "nvim-autopairs",
+            "rev": "defad64afbf19381fe31488a7582bbac421d6e38",
+            "sha256": "sha256-N/Z+JfhJ5N8zwshpxm8bKFDbBRRQKZ9zAI+Q6mPOMBY=",
+            "type": "github"
+        },
+        "version": "defad64afbf19381fe31488a7582bbac421d6e38"
+    },
+    "nvim-cmp": {
+        "cargoLocks": null,
+        "date": "2023-08-26",
+        "extract": null,
+        "name": "nvim-cmp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hrsh7th",
+            "repo": "nvim-cmp",
+            "rev": "5dce1b778b85c717f6614e3f4da45e9f19f54435",
+            "sha256": "sha256-WGck3By9GhnBUmzLGi2wnKjDreQx5kBOmHCbC5BZhfo=",
+            "type": "github"
+        },
+        "version": "5dce1b778b85c717f6614e3f4da45e9f19f54435"
+    },
+    "nvim-colorizer-lua": {
+        "cargoLocks": null,
+        "date": "2023-02-27",
+        "extract": null,
+        "name": "nvim-colorizer-lua",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvchad",
+            "repo": "nvim-colorizer.lua",
+            "rev": "dde3084106a70b9a79d48f426f6d6fec6fd203f7",
+            "sha256": "sha256-hShQabr+UafsP+yicWkHycWLTbPhOpRpoa9oTMMVZ9o=",
+            "type": "github"
+        },
+        "version": "dde3084106a70b9a79d48f426f6d6fec6fd203f7"
+    },
+    "nvim-dap": {
+        "cargoLocks": null,
+        "date": "2023-09-07",
+        "extract": null,
+        "name": "nvim-dap",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "mfussenegger",
+            "repo": "nvim-dap",
+            "rev": "0e6b7c47dd70e80793ed39271b2aa712d9366dbc",
+            "sha256": "sha256-6hREFfZAJLjK9CXr8KCVf3NRZMMtlIKql8DZMs7f+74=",
+            "type": "github"
+        },
+        "version": "0e6b7c47dd70e80793ed39271b2aa712d9366dbc"
+    },
+    "nvim-dap-ui": {
+        "cargoLocks": null,
+        "date": "2023-09-10",
+        "extract": null,
+        "name": "nvim-dap-ui",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rcarriga",
+            "repo": "nvim-dap-ui",
+            "rev": "34160a7ce6072ef332f350ae1d4a6a501daf0159",
+            "sha256": "sha256-IdWPzLpNH0fkubELr2uTI7UnB0Yaf/zCkF8WUWBtyaM=",
+            "type": "github"
+        },
+        "version": "34160a7ce6072ef332f350ae1d4a6a501daf0159"
+    },
+    "nvim-dap-virtual-text": {
+        "cargoLocks": null,
+        "date": "2023-05-25",
+        "extract": null,
+        "name": "nvim-dap-virtual-text",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "theHamsta",
+            "repo": "nvim-dap-virtual-text",
+            "rev": "57f1dbd0458dd84a286b27768c142e1567f3ce3b",
+            "sha256": "sha256-yzMRudA8Wag881ewzw82uXPzHoxaB6kAapPElKN6G6E=",
+            "type": "github"
+        },
+        "version": "57f1dbd0458dd84a286b27768c142e1567f3ce3b"
+    },
+    "nvim-lspconfig": {
+        "cargoLocks": null,
+        "date": "2023-09-13",
+        "extract": null,
+        "name": "nvim-lspconfig",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "neovim",
+            "repo": "nvim-lspconfig",
+            "rev": "57139c690dc8d594b2f9de8d1e609f2854a4fe45",
+            "sha256": "sha256-XCIC9zXhHXpMharFVxeDFnZiZ8Mpiqpj5mT8DTBpL74=",
+            "type": "github"
+        },
+        "version": "57139c690dc8d594b2f9de8d1e609f2854a4fe45"
+    },
+    "nvim-navic": {
+        "cargoLocks": null,
+        "date": "2023-07-21",
+        "extract": null,
+        "name": "nvim-navic",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "SmiteshP",
+            "repo": "nvim-navic",
+            "rev": "9c89730da6a05acfeb6a197e212dfadf5aa60ca0",
+            "sha256": "sha256-M7BT1C9xHyLgr22JI3b+wyD+bYs6FgKc6PIqMrXnNr4=",
+            "type": "github"
+        },
+        "version": "9c89730da6a05acfeb6a197e212dfadf5aa60ca0"
+    },
+    "nvim-notify": {
+        "cargoLocks": null,
+        "date": "2023-09-10",
+        "extract": null,
+        "name": "nvim-notify",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "rcarriga",
+            "repo": "nvim-notify",
+            "rev": "94859430020f5cf32a1b97ddd9e596fed9db7981",
+            "sha256": "sha256-80AvfMbv68BtZyJ/hWBZ9jJQbWw2R75VQ1uzcwSqzBE=",
+            "type": "github"
+        },
+        "version": "94859430020f5cf32a1b97ddd9e596fed9db7981"
+    },
+    "nvim-spectre": {
+        "cargoLocks": null,
+        "date": "2023-09-13",
+        "extract": null,
+        "name": "nvim-spectre",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-pack",
+            "repo": "nvim-spectre",
+            "rev": "97cfd1b0f5a6ab35979ce1bee6c17f54745fd1e5",
+            "sha256": "sha256-J9/WPaqpsDpHkymeYPFPqRiU01auLOic8woESWXvSAY=",
+            "type": "github"
+        },
+        "version": "97cfd1b0f5a6ab35979ce1bee6c17f54745fd1e5"
+    },
+    "nvim-surround": {
+        "cargoLocks": null,
+        "date": "2023-08-17",
+        "extract": null,
+        "name": "nvim-surround",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kylechui",
+            "repo": "nvim-surround",
+            "rev": "1c2ef599abeeb98e40706830bcd27e90e259367a",
+            "sha256": "sha256-mc3PI2DwcSVe6eWjQzhh69+4Cv0m23puZ9oZbTFIQRo=",
+            "type": "github"
+        },
+        "version": "1c2ef599abeeb98e40706830bcd27e90e259367a"
+    },
+    "nvim-tree-lua": {
+        "cargoLocks": null,
+        "date": "2023-09-10",
+        "extract": null,
+        "name": "nvim-tree-lua",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-tree",
+            "repo": "nvim-tree.lua",
+            "rev": "94c7c810af205c0f00c8f105dcf490c8eb17658a",
+            "sha256": "sha256-Rv3DdlqRppEum09N4cKRlj0xdPbf5QLYHzYDuxb55w8=",
+            "type": "github"
+        },
+        "version": "94c7c810af205c0f00c8f105dcf490c8eb17658a"
+    },
+    "nvim-treesitter": {
+        "cargoLocks": null,
+        "date": "2023-09-13",
+        "extract": null,
+        "name": "nvim-treesitter",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-treesitter",
+            "repo": "nvim-treesitter",
+            "rev": "9ab4e9cc8989e3811b14897cd0eb21ae35e5541e",
+            "sha256": "sha256-U/27eclZ7V1ax03lV3qtGCSRcoT/1kv9BW3FtKjno8k=",
+            "type": "github"
+        },
+        "version": "9ab4e9cc8989e3811b14897cd0eb21ae35e5541e"
+    },
+    "nvim-treesitter-context": {
+        "cargoLocks": null,
+        "date": "2023-09-06",
+        "extract": null,
+        "name": "nvim-treesitter-context",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-treesitter",
+            "repo": "nvim-treesitter-context",
+            "rev": "b6c763db8cc486215ba96e0a67418848a710ab25",
+            "sha256": "sha256-K5Son2U0HI/hoH1OPV959jxK3jANkeWSygPeppjNXH0=",
+            "type": "github"
+        },
+        "version": "b6c763db8cc486215ba96e0a67418848a710ab25"
+    },
+    "nvim-treesitter-textobjects": {
+        "cargoLocks": null,
+        "date": "2023-08-29",
+        "extract": null,
+        "name": "nvim-treesitter-textobjects",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-treesitter",
+            "repo": "nvim-treesitter-textobjects",
+            "rev": "bd103502252027434ec42f628d2dbf54821d4ce6",
+            "sha256": "sha256-bC3yXw0qbcojHNy0peObGUK9DD047CqOAiQ8soEAHww=",
+            "type": "github"
+        },
+        "version": "bd103502252027434ec42f628d2dbf54821d4ce6"
+    },
+    "nvim-ts-autotag": {
+        "cargoLocks": null,
+        "date": "2023-06-16",
+        "extract": null,
+        "name": "nvim-ts-autotag",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "windwp",
+            "repo": "nvim-ts-autotag",
+            "rev": "6be1192965df35f94b8ea6d323354f7dc7a557e4",
+            "sha256": "sha256-4qTtXYA5HyG1sADV0wsiccO/G89qEoYPmlg8tTx7h8g=",
+            "type": "github"
+        },
+        "version": "6be1192965df35f94b8ea6d323354f7dc7a557e4"
+    },
+    "nvim-web-devicons": {
+        "cargoLocks": null,
+        "date": "2023-09-11",
+        "extract": null,
+        "name": "nvim-web-devicons",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-tree",
+            "repo": "nvim-web-devicons",
+            "rev": "925e2aa30dc9fe9332060199c19f132ec0f3d493",
+            "sha256": "sha256-+T88roJ4pa7/2p2Bdevn+wTNAXgGmB+QkaLRq2rtUUQ=",
+            "type": "github"
+        },
+        "version": "925e2aa30dc9fe9332060199c19f132ec0f3d493"
+    },
+    "octo": {
+        "cargoLocks": null,
+        "date": "2023-08-28",
+        "extract": null,
+        "name": "octo",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "pwntester",
+            "repo": "octo.nvim",
+            "rev": "d1e52f9b3c755fcebb93d635821663a2c0f53281",
+            "sha256": "sha256-NrPNyeFI1+Xv6Id7C1LW5W9gVSyQ48MNpYkTgsw7az8=",
+            "type": "github"
+        },
+        "version": "d1e52f9b3c755fcebb93d635821663a2c0f53281"
+    },
+    "playground": {
+        "cargoLocks": null,
+        "date": "2023-08-26",
+        "extract": null,
+        "name": "playground",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-treesitter",
+            "repo": "playground",
+            "rev": "429f3e76cbb1c59fe000b690f7a5bea617b890c0",
+            "sha256": "sha256-Pp6KojsOD/JxufVNZASZjXU0Z23D3yeuZ6S2k5mPmLo=",
+            "type": "github"
+        },
+        "version": "429f3e76cbb1c59fe000b690f7a5bea617b890c0"
+    },
+    "plenary": {
+        "cargoLocks": null,
+        "date": "2023-09-12",
+        "extract": null,
+        "name": "plenary",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-lua",
+            "repo": "plenary.nvim",
+            "rev": "9ce85b0f7dcfe5358c0be937ad23e456907d410b",
+            "sha256": "sha256-s3qsKf05X5W1VdZT1vYXGQNK0UaiI+umWUf06Spe4hw=",
+            "type": "github"
+        },
+        "version": "9ce85b0f7dcfe5358c0be937ad23e456907d410b"
+    },
+    "presence": {
+        "cargoLocks": null,
+        "date": "2023-01-29",
+        "extract": null,
+        "name": "presence",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "andweeb",
+            "repo": "presence.nvim",
+            "rev": "87c857a56b7703f976d3a5ef15967d80508df6e6",
+            "sha256": "sha256-ZpsunLsn//zYgUtmAm5FqKVueVd/Pa1r55ZDqxCimBk=",
+            "type": "github"
+        },
+        "version": "87c857a56b7703f976d3a5ef15967d80508df6e6"
+    },
+    "py_lsp": {
+        "cargoLocks": null,
+        "date": "2023-02-28",
+        "extract": null,
+        "name": "py_lsp",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hallerpatrick",
+            "repo": "py_lsp.nvim",
+            "rev": "5b2bd6433a2dbab76d54d58ccc1d1e89b220091c",
+            "sha256": "sha256-YOYrumIYlWcZBL1LSeBWseb/0G4n8obcll6wPwaXqpM=",
+            "type": "github"
+        },
+        "version": "5b2bd6433a2dbab76d54d58ccc1d1e89b220091c"
+    },
+    "rainbow-delimiters": {
+        "cargoLocks": null,
+        "date": "2023-08-26",
+        "extract": null,
+        "name": "rainbow-delimiters",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "hiphish",
+            "repo": "rainbow-delimiters.nvim",
+            "rev": "9cbd3dc409af1f5531778ccd1ea6bce668241f39",
+            "sha256": "sha256-4aH2UhG1alE9F1jOMZUSSnvHmWYR6QSC4HwH3oOv5GM=",
+            "type": "github"
+        },
+        "version": "9cbd3dc409af1f5531778ccd1ea6bce668241f39"
+    },
+    "rust-tools": {
+        "cargoLocks": null,
+        "date": "2023-07-10",
+        "extract": null,
+        "name": "rust-tools",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "simrat39",
+            "repo": "rust-tools.nvim",
+            "rev": "0cc8adab23117783a0292a0c8a2fbed1005dc645",
+            "sha256": "sha256-jtfyDxifchznUupLSao6nmpVqaX1yO0xN+NhqS9fgxg=",
+            "type": "github"
+        },
+        "version": "0cc8adab23117783a0292a0c8a2fbed1005dc645"
+    },
+    "schemastore": {
+        "cargoLocks": null,
+        "date": "2023-09-12",
+        "extract": null,
+        "name": "schemastore",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "b0o",
+            "repo": "schemastore.nvim",
+            "rev": "8c388a1a38ae1b618eef06a6b0388f5ff33867bd",
+            "sha256": "sha256-uRtDv97s82IkPR0DWwIhCYoufXK1+jagh/pP3BK1LHs=",
+            "type": "github"
+        },
+        "version": "8c388a1a38ae1b618eef06a6b0388f5ff33867bd"
+    },
+    "tagalong-vim": {
+        "cargoLocks": null,
+        "date": "2023-09-07",
+        "extract": null,
+        "name": "tagalong-vim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "AndrewRadev",
+            "repo": "tagalong.vim",
+            "rev": "5a2bbf2b1d5b657685a49d48d98a4aa921c1fde3",
+            "sha256": "sha256-zTdq7hg+tPTy803o+f3gIzb7TCw4KRgKAaLf7bBC1A4=",
+            "type": "github"
+        },
+        "version": "5a2bbf2b1d5b657685a49d48d98a4aa921c1fde3"
+    },
+    "telescope": {
+        "cargoLocks": null,
+        "date": "2023-09-10",
+        "extract": null,
+        "name": "telescope",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-telescope",
+            "repo": "telescope.nvim",
+            "rev": "a19770625aed49ad2a9f591a5e3946707f7359f6",
+            "sha256": "sha256-M6mEgHS1MdE18bEDIUHnhBmejHGuIlaxLzZB6utaIo8=",
+            "type": "github"
+        },
+        "version": "a19770625aed49ad2a9f591a5e3946707f7359f6"
+    },
+    "telescope-asynctasks": {
+        "cargoLocks": null,
+        "date": "2022-04-09",
+        "extract": null,
+        "name": "telescope-asynctasks",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "GustavoKatel",
+            "repo": "telescope-asynctasks.nvim",
+            "rev": "065300fb0a8ba6a1c81991da1873c73e136dcdc0",
+            "sha256": "sha256-50HiNqIeaBz1koWwNpLSa8vd+JTVALbafcufVn+S8hw=",
+            "type": "github"
+        },
+        "version": "065300fb0a8ba6a1c81991da1873c73e136dcdc0"
+    },
+    "telescope-file-browser": {
+        "cargoLocks": null,
+        "date": "2023-08-13",
+        "extract": null,
+        "name": "telescope-file-browser",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-telescope",
+            "repo": "telescope-file-browser.nvim",
+            "rev": "ad7b637c72549713b9aaed7c4f9c79c62bcbdff0",
+            "sha256": "sha256-iq2KyNU5U/j0zVvWg0q9TAXolHjbxL4d2GyMW/e1+Lo=",
+            "type": "github"
+        },
+        "version": "ad7b637c72549713b9aaed7c4f9c79c62bcbdff0"
+    },
+    "telescope-fzf-native": {
+        "cargoLocks": null,
+        "date": "2023-09-10",
+        "extract": null,
+        "name": "telescope-fzf-native",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-telescope",
+            "repo": "telescope-fzf-native.nvim",
+            "rev": "6c921ca12321edaa773e324ef64ea301a1d0da62",
+            "sha256": "sha256-Hob1x/jwQYfphYGWQ/i44NVyCM+WFT5/4+J5J4/tLYA=",
+            "type": "github"
+        },
+        "version": "6c921ca12321edaa773e324ef64ea301a1d0da62"
+    },
+    "telescope-project": {
+        "cargoLocks": null,
+        "date": "2023-04-27",
+        "extract": null,
+        "name": "telescope-project",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-telescope",
+            "repo": "telescope-project.nvim",
+            "rev": "7c64b181dd4e72deddcf6f319e3bf1e95b2a2f30",
+            "sha256": "sha256-H6lrPjpOUVleKHB0ziI+6dthg9ymitHhEWtcgYJTrKo=",
+            "type": "github"
+        },
+        "version": "7c64b181dd4e72deddcf6f319e3bf1e95b2a2f30"
+    },
+    "telescope-ui-select": {
+        "cargoLocks": null,
+        "date": "2022-04-30",
+        "extract": null,
+        "name": "telescope-ui-select",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-telescope",
+            "repo": "telescope-ui-select.nvim",
+            "rev": "62ea5e58c7bbe191297b983a9e7e89420f581369",
+            "sha256": "sha256-/JM2KX70JXa3sydrUj13Vd4rRwhn3VrdW7qLLHqIqyY=",
+            "type": "github"
+        },
+        "version": "62ea5e58c7bbe191297b983a9e7e89420f581369"
+    },
+    "todo-comments": {
+        "cargoLocks": null,
+        "date": "2023-07-28",
+        "extract": null,
+        "name": "todo-comments",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "todo-comments.nvim",
+            "rev": "3094ead8edfa9040de2421deddec55d3762f64d1",
+            "sha256": "sha256-Qm8AJ8omU5eCfjLt91DVxLS0R3QHbfW55ZTegB1JvWI=",
+            "type": "github"
+        },
+        "version": "3094ead8edfa9040de2421deddec55d3762f64d1"
+    },
+    "toggleterm": {
+        "cargoLocks": null,
+        "date": "2023-09-11",
+        "extract": null,
+        "name": "toggleterm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "akinsho",
+            "repo": "toggleterm.nvim",
+            "rev": "0427b908ebefcb3701c7f2cfbdafa37d11afe71a",
+            "sha256": "sha256-oOKKYbmCPlnCmO5DGHKz4JytzuFjvurRRLVPMArlufM=",
+            "type": "github"
+        },
+        "version": "0427b908ebefcb3701c7f2cfbdafa37d11afe71a"
+    },
+    "tree-sitter-grammar-astro": {
+        "cargoLocks": null,
+        "date": "2023-07-09",
+        "extract": null,
+        "name": "tree-sitter-grammar-astro",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "virchau13",
+            "repo": "tree-sitter-astro",
+            "rev": "e122a8fcd07e808a7b873bfadc2667834067daf1",
+            "sha256": "sha256-iCVRTX2fMW1g40rHcJEwwE+tfwun+reIaj5y4AFgmKk=",
+            "type": "github"
+        },
+        "version": "e122a8fcd07e808a7b873bfadc2667834067daf1"
+    },
+    "tree-sitter-grammar-bash": {
+        "cargoLocks": null,
+        "date": "2023-08-30",
+        "extract": null,
+        "name": "tree-sitter-grammar-bash",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-bash",
+            "rev": "bdcd56c5a3896f7bbb7684e223c43d9f24380351",
+            "sha256": "sha256-zkhCk19kd/KiqYTamFxui7KDE9d+P9pLjc1KVTvYPhI=",
+            "type": "github"
+        },
+        "version": "bdcd56c5a3896f7bbb7684e223c43d9f24380351"
+    },
+    "tree-sitter-grammar-c": {
+        "cargoLocks": null,
+        "date": "2023-08-13",
+        "extract": null,
+        "name": "tree-sitter-grammar-c",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-c",
+            "rev": "a2b7bac3b313efbaa683d9a276ff63cdc544d960",
+            "sha256": "sha256-39i06oXMQemfq3Y4TTXai6HFXvURVOif1v2i9LP4sAI=",
+            "type": "github"
+        },
+        "version": "a2b7bac3b313efbaa683d9a276ff63cdc544d960"
+    },
+    "tree-sitter-grammar-css": {
+        "cargoLocks": null,
+        "date": "2023-08-20",
+        "extract": null,
+        "name": "tree-sitter-grammar-css",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-css",
+            "rev": "fec7d3757ab8f46a0ffe298be99b16ad5b9fa229",
+            "sha256": "sha256-f3+pvJtULuJ6SHcmrMYyvreSAeEsq3L2+5V3dhloaj8=",
+            "type": "github"
+        },
+        "version": "fec7d3757ab8f46a0ffe298be99b16ad5b9fa229"
+    },
+    "tree-sitter-grammar-dockerfile": {
+        "cargoLocks": null,
+        "date": "2023-07-06",
+        "extract": null,
+        "name": "tree-sitter-grammar-dockerfile",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "camdencheek",
+            "repo": "tree-sitter-dockerfile",
+            "rev": "c0a9d694d9bf8ab79a919f5f9c7bc9c169caf321",
+            "sha256": "sha256-dNrLw9E3I3LqQUqYx+YUBZTlSoAp/qoOf6+RL7Lv3ew=",
+            "type": "github"
+        },
+        "version": "c0a9d694d9bf8ab79a919f5f9c7bc9c169caf321"
+    },
+    "tree-sitter-grammar-go": {
+        "cargoLocks": null,
+        "date": "2023-07-26",
+        "extract": null,
+        "name": "tree-sitter-grammar-go",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-go",
+            "rev": "bbaa67a180cfe0c943e50c55130918be8efb20bd",
+            "sha256": "sha256-G7d8CHCyKDAb9j6ijRfHk/HlgPqSI+uvkuRIRRvjkHI=",
+            "type": "github"
+        },
+        "version": "bbaa67a180cfe0c943e50c55130918be8efb20bd"
+    },
+    "tree-sitter-grammar-graphql": {
+        "cargoLocks": null,
+        "date": "2021-05-10",
+        "extract": null,
+        "name": "tree-sitter-grammar-graphql",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "bkegley",
+            "repo": "tree-sitter-graphql",
+            "rev": "5e66e961eee421786bdda8495ed1db045e06b5fe",
+            "sha256": "sha256-NvE9Rpdp4sALqKSRWJpqxwl6obmqnIIdvrL1nK5peXc=",
+            "type": "github"
+        },
+        "version": "5e66e961eee421786bdda8495ed1db045e06b5fe"
+    },
+    "tree-sitter-grammar-html": {
+        "cargoLocks": null,
+        "date": "2023-07-10",
+        "extract": null,
+        "name": "tree-sitter-grammar-html",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-html",
+            "rev": "e5d7d7decbbdec5a4c90bbc69436b3828f5646e7",
+            "sha256": "sha256-jNAPumz8JdrGwSMow1xZqz3n2CHj60qUaivhJ8LZDz4=",
+            "type": "github"
+        },
+        "version": "e5d7d7decbbdec5a4c90bbc69436b3828f5646e7"
+    },
+    "tree-sitter-grammar-javascript": {
+        "cargoLocks": null,
+        "date": "2023-08-25",
+        "extract": null,
+        "name": "tree-sitter-grammar-javascript",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-javascript",
+            "rev": "f1e5a09b8d02f8209a68249c93f0ad647b228e6e",
+            "sha256": "sha256-VbK2asd1CavcBYGia30MomQh+KOgKgz5ax10V6nEVEs=",
+            "type": "github"
+        },
+        "version": "f1e5a09b8d02f8209a68249c93f0ad647b228e6e"
+    },
+    "tree-sitter-grammar-jsdoc": {
+        "cargoLocks": null,
+        "date": "2023-08-20",
+        "extract": null,
+        "name": "tree-sitter-grammar-jsdoc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-jsdoc",
+            "rev": "d01984de49927c979b46ea5c01b78c8ddd79baf9",
+            "sha256": "sha256-O7iDoOlXi+HLesS/sKcYfb+EJLR6gfRkwA657aRRg4c=",
+            "type": "github"
+        },
+        "version": "d01984de49927c979b46ea5c01b78c8ddd79baf9"
+    },
+    "tree-sitter-grammar-json": {
+        "cargoLocks": null,
+        "date": "2023-07-10",
+        "extract": null,
+        "name": "tree-sitter-grammar-json",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-json",
+            "rev": "ca3f8919800e3c1ad4508de3bfd7b0b860ce434f",
+            "sha256": "sha256-cyrea0Y13OVGkXbYE0Cwc7nUsDGEZyoQmPAS9wVuHw0=",
+            "type": "github"
+        },
+        "version": "ca3f8919800e3c1ad4508de3bfd7b0b860ce434f"
+    },
+    "tree-sitter-grammar-jsonc": {
+        "cargoLocks": null,
+        "date": "2021-03-07",
+        "extract": null,
+        "name": "tree-sitter-grammar-jsonc",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "rev": "02b01653c8a1c198ae7287d566efa86a135b30d5",
+            "sha256": "sha256-iWc2ePRiQnZ0FEdMAaAwa3iYt/SY0bEjQrZyqE9EhlU=",
+            "type": "git",
+            "url": "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc"
+        },
+        "version": "02b01653c8a1c198ae7287d566efa86a135b30d5"
+    },
+    "tree-sitter-grammar-lua": {
+        "cargoLocks": null,
+        "date": "2023-09-07",
+        "extract": null,
+        "name": "tree-sitter-grammar-lua",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "MunifTanjim",
+            "repo": "tree-sitter-lua",
+            "rev": "9668709211b2e683f27f414454a8b51bf0a6bda1",
+            "sha256": "sha256-5t5w8KqbefInNbA12/jpNzmky/uOUhsLjKdEqpl1GEc=",
+            "type": "github"
+        },
+        "version": "9668709211b2e683f27f414454a8b51bf0a6bda1"
+    },
+    "tree-sitter-grammar-markdown": {
+        "cargoLocks": null,
+        "date": "2023-07-22",
+        "extract": null,
+        "name": "tree-sitter-grammar-markdown",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "MDeiml",
+            "repo": "tree-sitter-markdown",
+            "rev": "aaf76797aa8ecd9a5e78e0ec3681941de6c945ee",
+            "sha256": "sha256-4HofUc+OsI3d2CN9mex5ROwuRHyB6fGow8gl0fe5es4=",
+            "type": "github"
+        },
+        "version": "aaf76797aa8ecd9a5e78e0ec3681941de6c945ee"
+    },
+    "tree-sitter-grammar-nix": {
+        "cargoLocks": null,
+        "date": "2023-07-13",
+        "extract": null,
+        "name": "tree-sitter-grammar-nix",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "cstrahan",
+            "repo": "tree-sitter-nix",
+            "rev": "66e3e9ce9180ae08fc57372061006ef83f0abde7",
+            "sha256": "sha256-+o+f1TlhcrcCB3TNw1RyCjVZ+37e11nL+GWBPo0Mxxg=",
+            "type": "github"
+        },
+        "version": "66e3e9ce9180ae08fc57372061006ef83f0abde7"
+    },
+    "tree-sitter-grammar-php": {
+        "cargoLocks": null,
+        "date": "2023-08-17",
+        "extract": null,
+        "name": "tree-sitter-grammar-php",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-php",
+            "rev": "ce2c73a8d84b5648e8792698dc9fd955e5f6a906",
+            "sha256": "sha256-HZOIz9KiZ13aqeQtCeQln56RRRPUSgT7ulPJs54fzJc=",
+            "type": "github"
+        },
+        "version": "ce2c73a8d84b5648e8792698dc9fd955e5f6a906"
+    },
+    "tree-sitter-grammar-pug": {
+        "cargoLocks": null,
+        "date": "2023-07-27",
+        "extract": null,
+        "name": "tree-sitter-grammar-pug",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "zealot128",
+            "repo": "tree-sitter-pug",
+            "rev": "a7ff31a38908df9b9f34828d21d6ca5e12413e18",
+            "sha256": "sha256-WDx2Y1LxuJJuAaeTxfqQrxRXxVd4Cn3niQeherh+5Uc=",
+            "type": "github"
+        },
+        "version": "a7ff31a38908df9b9f34828d21d6ca5e12413e18"
+    },
+    "tree-sitter-grammar-python": {
+        "cargoLocks": null,
+        "date": "2023-08-16",
+        "extract": null,
+        "name": "tree-sitter-grammar-python",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-python",
+            "rev": "c01fb4e38587e959b9058b8cd34b9e6a3068c827",
+            "sha256": "sha256-cV/QwvEQkIQcgo0Pm+3pUH2LhpYOPsuWMgjXMa8dv+s=",
+            "type": "github"
+        },
+        "version": "c01fb4e38587e959b9058b8cd34b9e6a3068c827"
+    },
+    "tree-sitter-grammar-rust": {
+        "cargoLocks": null,
+        "date": "2023-08-29",
+        "extract": null,
+        "name": "tree-sitter-grammar-rust",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-rust",
+            "rev": "17a6b15562b09db1f27b8f5f26f17edbb2aac097",
+            "sha256": "sha256-seWoMuA87ZWCq3mUXopVeDCcTxX/Bh+B4PFLVa0CBQA=",
+            "type": "github"
+        },
+        "version": "17a6b15562b09db1f27b8f5f26f17edbb2aac097"
+    },
+    "tree-sitter-grammar-scss": {
+        "cargoLocks": null,
+        "date": "2022-02-03",
+        "extract": null,
+        "name": "tree-sitter-grammar-scss",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "serenadeai",
+            "repo": "tree-sitter-scss",
+            "rev": "c478c6868648eff49eb04a4df90d703dc45b312a",
+            "sha256": "sha256-BFtMT6eccBWUyq6b8UXRAbB1R1XD3CrrFf1DM3aUI5c=",
+            "type": "github"
+        },
+        "version": "c478c6868648eff49eb04a4df90d703dc45b312a"
+    },
+    "tree-sitter-grammar-typescript": {
+        "cargoLocks": null,
+        "date": "2023-07-19",
+        "extract": null,
+        "name": "tree-sitter-grammar-typescript",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tree-sitter",
+            "repo": "tree-sitter-typescript",
+            "rev": "b1bf4825d9eaa0f3bdeb1e52f099533328acfbdf",
+            "sha256": "sha256-oZKit8kScXcOptmT2ckywL5JlAVe+wuwhuj6ThEI5OQ=",
+            "type": "github"
+        },
+        "version": "b1bf4825d9eaa0f3bdeb1e52f099533328acfbdf"
+    },
+    "tree-sitter-grammar-yaml": {
+        "cargoLocks": null,
+        "date": "2021-05-11",
+        "extract": null,
+        "name": "tree-sitter-grammar-yaml",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ikatyang",
+            "repo": "tree-sitter-yaml",
+            "rev": "0e36bed171768908f331ff7dff9d956bae016efb",
+            "sha256": "sha256-bpiT3FraOZhJaoiFWAoVJX1O+plnIi8aXOW2LwyU23M=",
+            "type": "github"
+        },
+        "version": "0e36bed171768908f331ff7dff9d956bae016efb"
+    },
+    "trouble": {
+        "cargoLocks": null,
+        "date": "2023-08-30",
+        "extract": null,
+        "name": "trouble",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "trouble.nvim",
+            "rev": "3f85d8ed30e97ceeddbbcf80224245d347053711",
+            "sha256": "sha256-3dielW+Y+Rpt/sotZjk8tYHhYTlSrYHS5AILdytyNVA=",
+            "type": "github"
+        },
+        "version": "3f85d8ed30e97ceeddbbcf80224245d347053711"
+    },
+    "true-zen": {
+        "cargoLocks": null,
+        "date": "2023-06-09",
+        "extract": null,
+        "name": "true-zen",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "pocco81",
+            "repo": "true-zen.nvim",
+            "rev": "2b9e210e0d1a735e1fa85ec22190115dffd963aa",
+            "sha256": "sha256-euaxTWS98i14wvuKrFvdCRigsKqrSUwZpMEmYtUBBss=",
+            "type": "github"
+        },
+        "version": "2b9e210e0d1a735e1fa85ec22190115dffd963aa"
+    },
+    "typescript-tools": {
+        "cargoLocks": null,
+        "date": "2023-09-11",
+        "extract": null,
+        "name": "typescript-tools",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "pmizio",
+            "repo": "typescript-tools.nvim",
+            "rev": "c0ce36c163d3f25b7899f2147e9c55a63157fa65",
+            "sha256": "sha256-sjLnC09F4Hl07wLOzXqKrqXS2e/Wf2yQjX2aP3LyHDk=",
+            "type": "github"
+        },
+        "version": "c0ce36c163d3f25b7899f2147e9c55a63157fa65"
+    },
+    "vim-dadbod": {
+        "cargoLocks": null,
+        "date": "2023-05-22",
+        "extract": null,
+        "name": "vim-dadbod",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tpope",
+            "repo": "vim-dadbod",
+            "rev": "7d80bbd11c407a09e0f7b869c38f3dec3902805f",
+            "sha256": "sha256-3Qg8GZVur4pkz31+WtkwSlPHsbAUOWu/DHEH8pjnSok=",
+            "type": "github"
+        },
+        "version": "7d80bbd11c407a09e0f7b869c38f3dec3902805f"
+    },
+    "vim-dadbod-completion": {
+        "cargoLocks": null,
+        "date": "2023-04-25",
+        "extract": null,
+        "name": "vim-dadbod-completion",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kristijanhusak",
+            "repo": "vim-dadbod-completion",
+            "rev": "fc7321a17f4c55db11fae89a884ddf4724020bae",
+            "sha256": "sha256-HMP+YBO0c1OXkn1na7rtg/Sf/pBec+3HOkQx+j/qfvg=",
+            "type": "github"
+        },
+        "version": "fc7321a17f4c55db11fae89a884ddf4724020bae"
+    },
+    "vim-dadbod-ui": {
+        "cargoLocks": null,
+        "date": "2023-06-16",
+        "extract": null,
+        "name": "vim-dadbod-ui",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kristijanhusak",
+            "repo": "vim-dadbod-ui",
+            "rev": "200aebf70e6fc4b0eb1d3ecf0d57028e198d8dc6",
+            "sha256": "sha256-Cq9yN/mj59LpzTiV+D+KkypBrTkhfvWVkSdxQbCnd4A=",
+            "type": "github"
+        },
+        "version": "200aebf70e6fc4b0eb1d3ecf0d57028e198d8dc6"
+    },
+    "vim-fugitive": {
+        "cargoLocks": null,
+        "date": "2023-09-08",
+        "extract": null,
+        "name": "vim-fugitive",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "tpope",
+            "repo": "vim-fugitive",
+            "rev": "6fcb0ad03982de646e3fecb6915e585651b9a9fb",
+            "sha256": "sha256-cbAJ1PogJ0pEojrClmkTDmZJ3/aUeFOst+q+1qdClKk=",
+            "type": "github"
+        },
+        "version": "6fcb0ad03982de646e3fecb6915e585651b9a9fb"
+    },
+    "vim-gnupg": {
+        "cargoLocks": null,
+        "date": "2022-05-18",
+        "extract": null,
+        "name": "vim-gnupg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "jamessan",
+            "repo": "vim-gnupg",
+            "rev": "f9b608f29003dfde6450931dc0f495a912973a88",
+            "sha256": "sha256-B6hSEeNjJdDUDjM0DlmAxc3zRRcJz91//GPk6rCWn6I=",
+            "type": "github"
+        },
+        "version": "f9b608f29003dfde6450931dc0f495a912973a88"
+    },
+    "vim-helm": {
+        "cargoLocks": null,
+        "date": "2022-08-22",
+        "extract": null,
+        "name": "vim-helm",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "towolf",
+            "repo": "vim-helm",
+            "rev": "c2e7b85711d410e1d73e64eb5df7b70b1c4c10eb",
+            "sha256": "sha256-NQXmIcDnUqbeiNX0QqvQbLGmONuC8HGFlfsBHBXWEc4=",
+            "type": "github"
+        },
+        "version": "c2e7b85711d410e1d73e64eb5df7b70b1c4c10eb"
+    },
+    "vim-just": {
+        "cargoLocks": null,
+        "date": "2023-08-02",
+        "extract": null,
+        "name": "vim-just",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "NoahTheDuke",
+            "repo": "vim-just",
+            "rev": "927b41825b9cd07a40fc15b4c68635c4b36fa923",
+            "sha256": "sha256-BmxYWUVBzTowH68eWNrQKV1fNN9d1hRuCnXqbEagRoY=",
+            "type": "github"
+        },
+        "version": "927b41825b9cd07a40fc15b4c68635c4b36fa923"
+    },
+    "vim-table-mode": {
+        "cargoLocks": null,
+        "date": "2022-10-20",
+        "extract": null,
+        "name": "vim-table-mode",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dhruvasagar",
+            "repo": "vim-table-mode",
+            "rev": "9555a3e6e5bcf285ec181b7fc983eea90500feb4",
+            "sha256": "sha256-upjy6O1v7Sev5KwPvlia/bvAKDdH0a7eauQTOCCa+F8=",
+            "type": "github"
+        },
+        "version": "9555a3e6e5bcf285ec181b7fc983eea90500feb4"
+    },
+    "which-key": {
+        "cargoLocks": null,
+        "date": "2023-07-28",
+        "extract": null,
+        "name": "which-key",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "which-key.nvim",
+            "rev": "7ccf476ebe0445a741b64e36c78a682c1c6118b7",
+            "sha256": "sha256-B1+EHd2eH/EbD5Kip9PfhdPyyGfIkD6rsx0Z3rXvb5w=",
+            "type": "github"
+        },
+        "version": "7ccf476ebe0445a741b64e36c78a682c1c6118b7"
+    }
+}

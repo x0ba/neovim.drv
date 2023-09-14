@@ -1,0 +1,432 @@
+[py_lsp]
+src.git = "https://github.com/hallerpatrick/py_lsp.nvim"
+fetch.github = "hallerpatrick/py_lsp.nvim"
+
+[indent-blankline]
+src.git = "https://github.com/lukas-reineke/indent-blankline.nvim"
+fetch.github = "lukas-reineke/indent-blankline.nvim"
+
+[trouble]
+src.git = "https://github.com/folke/trouble.nvim"
+fetch.github = "folke/trouble.nvim"
+
+[crates]
+src.git = "https://github.com/saecki/crates.nvim"
+fetch.github = "saecki/crates.nvim"
+
+[fidget]
+src.git = "https://github.com/j-hui/fidget.nvim"
+fetch.github = "j-hui/fidget.nvim"
+
+[neodev]
+src.git = "https://github.com/folke/neodev.nvim"
+fetch.github = "folke/neodev.nvim"
+
+[toggleterm]
+src.git = "https://github.com/akinsho/toggleterm.nvim"
+fetch.github = "akinsho/toggleterm.nvim"
+
+[rust-tools]
+src.git = "https://github.com/simrat39/rust-tools.nvim"
+fetch.github = "simrat39/rust-tools.nvim"
+
+[lsp-status]
+src.git = "https://github.com/nvim-lua/lsp-status.nvim"
+fetch.github = "nvim-lua/lsp-status.nvim"
+
+[neogit]
+src.git = "https://github.com/NeogitOrg/neogit"
+fetch.github = "NeogitOrg/neogit"
+
+[typescript-tools]
+src.git = "https://github.com/pmizio/typescript-tools.nvim"
+fetch.github = "pmizio/typescript-tools.nvim"
+
+[ltex-extra]
+src.git = "https://github.com/barreiroleo/ltex-extra.nvim"
+fetch.github = "barreiroleo/ltex-extra.nvim"
+
+[which-key]
+src.git = "https://github.com/folke/which-key.nvim"
+fetch.github = "folke/which-key.nvim"
+
+[vim-dadbod]
+src.git = "https://github.com/tpope/vim-dadbod"
+fetch.github = "tpope/vim-dadbod"
+
+[go]
+src.git = "https://github.com/ray-x/go.nvim"
+fetch.github = "ray-x/go.nvim"
+
+[schemastore]
+src.git = "https://github.com/b0o/schemastore.nvim"
+fetch.github = "b0o/schemastore.nvim"
+
+[vim-table-mode]
+src.git = "https://github.com/dhruvasagar/vim-table-mode"
+fetch.github = "dhruvasagar/vim-table-mode"
+
+[vim-dadbod-completion]
+src.git = "https://github.com/kristijanhusak/vim-dadbod-completion"
+fetch.github = "kristijanhusak/vim-dadbod-completion"
+
+[vim-gnupg]
+src.git = "https://github.com/jamessan/vim-gnupg"
+fetch.github = "jamessan/vim-gnupg"
+
+[vim-dadbod-ui]
+src.git = "https://github.com/kristijanhusak/vim-dadbod-ui"
+fetch.github = "kristijanhusak/vim-dadbod-ui"
+
+[nvim-dap]
+src.git = "https://github.com/mfussenegger/nvim-dap"
+fetch.github = "mfussenegger/nvim-dap"
+
+[markdown-preview]
+src.git = "https://github.com/iamcco/markdown-preview.nvim"
+fetch.github = "iamcco/markdown-preview.nvim"
+
+[nvim-dap-ui]
+src.git = "https://github.com/rcarriga/nvim-dap-ui"
+fetch.github = "rcarriga/nvim-dap-ui"
+
+[nvim-dap-virtual-text]
+src.git = "https://github.com/theHamsta/nvim-dap-virtual-text"
+fetch.github = "theHamsta/nvim-dap-virtual-text"
+
+[true-zen]
+src.git = "https://github.com/pocco81/true-zen.nvim"
+fetch.github = "pocco81/true-zen.nvim"
+
+[nvim-tree-lua]
+src.git = "https://github.com/nvim-tree/nvim-tree.lua"
+fetch.github = "nvim-tree/nvim-tree.lua"
+
+[editorconfig]
+src.git = "https://github.com/gpanders/editorconfig.nvim"
+fetch.github = "gpanders/editorconfig.nvim"
+
+[neovim-session-manager]
+src.git = "https://github.com/Shatur/neovim-session-manager"
+fetch.github = "Shatur/neovim-session-manager"
+
+[neorg]
+src.git = "https://github.com/nvim-neorg/neorg"
+fetch.github = "nvim-neorg/neorg"
+
+[nvim-lspconfig]
+src.git = "https://github.com/neovim/nvim-lspconfig"
+fetch.github = "neovim/nvim-lspconfig"
+
+[copilot-lua]
+src.git = "https://github.com/zbirenbaum/copilot.lua"
+fetch.github = "zbirenbaum/copilot.lua"
+
+[flash]
+src.git = "https://github.com/folke/flash.nvim"
+fetch.github = "folke/flash.nvim"
+
+[alpha-nvim]
+src.git = "https://github.com/goolord/alpha-nvim"
+fetch.github = "goolord/alpha-nvim"
+
+[playground]
+src.git = "https://github.com/nvim-treesitter/playground"
+fetch.github = "nvim-treesitter/playground"
+
+[asyncrun-vim]
+src.git = "https://github.com/skywind3000/asyncrun.vim"
+fetch.github = "skywind3000/asyncrun.vim"
+
+[bufferline]
+src.git = "https://github.com/akinsho/bufferline.nvim"
+fetch.github = "akinsho/bufferline.nvim"
+
+[nvim-treesitter-textobjects]
+src.git = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
+fetch.github = "nvim-treesitter/nvim-treesitter-textobjects"
+
+[asynctasks-vim]
+src.git = "https://github.com/skywind3000/asynctasks.vim"
+fetch.github = "skywind3000/asynctasks.vim"
+
+[lazy]
+src.git = "https://github.com/folke/lazy.nvim"
+fetch.github = "folke/lazy.nvim"
+
+[vim-fugitive]
+src.git = "https://github.com/tpope/vim-fugitive"
+fetch.github = "tpope/vim-fugitive"
+
+[telescope-project]
+src.git = "https://github.com/nvim-telescope/telescope-project.nvim"
+fetch.github = "nvim-telescope/telescope-project.nvim"
+
+[nvim-ts-autotag]
+src.git = "https://github.com/windwp/nvim-ts-autotag"
+fetch.github = "windwp/nvim-ts-autotag"
+
+[cmp-nvim-lsp]
+src.git = "https://github.com/hrsh7th/cmp-nvim-lsp"
+fetch.github = "hrsh7th/cmp-nvim-lsp"
+
+[dressing]
+src.git = "https://github.com/stevearc/dressing.nvim"
+fetch.github = "stevearc/dressing.nvim"
+
+[comment]
+src.git = "https://github.com/numtostr/comment.nvim"
+fetch.github = "numtostr/comment.nvim"
+
+[color-picker]
+src.git = "https://github.com/ziontee113/color-picker.nvim"
+fetch.github = "ziontee113/color-picker.nvim"
+
+[nvim-treesitter-context]
+src.git = "https://github.com/nvim-treesitter/nvim-treesitter-context"
+fetch.github = "nvim-treesitter/nvim-treesitter-context"
+
+[rainbow-delimiters]
+src.git = "https://github.com/hiphish/rainbow-delimiters.nvim"
+fetch.github = "hiphish/rainbow-delimiters.nvim"
+
+[todo-comments]
+src.git = "https://github.com/folke/todo-comments.nvim"
+fetch.github = "folke/todo-comments.nvim"
+
+[cmp-path]
+src.git = "https://github.com/hrsh7th/cmp-path"
+fetch.github = "hrsh7th/cmp-path"
+
+[telescope-file-browser]
+src.git = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+fetch.github = "nvim-telescope/telescope-file-browser.nvim"
+
+[plenary]
+src.git = "https://github.com/nvim-lua/plenary.nvim"
+fetch.github = "nvim-lua/plenary.nvim"
+
+[telescope]
+src.git = "https://github.com/nvim-telescope/telescope.nvim"
+fetch.github = "nvim-telescope/telescope.nvim"
+
+[vim-helm]
+src.git = "https://github.com/towolf/vim-helm"
+fetch.github = "towolf/vim-helm"
+
+[nvim-surround]
+src.git = "https://github.com/kylechui/nvim-surround"
+fetch.github = "kylechui/nvim-surround"
+
+[nvim-autopairs]
+src.git = "https://github.com/windwp/nvim-autopairs"
+fetch.github = "windwp/nvim-autopairs"
+
+[nvim-treesitter]
+src.git = "https://github.com/nvim-treesitter/nvim-treesitter"
+fetch.github = "nvim-treesitter/nvim-treesitter"
+
+[diffview]
+src.git = "https://github.com/sindrets/diffview.nvim"
+fetch.github = "sindrets/diffview.nvim"
+
+[nvim-spectre]
+src.git = "https://github.com/nvim-pack/nvim-spectre"
+fetch.github = "nvim-pack/nvim-spectre"
+
+[vim-just]
+src.git = "https://github.com/NoahTheDuke/vim-just"
+fetch.github = "NoahTheDuke/vim-just"
+
+[glance]
+src.git = "https://github.com/dnlhc/glance.nvim"
+fetch.github = "dnlhc/glance.nvim"
+
+[cmp_luasnip]
+src.git = "https://github.com/saadparwaiz1/cmp_luasnip"
+fetch.github = "saadparwaiz1/cmp_luasnip"
+
+[telescope-fzf-native]
+src.git = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+fetch.github = "nvim-telescope/telescope-fzf-native.nvim"
+
+[gitsigns]
+src.git = "https://github.com/lewis6991/gitsigns.nvim"
+fetch.github = "lewis6991/gitsigns.nvim"
+
+[telescope-asynctasks]
+src.git = "https://github.com/GustavoKatel/telescope-asynctasks.nvim"
+fetch.github = "GustavoKatel/telescope-asynctasks.nvim"
+
+[telescope-ui-select]
+src.git = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+fetch.github = "nvim-telescope/telescope-ui-select.nvim"
+
+[tagalong-vim]
+src.git = "https://github.com/AndrewRadev/tagalong.vim"
+fetch.github = "AndrewRadev/tagalong.vim"
+
+[nvim-cmp]
+src.git = "https://github.com/hrsh7th/nvim-cmp"
+fetch.github = "hrsh7th/nvim-cmp"
+
+[presence]
+src.git = "https://github.com/andweeb/presence.nvim"
+fetch.github = "andweeb/presence.nvim"
+
+[nvim-notify]
+src.git = "https://github.com/rcarriga/nvim-notify"
+fetch.github = "rcarriga/nvim-notify"
+
+[nvim-navic]
+src.git = "https://github.com/SmiteshP/nvim-navic"
+fetch.github = "SmiteshP/nvim-navic"
+
+[octo]
+src.git = "https://github.com/pwntester/octo.nvim"
+fetch.github = "pwntester/octo.nvim"
+
+[headlines]
+src.git = "https://github.com/lukas-reineke/headlines.nvim"
+fetch.github = "lukas-reineke/headlines.nvim"
+
+[lspkind]
+src.git = "https://github.com/onsails/lspkind.nvim"
+fetch.github = "onsails/lspkind.nvim"
+
+[nvim-colorizer-lua]
+src.git = "https://github.com/nvchad/nvim-colorizer.lua"
+fetch.github = "nvchad/nvim-colorizer.lua"
+
+[catppuccin]
+src.git = "https://github.com/catppuccin/nvim"
+fetch.github = "catppuccin/nvim"
+
+[cmp-git]
+src.git = "https://github.com/petertriho/cmp-git"
+fetch.github = "petertriho/cmp-git"
+
+[luasnip]
+src.git = "https://github.com/L3MON4D3/LuaSnip"
+fetch.github = "L3MON4D3/LuaSnip"
+
+[cmp-cmdline]
+src.git = "https://github.com/hrsh7th/cmp-cmdline"
+fetch.github = "hrsh7th/cmp-cmdline"
+
+[friendly-snippets]
+src.git = "https://github.com/rafamadriz/friendly-snippets"
+fetch.github = "rafamadriz/friendly-snippets"
+
+[lualine]
+src.git = "https://github.com/nvim-lualine/lualine.nvim"
+fetch.github = "nvim-lualine/lualine.nvim"
+
+[cmp-buffer]
+src.git = "https://github.com/hrsh7th/cmp-buffer"
+fetch.github = "hrsh7th/cmp-buffer"
+
+[guihua-lua]
+src.git = "https://github.com/ray-x/guihua.lua"
+fetch.github = "ray-x/guihua.lua"
+
+[auto-dark-mode]
+src.git = "https://github.com/f-person/auto-dark-mode.nvim"
+fetch.github = "f-person/auto-dark-mode.nvim"
+
+[nvim-web-devicons]
+src.git = "https://github.com/nvim-tree/nvim-web-devicons"
+fetch.github = "nvim-tree/nvim-web-devicons"
+
+[null-ls]
+src.git = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+fetch.github = "jose-elias-alvarez/null-ls.nvim"
+
+### TREESITTER PARSERS ###
+[tree-sitter-grammar-astro]
+src.git = "https://github.com/virchau13/tree-sitter-astro"
+fetch.github = "virchau13/tree-sitter-astro"
+
+[tree-sitter-grammar-bash]
+src.git = "https://github.com/tree-sitter/tree-sitter-bash"
+fetch.github = "tree-sitter/tree-sitter-bash"
+
+[tree-sitter-grammar-c]
+src.git = "https://github.com/tree-sitter/tree-sitter-c"
+fetch.github = "tree-sitter/tree-sitter-c"
+
+[tree-sitter-grammar-css]
+src.git = "https://github.com/tree-sitter/tree-sitter-css"
+fetch.github = "tree-sitter/tree-sitter-css"
+
+[tree-sitter-grammar-dockerfile]
+src.git = "https://github.com/camdencheek/tree-sitter-dockerfile"
+fetch.github = "camdencheek/tree-sitter-dockerfile"
+
+[tree-sitter-grammar-go]
+src.git = "https://github.com/tree-sitter/tree-sitter-go"
+fetch.github = "tree-sitter/tree-sitter-go"
+
+[tree-sitter-grammar-graphql]
+src.git = "https://github.com/bkegley/tree-sitter-graphql"
+fetch.github = "bkegley/tree-sitter-graphql"
+
+[tree-sitter-grammar-html]
+src.git = "https://github.com/tree-sitter/tree-sitter-html"
+fetch.github = "tree-sitter/tree-sitter-html"
+
+[tree-sitter-grammar-javascript]
+src.git = "https://github.com/tree-sitter/tree-sitter-javascript"
+fetch.github = "tree-sitter/tree-sitter-javascript"
+
+[tree-sitter-grammar-jsdoc]
+src.git = "https://github.com/tree-sitter/tree-sitter-jsdoc"
+fetch.github = "tree-sitter/tree-sitter-jsdoc"
+
+[tree-sitter-grammar-json]
+src.git = "https://github.com/tree-sitter/tree-sitter-json"
+fetch.github = "tree-sitter/tree-sitter-json"
+
+[tree-sitter-grammar-jsonc]
+src.git = "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc"
+fetch.git = "https://gitlab.com/WhyNotHugo/tree-sitter-jsonc"
+
+[tree-sitter-grammar-lua]
+src.git = "https://github.com/MunifTanjim/tree-sitter-lua"
+fetch.github = "MunifTanjim/tree-sitter-lua"
+
+[tree-sitter-grammar-markdown]
+src.git = "https://github.com/MDeiml/tree-sitter-markdown"
+fetch.github = "MDeiml/tree-sitter-markdown"
+
+[tree-sitter-grammar-nix]
+src.git = "https://github.com/cstrahan/tree-sitter-nix"
+fetch.github = "cstrahan/tree-sitter-nix"
+
+[tree-sitter-grammar-php]
+src.git = "https://github.com/tree-sitter/tree-sitter-php"
+fetch.github = "tree-sitter/tree-sitter-php"
+
+[tree-sitter-grammar-pug]
+src.git = "https://github.com/zealot128/tree-sitter-pug"
+fetch.github = "zealot128/tree-sitter-pug"
+
+[tree-sitter-grammar-python]
+src.git = "https://github.com/tree-sitter/tree-sitter-python"
+fetch.github = "tree-sitter/tree-sitter-python"
+
+[tree-sitter-grammar-rust]
+src.git = "https://github.com/tree-sitter/tree-sitter-rust"
+fetch.github = "tree-sitter/tree-sitter-rust"
+
+[tree-sitter-grammar-scss]
+src.git = "https://github.com/serenadeai/tree-sitter-scss"
+fetch.github = "serenadeai/tree-sitter-scss"
+
+[tree-sitter-grammar-typescript]
+src.git = "https://github.com/tree-sitter/tree-sitter-typescript"
+fetch.github = "tree-sitter/tree-sitter-typescript"
+
+[tree-sitter-grammar-yaml]
+src.git = "https://github.com/ikatyang/tree-sitter-yaml"
+fetch.github = "ikatyang/tree-sitter-yaml"
