@@ -48,8 +48,8 @@ return function()
 		"           .::::''::::.     '::::.         ",
 		"          .::::'   ::::.     '::::.        ",
 		"         .::::      ::::      '::::.       ",
-		"                                           ",
-		"         now fully managed with Nix.       ",
+		" ",
+		"nix geht mehr",
 	}
 
 	local buttons = {

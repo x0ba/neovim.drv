@@ -32,20 +32,8 @@
     };
 
     # LSP
-    nekowinston-nur = {
-      url = "github:nekowinston/nur";
-      inputs.crane.follows = "crane";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.rust-overlay.follows = "rust-overlay";
-    };
-    bandithedoge-nur = {
-      url = "github:nekowinston/nur";
-      inputs.crane.follows = "crane";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.rust-overlay.follows = "rust-overlay";
-    };
+    nekowinston-nur.url = "github:nekowinston/nur";
+    bandithedoge-nur.url = "github:bandithedoge/nur-packages";
     # maintenance
     nvfetcher = {
       url = "github:berberman/nvfetcher";
@@ -69,19 +57,21 @@
       }: {
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
+          config.allowUnfree = true;
           overlays = [
             (f: p: {
               nvfetcher = inputs.nvfetcher.packages.${system}.default;
               repos = {
-                bandithedoge = import inputs.bandithedoge-nur;
-                nekowinston = import inputs.nekowinston-nur;
+                bandithedoge = import inputs.bandithedoge-nur {inherit (p) pkgs;};
+                nekowinston = import inputs.nekowinston-nur {inherit (p) pkgs;};
               };
             })
           ];
         };
+        legacyPackages = pkgs;
 
-        devShells.maintenance = pkgs.mkShell {
-          buildInputs = with pkgs; [nvfetcher];
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [nvfetcher nix-tree];
         };
 
         # packages.default = pkgs.hello;
@@ -89,4 +79,15 @@
         packages.tree-sitter = pkgs.callPackage ./pkgs/tree-sitter {};
       };
     };
+
+  nixConfig = {
+    extra-substituters = [
+      "https://bandithedoge.cachix.org"
+      "https://nekowinston.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "bandithedoge.cachix.org-1:ZtcHw1anyEa4t6H8m3o/ctYFrwYFPAwoENSvofamE6g="
+      "nekowinston.cachix.org-1:lucpmaO+JwtoZj16HCO1p1fOv68s/RL1gumpVzRHRDs="
+    ];
+  };
 }
