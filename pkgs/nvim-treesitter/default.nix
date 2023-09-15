@@ -4,6 +4,7 @@
   stdenv,
   symlinkJoin,
   tree-sitter,
+  pkgs,
 }: let
   nvfetcher = callPackage ../../_sources/generated.nix {};
   nvim-treesitter = nvfetcher.nvim-treesitter;
@@ -12,6 +13,12 @@
     astro = {};
     bash = {};
     c = {};
+    d = {
+      overrides = {
+        buildInputs = [pkgs.nodejs];
+        preBuild = "${tree-sitter}/bin/tree-sitter generate";
+      };
+    };
     css = {};
     dockerfile = {};
     go = {};

@@ -31,6 +31,11 @@
     };
 
     # LSP
+    nixd = {
+      url = "github:nekowinston/nixd";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
     nekowinston-nur.url = "github:nekowinston/nur";
     bandithedoge-nur.url = "github:bandithedoge/nur-packages";
 
@@ -56,6 +61,7 @@
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
       perSystem = {
         config,
+        inputs',
         pkgs,
         system,
         ...
@@ -65,8 +71,9 @@
           config.allowUnfree = true;
           overlays = [
             (f: p: {
-              nvfetcher = inputs.nvfetcher.packages.${system}.default;
+              nvfetcher = inputs'.nvfetcher.packages.default;
               repos = {
+                nixd = inputs'.nixd.packages;
                 bandithedoge = import inputs.bandithedoge-nur {inherit (p) pkgs;};
                 nekowinston = import inputs.nekowinston-nur {inherit (p) pkgs;};
               };
@@ -82,6 +89,7 @@
             stylua.enable = true;
           };
         };
+
         formatter = pkgs.alejandra;
 
         packages = rec {

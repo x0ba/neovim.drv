@@ -1581,6 +1581,26 @@
         },
         "version": "fec7d3757ab8f46a0ffe298be99b16ad5b9fa229"
     },
+    "tree-sitter-grammar-d": {
+        "cargoLocks": null,
+        "date": "2021-07-18",
+        "extract": null,
+        "name": "tree-sitter-grammar-d",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "CyberShadow",
+            "repo": "tree-sitter-d",
+            "rev": "c2fbf21bd3aa45495fe13247e040ad5815250032",
+            "sha256": "sha256-1aW3nLZ5MbsOEiJ9PH6N/bBUlRihosWa4OWRcAmT3kc=",
+            "type": "github"
+        },
+        "version": "c2fbf21bd3aa45495fe13247e040ad5815250032"
+    },
     "tree-sitter-grammar-dockerfile": {
         "cargoLocks": null,
         "date": "2023-07-06",

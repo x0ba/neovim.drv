@@ -316,6 +316,10 @@ src.git = "https://github.com/tree-sitter/tree-sitter-c"
 fetch.github = "tree-sitter/tree-sitter-css"
 src.git = "https://github.com/tree-sitter/tree-sitter-css"
 
+[tree-sitter-grammar-d]
+fetch.github = "CyberShadow/tree-sitter-d"
+src.git = "https://github.com/CyberShadow/tree-sitter-d"
+
 [tree-sitter-grammar-dockerfile]
 fetch.github = "camdencheek/tree-sitter-dockerfile"
 src.git = "https://github.com/camdencheek/tree-sitter-dockerfile"

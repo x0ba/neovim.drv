@@ -954,6 +954,18 @@
     };
     date = "2023-08-20";
   };
+  tree-sitter-grammar-d = {
+    pname = "tree-sitter-grammar-d";
+    version = "c2fbf21bd3aa45495fe13247e040ad5815250032";
+    src = fetchFromGitHub {
+      owner = "CyberShadow";
+      repo = "tree-sitter-d";
+      rev = "c2fbf21bd3aa45495fe13247e040ad5815250032";
+      fetchSubmodules = false;
+      sha256 = "sha256-1aW3nLZ5MbsOEiJ9PH6N/bBUlRihosWa4OWRcAmT3kc=";
+    };
+    date = "2021-07-18";
+  };
   tree-sitter-grammar-dockerfile = {
     pname = "tree-sitter-grammar-dockerfile";
     version = "c0a9d694d9bf8ab79a919f5f9c7bc9c169caf321";

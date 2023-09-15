@@ -80,6 +80,22 @@
         "type": "github"
       }
     },
+    "dub2nix": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1694449706,
+        "narHash": "sha256-IZc4U6DxAiMIgO5DLOC9EJyJvMdrr1OrRJo+keujfb8=",
+        "owner": "lionello",
+        "repo": "dub2nix",
+        "rev": "d72adcf01c4d4351ed459e169494232a228eedb3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lionello",
+        "repo": "dub2nix",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -321,6 +337,30 @@
         "type": "github"
       }
     },
+    "nixd": {
+      "inputs": {
+        "dub2nix": "dub2nix",
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1694764284,
+        "narHash": "sha256-mDgowqZPNZ4xoHP1b7VQU4iXe8EGGtaizU+ACHngGbE=",
+        "owner": "nekowinston",
+        "repo": "nixd",
+        "rev": "eeee695ce4cfecccecfdc96a82330f4be45da32b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nekowinston",
+        "repo": "nixd",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1694593561,
@@ -517,6 +557,7 @@
         "nekowinston-nur": "nekowinston-nur",
         "neovim": "neovim",
         "neovim-nix": "neovim-nix",
+        "nixd": "nixd",
         "nixpkgs": "nixpkgs_4",
         "nvfetcher": "nvfetcher",
         "pre-commit-nix": "pre-commit-nix"
