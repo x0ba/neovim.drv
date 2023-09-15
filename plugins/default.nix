@@ -31,15 +31,39 @@ in rec {
 
   nvim-treesitter = {
     package = pkgs.callPackage ../pkgs/nvim-treesitter {};
-    config = {
-      highlight.enable = true;
-      rainbow = {
-        enable = true;
-        extended_mode = true;
-        max_file_lines = 8192;
+    config = ./tree-sitter.lua;
+    dependencies = {
+      nvim-treesitter-context = {
+        src = srcs.nvim-treesitter-context;
+        config.mode = "topline";
       };
+      nvim-treesitter-playground.src = srcs.playground;
+      nvim-treesitter-textobjects.src = srcs.nvim-treesitter-textobjects;
+      nvim-ts-autotag.src = srcs.nvim-ts-autotag;
+      rainbow-delimiters.src = srcs.rainbow-delimiters;
     };
   };
+  vim-helm.src = srcs.vim-helm;
+  vim-just.src = srcs.vim-just;
+
+  # markdown headers
+  headlines = {
+    src = srcs.headlines;
+    config = true;
+    dependencies = {inherit nvim-treesitter;};
+  };
+  markdown-preview = {
+    package = pkgs.callPackage ../pkgs/markdown-preview {};
+  };
+
+  dressing.src = srcs.dressing;
+  glance = {
+    src = srcs.glance;
+    config = true;
+  };
+
+  asyncrun-vim.src = srcs.asyncrun-vim;
+  asynctasks-vim.src = srcs.asynctasks-vim;
 
   # pure rice
   alpha = {
@@ -64,12 +88,39 @@ in rec {
 
   flash = {
     src = srcs.flash;
+    config = ./flash.lua;
+    # TODO: improve how neovim.nix does
+    # plugin.<name>.keys = [];
+    dependencies = {inherit which-key;};
+  };
+
+  fidget = {
+    src = srcs.fidget;
+    config = {
+      text = {
+        spinner = "dots";
+        done = "󰗡";
+        commenced = "init";
+        completed = "done";
+      };
+      window.blend = 0;
+      sources = {
+        "copilot".ignore = true;
+        "null-ls".ignore = true;
+      };
+    };
   };
 
   bufferline = {
     src = srcs.bufferline;
     config = ./bufferline.lua;
     dependencies = {inherit catppuccin;};
+  };
+
+  notify = {
+    src = srcs.nvim-notify;
+    config = ./notify.lua;
+    lazy = false;
   };
 
   nvim-colorizer = {
@@ -104,9 +155,25 @@ in rec {
     config = true;
   };
 
+  comment = {
+    src = srcs.comment;
+    config = true;
+  };
   indent-blankline = {
     src = srcs.indent-blankline;
     config = ./indent-blankline.lua;
+  };
+  nvim-surround = {
+    src = srcs.nvim-surround;
+    config = true;
+  };
+  tagalong-vim = {
+    src = srcs.tagalong-vim;
+    config = ./tagalong.lua;
+  };
+  todo-comments = {
+    src = srcs.todo-comments;
+    config = true;
   };
 
   copilot-lua = {
@@ -163,5 +230,117 @@ in rec {
     # TODO: config:
     # vim.g.db_ui_use_nerd_fonts = true
     # vim.g.db_ui_win_position = "right"
+  };
+
+  lualine = {
+    src = srcs.lualine;
+    config = ./lualine.lua;
+    dependencies = {
+      navic = {
+        src = srcs.nvim-navic;
+        config = {
+          highlight = true;
+          separator = " ";
+          icons = {
+            File = " ";
+            Module = " ";
+            Namespace = " ";
+            Package = " ";
+            Class = " ";
+            Method = " ";
+            Property = " ";
+            Field = " ";
+            Constructor = " ";
+            Enum = " ";
+            Interface = " ";
+            Function = " ";
+            Variable = " ";
+            Constant = " ";
+            String = " ";
+            Number = " ";
+            Boolean = " ";
+            Array = " ";
+            Object = " ";
+            Key = " ";
+            Null = " ";
+            EnumMember = " ";
+            Struct = " ";
+            Event = " ";
+            Operator = " ";
+            TypeParameter = " ";
+          };
+        };
+        dependencies = {inherit nvim-web-devicons;};
+      };
+    };
+  };
+
+  nvim-lspconfig = {
+    src = srcs.nvim-lspconfig;
+    dependencies = {
+      cmp.src = srcs.nvim-cmp;
+      cmp-buffer.src = srcs.cmp-buffer;
+      cmp-cmdline.src = srcs.cmp-cmdline;
+      cmp-nvim-lsp.src = srcs.cmp-nvim-lsp;
+      cmp-path.src = srcs.cmp-path;
+      luasnip.src = srcs.luasnip;
+      cmp_luasnip.src = srcs.cmp_luasnip;
+      cmp-git.src = srcs.cmp-git;
+      lspkind.src = srcs.lspkind;
+      friendly-snippets.src = srcs.friendly-snippets;
+      null-ls.src = srcs.null-ls;
+      trouble = {
+        src = srcs.trouble;
+        config.padding = false;
+      };
+      neodev = {
+        src = srcs.neodev;
+        config = true;
+      };
+      lsp-status.src = srcs.lsp-status;
+      ltex-extra.src = srcs.ltex-extra;
+      schemastore.src = srcs.schemastore;
+      py_lsp.src = srcs.py_lsp;
+      crates = {
+        src = srcs.crates;
+        config = true;
+      };
+      rust-tools.src = srcs.rust-tools;
+      typescript-tools.src = srcs.typescript-tools;
+      go-nvim = {
+        src = srcs.go-nvim;
+        dependencies = {
+          guihua-lua.src = srcs.guihua-lua;
+        };
+      };
+    };
+  };
+
+  telescope = {
+    src = srcs.telescope;
+    config = ./telescope.lua;
+    dependencies = {
+      inherit plenary nvim-web-devicons;
+      telescope-asynctasks.src = srcs.telescope-asynctasks;
+      telescope-file-browser.src = srcs.telescope-file-browser;
+
+      # FIX: make this a package that calls `make` to build!
+      telescope-fzf-native.package = pkgs.callPackage ../pkgs/telescope-fzf-native {};
+
+      telescope-project.src = srcs.telescope-project;
+      telescope-ui-select.src = srcs.telescope-ui-select;
+      octo = {
+        src = srcs.octo;
+        config = true;
+      };
+    };
+  };
+
+  toggleterm = {
+    src = srcs.toggleterm;
+    config = {
+      open_mapping = "<C-t>";
+      shade_terminals = false;
+    };
   };
 }

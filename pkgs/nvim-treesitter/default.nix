@@ -1,8 +1,12 @@
-{pkgs}: let
-  inherit (pkgs) lib;
-
-  nvfetcher = pkgs.callPackage ../../_sources/generated.nix {};
-  tree-sitter = nvfetcher.nvim-treesitter;
+{
+  callPackage,
+  lib,
+  stdenv,
+  symlinkJoin,
+  tree-sitter,
+}: let
+  nvfetcher = callPackage ../../_sources/generated.nix {};
+  nvim-treesitter = nvfetcher.nvim-treesitter;
 
   grammars = {
     astro = {};
@@ -48,10 +52,10 @@
   };
 
   treesitterGrammars = lib.mapAttrsToList (name: attrs:
-    pkgs.stdenv.mkDerivation ({
+    stdenv.mkDerivation ({
         inherit (nvfetcher."tree-sitter-grammar-${name}") pname version src;
 
-        buildInputs = [pkgs.tree-sitter];
+        buildInputs = [tree-sitter];
 
         CFLAGS = ["-Isrc" "-O2"];
         CXXFLAGS = ["-Isrc" "-O2"];
@@ -84,7 +88,7 @@
           runHook postInstall
         '';
 
-        fixupPhase = lib.optionalString pkgs.stdenv.isLinux ''
+        fixupPhase = lib.optionalString stdenv.isLinux ''
           runHook preFixup
           $STRIP $out/parser/${name}.so
           runHook postFixup
@@ -93,7 +97,7 @@
       // attrs.overrides or {}))
   grammars;
 in
-  pkgs.symlinkJoin {
+  symlinkJoin {
     name = "nvim-tree-sitter";
-    paths = [tree-sitter.src] ++ treesitterGrammars;
+    paths = [nvim-treesitter.src] ++ treesitterGrammars;
   }

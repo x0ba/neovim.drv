@@ -84,8 +84,12 @@
         };
         formatter = pkgs.alejandra;
 
-        packages.default = config.neovim.final;
-        packages.nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter {};
+        packages = rec {
+          default = neovim;
+          neovim = config.neovim.final;
+          nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter {};
+          markdown-preview = pkgs.callPackage ./pkgs/markdown-preview {};
+        };
       };
     };
 

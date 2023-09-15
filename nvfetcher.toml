@@ -16,6 +16,7 @@ fetch.github = "saecki/crates.nvim"
 
 [fidget]
 src.git = "https://github.com/j-hui/fidget.nvim"
+src.branch = "legacy"
 fetch.github = "j-hui/fidget.nvim"
 
 [neodev]
@@ -54,7 +55,7 @@ fetch.github = "folke/which-key.nvim"
 src.git = "https://github.com/tpope/vim-dadbod"
 fetch.github = "tpope/vim-dadbod"
 
-[go]
+[go-nvim]
 src.git = "https://github.com/ray-x/go.nvim"
 fetch.github = "ray-x/go.nvim"
 
@@ -84,6 +85,7 @@ fetch.github = "mfussenegger/nvim-dap"
 
 [markdown-preview]
 src.git = "https://github.com/iamcco/markdown-preview.nvim"
+extract = ["app/yarn.lock"]
 fetch.github = "iamcco/markdown-preview.nvim"
 
 [nvim-dap-ui]

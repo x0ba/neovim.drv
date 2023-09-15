@@ -34,6 +34,7 @@
           repos.nekowinston.gonvim-tools
 
           # webdev
+          nodePackages.nodejs
           nodePackages."@astrojs/language-server"
           nodePackages."@tailwindcss/language-server"
           nodePackages.alex
