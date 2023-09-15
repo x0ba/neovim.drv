@@ -1780,6 +1780,26 @@
         },
         "version": "66e3e9ce9180ae08fc57372061006ef83f0abde7"
     },
+    "tree-sitter-grammar-norg": {
+        "cargoLocks": null,
+        "date": "2023-02-12",
+        "extract": null,
+        "name": "tree-sitter-grammar-norg",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nvim-neorg",
+            "repo": "tree-sitter-norg",
+            "rev": "1a305093569632de50f9a316ff843dcda25b4ef5",
+            "sha256": "sha256-dfdykz5DnbuJvRdY3rYehzphIJgDl1efrsEgG2+BhvI=",
+            "type": "github"
+        },
+        "version": "1a305093569632de50f9a316ff843dcda25b4ef5"
+    },
     "tree-sitter-grammar-php": {
         "cargoLocks": null,
         "date": "2023-08-17",

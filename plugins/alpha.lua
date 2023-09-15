@@ -64,13 +64,17 @@ return function()
 			dashboard.button("q", "  Quit", ":qa<CR>"),
 		},
 	}
+
+	local v = vim.version()
+	local vStr = string.format("v%d.%d.%d", v.major, v.minor, v.patch)
+
 	local footer = {
 		type = "group",
 		position = "center",
 		val = {
 			{
 				type = "text",
-				val = "neovim v" .. tostring(vim.version()),
+				val = "neovim v" .. vStr,
 				opts = { hl = "Comment", position = "center" },
 			},
 			{

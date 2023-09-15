@@ -1,7 +1,5 @@
 {pkgs}: let
-  srcs =
-    builtins.mapAttrs (name: pkg: pkg.src)
-    (pkgs.callPackage ../_sources/generated.nix {});
+  srcs = builtins.mapAttrs (name: pkg: pkg.src) (pkgs.callPackage ../_sources/generated.nix {});
 in rec {
   config = {
     src = ./config;
@@ -19,7 +17,6 @@ in rec {
     config = {
       renderer.indent_markers.enable = true;
       diagnostics.enable = true;
-      # actions.file_popup.open_win_config.border = vim.g.bc.style;
     };
     dependencies = {inherit plenary nvim-web-devicons;};
   };
@@ -54,6 +51,11 @@ in rec {
   };
   markdown-preview = {
     package = pkgs.callPackage ../pkgs/markdown-preview {};
+  };
+  vim-gnupg.src = srcs.vim-gnupg;
+  vim-table-mode = {
+    src = srcs.vim-table-mode;
+    config = ./vim-table-mode.lua;
   };
 
   dressing.src = srcs.dressing;
@@ -275,6 +277,10 @@ in rec {
     };
   };
 
+  lspconfig = {
+    src = ./lspconfig;
+    lazy = false;
+  };
   nvim-lspconfig = {
     src = srcs.nvim-lspconfig;
     dependencies = {
@@ -313,7 +319,20 @@ in rec {
           guihua-lua.src = srcs.guihua-lua;
         };
       };
+
+      nvim-dap = {
+        src = srcs.nvim-dap;
+        dependencies = {
+          nvim-dap-ui.src = srcs.nvim-dap-ui;
+          nvim-dap-virtual-text.src = srcs.nvim-dap-virtual-text;
+        };
+      };
     };
+  };
+  nvim-autopairs = {
+    src = srcs.nvim-autopairs;
+    config = ./autopairs.lua;
+    dependencies = {inherit (nvim-lspconfig.dependencies) cmp;};
   };
 
   telescope = {
@@ -323,10 +342,7 @@ in rec {
       inherit plenary nvim-web-devicons;
       telescope-asynctasks.src = srcs.telescope-asynctasks;
       telescope-file-browser.src = srcs.telescope-file-browser;
-
-      # FIX: make this a package that calls `make` to build!
       telescope-fzf-native.package = pkgs.callPackage ../pkgs/telescope-fzf-native {};
-
       telescope-project.src = srcs.telescope-project;
       telescope-ui-select.src = srcs.telescope-ui-select;
       octo = {
@@ -342,5 +358,29 @@ in rec {
       open_mapping = "<C-t>";
       shade_terminals = false;
     };
+  };
+
+  spectre = {
+    src = srcs.nvim-spectre;
+    config.replace_engine.sed.cmd = "sed";
+    dependencies = {inherit plenary;};
+  };
+
+  neorg = {
+    src = srcs.neorg;
+    config = {
+      load = {
+        "core.defaults" = {};
+        "core.concealer" = {};
+        "core.dirman" = {
+          config = {
+            workspaces = {
+              notes = "~/notes";
+            };
+          };
+        };
+      };
+    };
+    dependencies = {inherit plenary;};
   };
 }

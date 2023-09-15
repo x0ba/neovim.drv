@@ -1071,6 +1071,18 @@
     };
     date = "2023-07-13";
   };
+  tree-sitter-grammar-norg = {
+    pname = "tree-sitter-grammar-norg";
+    version = "1a305093569632de50f9a316ff843dcda25b4ef5";
+    src = fetchFromGitHub {
+      owner = "nvim-neorg";
+      repo = "tree-sitter-norg";
+      rev = "1a305093569632de50f9a316ff843dcda25b4ef5";
+      fetchSubmodules = false;
+      sha256 = "sha256-dfdykz5DnbuJvRdY3rYehzphIJgDl1efrsEgG2+BhvI=";
+    };
+    date = "2023-02-12";
+  };
   tree-sitter-grammar-php = {
     pname = "tree-sitter-grammar-php";
     version = "ce2c73a8d84b5648e8792698dc9fd955e5f6a906";

@@ -32,6 +32,7 @@
         inherit (nvfetcher."tree-sitter-grammar-markdown") version src;
       };
     };
+    norg = {};
     nix = {};
     php = {};
     pug = {};
