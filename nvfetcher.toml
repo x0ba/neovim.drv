@@ -140,6 +140,10 @@ extract = ["app/yarn.lock"]
 fetch.github = "iamcco/markdown-preview.nvim"
 src.git = "https://github.com/iamcco/markdown-preview.nvim"
 
+[neoconf]
+fetch.github = "folke/neoconf.nvim"
+src.git = "https://github.com/folke/neoconf.nvim"
+
 [neodev]
 fetch.github = "folke/neodev.nvim"
 src.git = "https://github.com/folke/neodev.nvim"

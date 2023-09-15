@@ -701,6 +701,26 @@
         },
         "version": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96"
     },
+    "neoconf": {
+        "cargoLocks": null,
+        "date": "2023-09-15",
+        "extract": null,
+        "name": "neoconf",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "folke",
+            "repo": "neoconf.nvim",
+            "rev": "06afabe121ec01784e7c4da20340a338ae78f7c7",
+            "sha256": "sha256-TNfTnr5FUXaWxYNfKNXhD1Ab16RsFnUHEPHX0KNoG6g=",
+            "type": "github"
+        },
+        "version": "06afabe121ec01784e7c4da20340a338ae78f7c7"
+    },
     "neodev": {
         "cargoLocks": null,
         "date": "2023-09-14",
