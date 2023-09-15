@@ -9,7 +9,7 @@
         # NB: neovim-nightly is currently broken on darwin
         # see https://github.com/NixOS/nixpkgs/issues/229275
         package =
-          if pkgs.stdenv.hostPlatform.system.isDarwin
+          if pkgs.stdenv.hostPlatform.isDarwin
           then pkgs.neovim-unwrapped
           else inputs'.neovim.packages.default;
 
