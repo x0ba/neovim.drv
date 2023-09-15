@@ -33,7 +33,7 @@
       sourceRoot = "tree-sitter-markdown";
     };
     markdown_inline = {
-      sourceRoot = "tree-sitter-markdown";
+      sourceRoot = "tree-sitter-markdown-inline";
       overrides = {
         pname = "tree-sitter-grammar-markdown_line";
         inherit (nvfetcher."tree-sitter-grammar-markdown") version src;
@@ -50,7 +50,7 @@
       sourceRoot = "typescript";
     };
     tsx = {
-      sourceRoot = "typescript";
+      sourceRoot = "tsx";
       overrides = {
         pname = "tree-sitter-grammar-tsx";
         inherit (nvfetcher."tree-sitter-grammar-typescript") version src;
