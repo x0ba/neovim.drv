@@ -71,7 +71,6 @@
           config.allowUnfree = true;
           overlays = [
             (f: p: {
-              nvfetcher = inputs'.nvfetcher.packages.default;
               repos = {
                 nixd = inputs'.nixd.packages;
                 bandithedoge = import inputs.bandithedoge-nur {inherit (p) pkgs;};
@@ -83,7 +82,10 @@
 
         devenv.shells.default = {
           containers = pkgs.lib.mkForce {};
-          packages = with pkgs; [nvfetcher];
+          packages = with pkgs; [
+            inputs'.nvfetcher.packages.default
+            nix-tree
+          ];
           pre-commit.hooks = {
             alejandra.enable = true;
             stylua.enable = true;

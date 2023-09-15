@@ -35,7 +35,7 @@
 
           # TODO: dlang
           # serve-d
-          dfmt
+          repos.nixd.dfmt
 
           # webdev
           nodePackages.nodejs
