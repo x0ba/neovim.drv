@@ -74,7 +74,7 @@ return function()
 		val = {
 			{
 				type = "text",
-				val = "neovim v" .. vStr,
+				val = "neovim " .. vStr,
 				opts = { hl = "Comment", position = "center" },
 			},
 			{
