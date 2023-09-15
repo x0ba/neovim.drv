@@ -156,6 +156,10 @@ src.git = "https://github.com/NeogitOrg/neogit"
 fetch.github = "nvim-neorg/neorg"
 src.git = "https://github.com/nvim-neorg/neorg"
 
+[neorepl]
+fetch.github = "ii14/neorepl.nvim"
+src.git = "https://github.com/ii14/neorepl.nvim"
+
 [neovim-session-manager]
 fetch.github = "Shatur/neovim-session-manager"
 src.git = "https://github.com/Shatur/neovim-session-manager"

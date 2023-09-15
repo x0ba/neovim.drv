@@ -761,6 +761,26 @@
         },
         "version": "8181099f5946724145cd27494bdaf84f354ba198"
     },
+    "neorepl": {
+        "cargoLocks": null,
+        "date": "2022-11-07",
+        "extract": null,
+        "name": "neorepl",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "ii14",
+            "repo": "neorepl.nvim",
+            "rev": "bc819bb42edca9c4a6b6e5d00f09f94a49c3b735",
+            "sha256": "sha256-OkePRGuaLWE+NRdONAh14PijUF08HsYf9rvwi58fzRU=",
+            "type": "github"
+        },
+        "version": "bc819bb42edca9c4a6b6e5d00f09f94a49c3b735"
+    },
     "neorg": {
         "cargoLocks": null,
         "date": "2023-09-14",

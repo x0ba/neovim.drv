@@ -462,6 +462,18 @@
     };
     date = "2023-09-14";
   };
+  neorepl = {
+    pname = "neorepl";
+    version = "bc819bb42edca9c4a6b6e5d00f09f94a49c3b735";
+    src = fetchFromGitHub {
+      owner = "ii14";
+      repo = "neorepl.nvim";
+      rev = "bc819bb42edca9c4a6b6e5d00f09f94a49c3b735";
+      fetchSubmodules = false;
+      sha256 = "sha256-OkePRGuaLWE+NRdONAh14PijUF08HsYf9rvwi58fzRU=";
+    };
+    date = "2022-11-07";
+  };
   neorg = {
     pname = "neorg";
     version = "0b29eee79e08aa7e378748fd48f17dd69218749c";

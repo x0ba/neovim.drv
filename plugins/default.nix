@@ -306,6 +306,7 @@ in rec {
           src = srcs.neodev;
           config = true;
         };
+        neorepl.src = srcs.neorepl;
         nvim-autopairs = {
           src = srcs.nvim-autopairs;
           config = ./autopairs.lua;
