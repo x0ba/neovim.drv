@@ -498,7 +498,9 @@
         "date": "2023-08-31",
         "extract": null,
         "name": "tree-sitter-grammar-csv",
-        "passthru": null,
+        "passthru": {
+            "location": "csv"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -707,7 +709,9 @@
         "date": "2023-08-10",
         "extract": null,
         "name": "tree-sitter-grammar-dtd",
-        "passthru": null,
+        "passthru": {
+            "location": "tree-sitter-dtd"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -726,7 +730,9 @@
         "date": "2023-02-06",
         "extract": null,
         "name": "tree-sitter-grammar-ebnf",
-        "passthru": null,
+        "passthru": {
+            "location": "crates/tree-sitter-ebnf"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -2113,7 +2119,9 @@
         "date": "2023-07-22",
         "extract": null,
         "name": "tree-sitter-grammar-markdown",
-        "passthru": null,
+        "passthru": {
+            "location": "tree-sitter-markdown"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -2132,7 +2140,9 @@
         "date": "2023-07-22",
         "extract": null,
         "name": "tree-sitter-grammar-markdown_inline",
-        "passthru": null,
+        "passthru": {
+            "location": "tree-sitter-markdown-inline"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -2379,7 +2389,9 @@
         "date": "2023-07-17",
         "extract": null,
         "name": "tree-sitter-grammar-ocaml",
-        "passthru": null,
+        "passthru": {
+            "location": "ocaml"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -2398,7 +2410,9 @@
         "date": "2023-07-17",
         "extract": null,
         "name": "tree-sitter-grammar-ocaml_interface",
-        "passthru": null,
+        "passthru": {
+            "location": "interface"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -2740,7 +2754,9 @@
         "date": "2023-08-31",
         "extract": null,
         "name": "tree-sitter-grammar-psv",
-        "passthru": null,
+        "passthru": {
+            "location": "psv"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -3576,7 +3592,9 @@
         "date": "2023-07-27",
         "extract": null,
         "name": "tree-sitter-grammar-terraform",
-        "passthru": null,
+        "passthru": {
+            "location": "dialects/terraform"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -3690,7 +3708,9 @@
         "date": "2023-08-31",
         "extract": null,
         "name": "tree-sitter-grammar-tsv",
-        "passthru": null,
+        "passthru": {
+            "location": "tsv"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -3709,7 +3729,9 @@
         "date": "2023-07-19",
         "extract": null,
         "name": "tree-sitter-grammar-tsx",
-        "passthru": null,
+        "passthru": {
+            "location": "tsx"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -3766,7 +3788,9 @@
         "date": "2023-07-19",
         "extract": null,
         "name": "tree-sitter-grammar-typescript",
-        "passthru": null,
+        "passthru": {
+            "location": "typescript"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -3861,7 +3885,9 @@
         "date": "2023-07-04",
         "extract": null,
         "name": "tree-sitter-grammar-v",
-        "passthru": null,
+        "passthru": {
+            "location": "tree_sitter_v"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -4032,7 +4058,9 @@
         "date": "2023-09-15",
         "extract": null,
         "name": "tree-sitter-grammar-wing",
-        "passthru": null,
+        "passthru": {
+            "location": "libs/tree-sitter-wing"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,
@@ -4051,7 +4079,9 @@
         "date": "2023-08-10",
         "extract": null,
         "name": "tree-sitter-grammar-xml",
-        "passthru": null,
+        "passthru": {
+            "location": "tree-sitter-xml"
+        },
         "pinned": false,
         "src": {
             "deepClone": false,

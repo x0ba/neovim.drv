@@ -354,6 +354,7 @@
       leaveDotGit = false;
       sha256 = "sha256-ISG+FgauEfuH5+uCxQWA1h9/HTaWR3eJcn+k2c51dYs=";
     };
+    location = "csv";
     date = "2023-08-31";
   };
   tree-sitter-grammar-cuda = {
@@ -497,6 +498,7 @@
       leaveDotGit = false;
       sha256 = "sha256-3ryZXRgsBaNKBBHUhJ8ANHYunOUMzthMI7gw+6lnooQ=";
     };
+    location = "tree-sitter-dtd";
     date = "2023-08-10";
   };
   tree-sitter-grammar-ebnf = {
@@ -510,6 +512,7 @@
       leaveDotGit = false;
       sha256 = "sha256-Cch6WCYq9bsWGypzDGapxBLJ0ZB432uAl6YjEjBJ5yg=";
     };
+    location = "crates/tree-sitter-ebnf";
     date = "2023-02-06";
   };
   tree-sitter-grammar-eex = {
@@ -1459,6 +1462,7 @@
       leaveDotGit = false;
       sha256 = "sha256-4HofUc+OsI3d2CN9mex5ROwuRHyB6fGow8gl0fe5es4=";
     };
+    location = "tree-sitter-markdown";
     date = "2023-07-22";
   };
   tree-sitter-grammar-markdown_inline = {
@@ -1472,6 +1476,7 @@
       leaveDotGit = false;
       sha256 = "sha256-4HofUc+OsI3d2CN9mex5ROwuRHyB6fGow8gl0fe5es4=";
     };
+    location = "tree-sitter-markdown-inline";
     date = "2023-07-22";
   };
   tree-sitter-grammar-matlab = {
@@ -1641,6 +1646,7 @@
       leaveDotGit = false;
       sha256 = "sha256-j3Hv2qOMxeBNOW+WIgIYzG3zMIFWPQpoHe94b2rT+A8=";
     };
+    location = "ocaml";
     date = "2023-07-17";
   };
   tree-sitter-grammar-ocaml_interface = {
@@ -1654,6 +1660,7 @@
       leaveDotGit = false;
       sha256 = "sha256-j3Hv2qOMxeBNOW+WIgIYzG3zMIFWPQpoHe94b2rT+A8=";
     };
+    location = "interface";
     date = "2023-07-17";
   };
   tree-sitter-grammar-ocamllex = {
@@ -1888,6 +1895,7 @@
       leaveDotGit = false;
       sha256 = "sha256-ISG+FgauEfuH5+uCxQWA1h9/HTaWR3eJcn+k2c51dYs=";
     };
+    location = "psv";
     date = "2023-08-31";
   };
   tree-sitter-grammar-pug = {
@@ -2460,6 +2468,7 @@
       leaveDotGit = false;
       sha256 = "sha256-okLwoDGgK6aM5+8oelfRnuKqIimTs8Hc0N8Ikrm2eY0=";
     };
+    location = "dialects/terraform";
     date = "2023-07-27";
   };
   tree-sitter-grammar-thrift = {
@@ -2538,6 +2547,7 @@
       leaveDotGit = false;
       sha256 = "sha256-ISG+FgauEfuH5+uCxQWA1h9/HTaWR3eJcn+k2c51dYs=";
     };
+    location = "tsv";
     date = "2023-08-31";
   };
   tree-sitter-grammar-tsx = {
@@ -2551,6 +2561,7 @@
       leaveDotGit = false;
       sha256 = "sha256-oZKit8kScXcOptmT2ckywL5JlAVe+wuwhuj6ThEI5OQ=";
     };
+    location = "tsx";
     date = "2023-07-19";
   };
   tree-sitter-grammar-turtle = {
@@ -2590,6 +2601,7 @@
       leaveDotGit = false;
       sha256 = "sha256-oZKit8kScXcOptmT2ckywL5JlAVe+wuwhuj6ThEI5OQ=";
     };
+    location = "typescript";
     date = "2023-07-19";
   };
   tree-sitter-grammar-ungrammar = {
@@ -2655,6 +2667,7 @@
       leaveDotGit = false;
       sha256 = "sha256-ERtjgmnXzXyuKLxVy6Pi89B59BaB87JIzZqaWMZPR9k=";
     };
+    location = "tree_sitter_v";
     date = "2023-07-04";
   };
   tree-sitter-grammar-vala = {
@@ -2772,6 +2785,7 @@
       leaveDotGit = false;
       sha256 = "sha256-vfmpob+2yh/Lnhc6b+Lz0nB7bwk2tMbbIFs1iASj19M=";
     };
+    location = "libs/tree-sitter-wing";
     date = "2023-09-15";
   };
   tree-sitter-grammar-xml = {
@@ -2785,6 +2799,7 @@
       leaveDotGit = false;
       sha256 = "sha256-3ryZXRgsBaNKBBHUhJ8ANHYunOUMzthMI7gw+6lnooQ=";
     };
+    location = "tree-sitter-xml";
     date = "2023-08-10";
   };
   tree-sitter-grammar-yaml = {

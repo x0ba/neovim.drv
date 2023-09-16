@@ -17,6 +17,9 @@ for _, lang in pairs(parser_list) do
 	if info.branch then
 		c = c .. 'src.branch = "' .. info.branch .. '"\n'
 	end
+	if info.location then
+		c = c .. 'passthru = { location = "' .. info.location .. '" }\n'
+	end
 	c = c .. "\n"
 end
 

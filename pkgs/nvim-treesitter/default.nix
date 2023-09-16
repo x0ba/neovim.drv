@@ -23,7 +23,7 @@
       preBuild = "${tree-sitter}/bin/tree-sitter generate";
     };
     css = {};
-    csv.sourceRoot = "csv";
+    csv = {};
     dhall = {};
     diff = {};
     dockerfile = {};
@@ -46,8 +46,8 @@
     jsonc = {};
     lua = {};
     make = {};
-    markdown.sourceRoot = "tree-sitter-markdown";
-    markdown_inline.sourceRoot = "tree-sitter-markdown-inline";
+    markdown = {};
+    markdown_inline = {};
     norg = {};
     norg_meta = {};
     nix = {};
@@ -56,9 +56,9 @@
     python = {};
     rust = {};
     scss = {};
-    typescript.sourceRoot = "typescript";
-    tsv.sourceRoot = "tsv";
-    tsx.sourceRoot = "tsx";
+    typescript = {};
+    tsv = {};
+    tsx = {};
     svelte = {};
     vhs = {};
     vue = {};
@@ -66,8 +66,15 @@
   };
 
   treesitterGrammars = lib.mapAttrsToList (name: attrs:
-    stdenv.mkDerivation ({
-        inherit (nvgrammars."tree-sitter-grammar-${name}") pname version src;
+    stdenv.mkDerivation (let
+      nvgrammar = nvgrammars."tree-sitter-grammar-${name}";
+      sourceRoot =
+        if lib.hasAttr "location" nvgrammar
+        then nvgrammar.location
+        else ".";
+    in
+      {
+        inherit (nvgrammar) pname version src;
 
         buildInputs = [tree-sitter];
 
@@ -76,24 +83,18 @@
 
         dontConfigure = true;
 
-        buildPhase = lib.concatStringsSep "\n" [
-          "runHook preBuild"
-          (
-            if attrs ? "sourceRoot"
-            then "cd ${attrs.sourceRoot}"
-            else ""
-          )
-          ''
-            if [[ -e "src/scanner.cc" ]]; then
-              $CXX -c "src/scanner.cc" -o scanner.o $CXXFLAGS
-            elif [[ -e "src/scanner.c" ]]; then
-              $CC -c "src/scanner.c" -o scanner.o $CFLAGS
-            fi
-            $CC -c "src/parser.c" -o parser.o $CFLAGS
-            $CXX -shared -o parser *.o
-            runHook postBuild
-          ''
-        ];
+        buildPhase = ''
+          runHook preBuild
+          cd ${sourceRoot}
+          if [[ -e "src/scanner.cc" ]]; then
+            $CXX -c "src/scanner.cc" -o scanner.o $CXXFLAGS
+          elif [[ -e "src/scanner.c" ]]; then
+            $CC -c "src/scanner.c" -o scanner.o $CFLAGS
+          fi
+          $CC -c "src/parser.c" -o parser.o $CFLAGS
+          $CXX -shared -o parser *.o
+          runHook postBuild
+        '';
 
         installPhase = ''
           runHook preInstall
