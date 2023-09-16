@@ -35,8 +35,9 @@
           repos.nekowinston.gonvim-tools
 
           # TODO: dlang
-          # serve-d
           repos.nixd.dfmt
+          repos.nixd.dcd
+          repos.nixd.serve-d
 
           # webdev
           nodePackages.nodejs
