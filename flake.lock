@@ -348,11 +348,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1694891904,
-        "narHash": "sha256-Gooc24ZpMe0oYDeYKM1sQ2QA/2eF9SpnozqJHmvocz8=",
+        "lastModified": 1694895152,
+        "narHash": "sha256-9myuZFyrpAGKd+/zjrxJ+xrLLvqW3ZmHE1lwasA1gys=",
         "owner": "nekowinston",
         "repo": "nixd",
-        "rev": "fcb5cf638254efd62e7852042d2f4a9e0dac19f4",
+        "rev": "85cde6ca9215769df84403141252b4b76e593091",
         "type": "github"
       },
       "original": {

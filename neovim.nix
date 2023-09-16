@@ -34,9 +34,9 @@
           go
           repos.nekowinston.gonvim-tools
 
-          # repos.nixd.dfmt
-          # repos.nixd.dcd
-          # repos.nixd.serve-d
+          repos.nixd.dfmt
+          repos.nixd.dcd
+          repos.nixd.serve-d-bin
 
           # webdev
           nodePackages.nodejs
