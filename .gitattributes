@@ -1,2 +1,2 @@
 * text=auto
-_sources/*.nix linguist-generated
+**/_sources/* linguist-generated -diff

@@ -1,20 +1,33 @@
 local plugins = require("lazy").plugins()
 
+-- drop the trailing `.nvim`, replace dots with dashes
+local function toNvfetcherName(name)
+	return name:lower():gsub("%.nvim$", ""):gsub("%.", "-")
+end
+
+table.sort(plugins, function(a, b)
+	return toNvfetcherName(a.name) < toNvfetcherName(b.name)
+end)
+
 local c = ""
 for _, plugin in ipairs(plugins) do
-	-- drop the trailing `.nvim`, replace dots with dashes
-	local name = plugin.name:lower():gsub("%.nvim$", ""):gsub("%.", "-")
+	local name = toNvfetcherName(plugin.name)
 
-	-- get rid of the .git at the end
-	local url = plugin.url:sub(1, -5)
+	if plugin.url then
+		-- get rid of the .git at the end
+		local url = plugin.url:sub(1, -5)
 
-	c = c .. "[" .. name .. "]\n"
-	c = c .. 'src.git = "' .. url .. '"\n'
-	if url:find("github") then
-		url = url:gsub("%w+://github.com/", "")
-		c = c .. 'fetch.github = "' .. url .. '"\n'
-	else
-		c = c .. 'fetch.git = "' .. url .. '"\n'
+		c = c .. "[" .. name .. "]\n"
+		if url:find("github") then
+			c = c .. 'fetch.github = "' .. url:gsub("%w+://github.com/", "") .. '"\n'
+		else
+			c = c .. 'fetch.git = "' .. url .. '"\n'
+		end
+		c = c .. 'src.git = "' .. url .. '"\n'
+	end
+
+	if plugin.branch then
+		c = c .. 'src.branch = "' .. plugin.branch .. '"\n'
 	end
 	c = c .. "\n"
 end

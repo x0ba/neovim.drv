@@ -84,6 +84,7 @@
           containers = pkgs.lib.mkForce {};
           packages = with pkgs; [
             inputs'.nvfetcher.packages.default
+            just
             nix-tree
           ];
           pre-commit.hooks = {

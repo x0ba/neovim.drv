@@ -6,62 +6,68 @@
   tree-sitter,
   pkgs,
 }: let
-  nvfetcher = callPackage ../../_sources/generated.nix {};
-  nvim-treesitter = nvfetcher.nvim-treesitter;
+  nvplugins = callPackage ../../_sources/generated.nix {};
+  nvgrammars = callPackage ./_sources/generated.nix {};
+  nvim-treesitter = nvplugins.nvim-treesitter;
 
   grammars = {
+    arduino = {};
     astro = {};
+    awk = {};
     bash = {};
+    beancount = {};
     c = {};
-    d = {
-      overrides = {
-        buildInputs = [pkgs.nodejs];
-        preBuild = "${tree-sitter}/bin/tree-sitter generate";
-      };
+    cpp = {};
+    d.overrides = {
+      buildInputs = [pkgs.nodejs];
+      preBuild = "${tree-sitter}/bin/tree-sitter generate";
     };
     css = {};
+    csv.sourceRoot = "csv";
+    dhall = {};
+    diff = {};
     dockerfile = {};
+    git_config = {};
+    git_rebase = {};
+    gitattributes = {};
+    gitcommit = {};
+    gitignore = {};
     go = {};
+    gomod = {};
+    gosum = {};
+    gpg = {};
     graphql = {};
+    haskell = {};
+    hlsl = {};
     html = {};
     javascript = {};
     jsdoc = {};
     json = {};
     jsonc = {};
     lua = {};
-    markdown = {
-      sourceRoot = "tree-sitter-markdown";
-    };
-    markdown_inline = {
-      sourceRoot = "tree-sitter-markdown-inline";
-      overrides = {
-        pname = "tree-sitter-grammar-markdown_line";
-        inherit (nvfetcher."tree-sitter-grammar-markdown") version src;
-      };
-    };
+    make = {};
+    markdown.sourceRoot = "tree-sitter-markdown";
+    markdown_inline.sourceRoot = "tree-sitter-markdown-inline";
     norg = {};
+    norg_meta = {};
     nix = {};
     php = {};
     pug = {};
     python = {};
     rust = {};
     scss = {};
-    typescript = {
-      sourceRoot = "typescript";
-    };
-    tsx = {
-      sourceRoot = "tsx";
-      overrides = {
-        pname = "tree-sitter-grammar-tsx";
-        inherit (nvfetcher."tree-sitter-grammar-typescript") version src;
-      };
-    };
+    typescript.sourceRoot = "typescript";
+    tsv.sourceRoot = "tsv";
+    tsx.sourceRoot = "tsx";
+    svelte = {};
+    vhs = {};
+    vue = {};
     yaml = {};
   };
 
   treesitterGrammars = lib.mapAttrsToList (name: attrs:
     stdenv.mkDerivation ({
-        inherit (nvfetcher."tree-sitter-grammar-${name}") pname version src;
+        inherit (nvgrammars."tree-sitter-grammar-${name}") pname version src;
 
         buildInputs = [tree-sitter];
 
