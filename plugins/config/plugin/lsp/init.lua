@@ -1,3 +1,6 @@
+local neoconf_present, neoconf = pcall(require, "neoconf")
+neoconf.setup()
+
 local lsp_present, lspconfig = pcall(require, "lspconfig")
 local cmp_present, cmp = pcall(require, "cmp")
 local navic_present, navic = pcall(require, "nvim-navic")

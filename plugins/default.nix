@@ -277,63 +277,56 @@ in rec {
     };
   };
 
-  lspconfig = {
-    src = ./lspconfig;
-    lazy = false;
-    dependencies.nvim-lspconfig = {
-      src = srcs.nvim-lspconfig;
-      dependencies = rec {
-        cmp.src = srcs.nvim-cmp;
-        cmp-buffer.src = srcs.cmp-buffer;
-        cmp-cmdline.src = srcs.cmp-cmdline;
-        cmp-nvim-lsp.src = srcs.cmp-nvim-lsp;
-        cmp-path.src = srcs.cmp-path;
-        luasnip.src = srcs.luasnip;
-        cmp_luasnip.src = srcs.cmp_luasnip;
-        cmp-git.src = srcs.cmp-git;
-        lspkind.src = srcs.lspkind;
-        friendly-snippets.src = srcs.friendly-snippets;
-        null-ls.src = srcs.null-ls;
-        trouble = {
-          src = srcs.trouble;
-          config.padding = false;
+  nvim-lspconfig = {
+    src = srcs.nvim-lspconfig;
+    dependencies = rec {
+      cmp.src = srcs.nvim-cmp;
+      cmp-buffer.src = srcs.cmp-buffer;
+      cmp-cmdline.src = srcs.cmp-cmdline;
+      cmp-nvim-lsp.src = srcs.cmp-nvim-lsp;
+      cmp-path.src = srcs.cmp-path;
+      luasnip.src = srcs.luasnip;
+      cmp_luasnip.src = srcs.cmp_luasnip;
+      cmp-git.src = srcs.cmp-git;
+      lspkind.src = srcs.lspkind;
+      friendly-snippets.src = srcs.friendly-snippets;
+      null-ls.src = srcs.null-ls;
+      trouble = {
+        src = srcs.trouble;
+        config.padding = false;
+      };
+      neoconf.src = srcs.neoconf;
+      neodev = {
+        src = srcs.neodev;
+        config = true;
+      };
+      neorepl.src = srcs.neorepl;
+      nvim-autopairs = {
+        src = srcs.nvim-autopairs;
+        config = ./autopairs.lua;
+        dependencies = {inherit cmp;};
+      };
+      lsp-status.src = srcs.lsp-status;
+      ltex-extra.src = srcs.ltex-extra;
+      schemastore.src = srcs.schemastore;
+      py_lsp.src = srcs.py_lsp;
+      crates = {
+        src = srcs.crates;
+        config = true;
+      };
+      rust-tools.src = srcs.rust-tools;
+      typescript-tools.src = srcs.typescript-tools;
+      go-nvim = {
+        src = srcs.go-nvim;
+        dependencies = {
+          guihua-lua.src = srcs.guihua-lua;
         };
-        neoconf = {
-          src = srcs.neoconf;
-          config = true;
-        };
-        neodev = {
-          src = srcs.neodev;
-          config = true;
-        };
-        neorepl.src = srcs.neorepl;
-        nvim-autopairs = {
-          src = srcs.nvim-autopairs;
-          config = ./autopairs.lua;
-          dependencies = {inherit cmp;};
-        };
-        lsp-status.src = srcs.lsp-status;
-        ltex-extra.src = srcs.ltex-extra;
-        schemastore.src = srcs.schemastore;
-        py_lsp.src = srcs.py_lsp;
-        crates = {
-          src = srcs.crates;
-          config = true;
-        };
-        rust-tools.src = srcs.rust-tools;
-        typescript-tools.src = srcs.typescript-tools;
-        go-nvim = {
-          src = srcs.go-nvim;
-          dependencies = {
-            guihua-lua.src = srcs.guihua-lua;
-          };
-        };
-        nvim-dap = {
-          src = srcs.nvim-dap;
-          dependencies = {
-            nvim-dap-ui.src = srcs.nvim-dap-ui;
-            nvim-dap-virtual-text.src = srcs.nvim-dap-virtual-text;
-          };
+      };
+      nvim-dap = {
+        src = srcs.nvim-dap;
+        dependencies = {
+          nvim-dap-ui.src = srcs.nvim-dap-ui;
+          nvim-dap-virtual-text.src = srcs.nvim-dap-virtual-text;
         };
       };
     };
