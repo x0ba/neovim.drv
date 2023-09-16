@@ -188,11 +188,11 @@ pcall(require("rust-tools").setup, {
 			["rust-analyzer"] = {
 				cargo = {
 					autoReload = true,
-					target = "wasm32-unknown-unknown",
 				},
-				checkOnSave = {
+				check = {
 					allTargets = true,
 				},
+				checkOnSave = true,
 			},
 		},
 	},
