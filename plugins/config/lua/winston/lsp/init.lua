@@ -174,12 +174,12 @@ vim.cmd([[au BufRead,BufNewFile *.jq setfiletype jq]])
 
 local common = { capabilities = capabilities }
 
-require("lsp.go").setup(common)
-require("lsp.ltex").setup(common)
-require("lsp.helm-ls")
-require("lsp.null-ls")
-require("lsp.validation").setup(common)
-require("lsp.webdev").setup(common)
+require("winston.lsp.go").setup(common)
+require("winston.lsp.ltex").setup(common)
+require("winston.lsp.helm-ls")
+require("winston.lsp.null-ls")
+require("winston.lsp.validation").setup(common)
+require("winston.lsp.webdev").setup(common)
 -- external dependencies
 pcall(require("py_lsp").setup, common)
 pcall(require("rust-tools").setup, {

@@ -279,6 +279,7 @@ in rec {
 
   nvim-lspconfig = {
     src = srcs.nvim-lspconfig;
+    config = ./lsp.lua;
     dependencies = rec {
       cmp.src = srcs.nvim-cmp;
       cmp-buffer.src = srcs.cmp-buffer;
