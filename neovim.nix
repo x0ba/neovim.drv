@@ -16,6 +16,7 @@
         paths = with pkgs; [
           # external deps
           fd
+          git
           ripgrep
 
           # python
