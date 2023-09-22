@@ -74,15 +74,7 @@ return function()
 			n = { "<cmd>Telescope notify<cr>", "Show notifications" },
 			p = { "<cmd>Telescope project<cr>", "Project" },
 			r = { "<cmd>Telescope asynctasks all<cr>", "Run asynctasks" },
-			s = {
-				function()
-					require("telescope.builtin").find_files({
-						cwd = vim.fn.resolve(vim.fn.stdpath("config")),
-					})
-				end,
-				"Find in config",
-			},
-			S = { "<cmd>SessionManager load_session<cr>", "Show sessions" },
+			s = { "<cmd>SessionManager load_session<cr>", "Show sessions" },
 		},
 	})
 end
