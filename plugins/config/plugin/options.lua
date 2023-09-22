@@ -1,7 +1,9 @@
 vim.g.mapleader = " "
+
 -- netrw is handled by nvim-tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
 -- true colors
 vim.o.termguicolors = true
 vim.o.cmdheight = 0
@@ -55,20 +57,12 @@ local borderchars = {
 
 -- my custom borderchars
 vim.g.bc = borderchars.rounded
-
--- stylua: ignore
-vim.opt.fillchars:append({ horiz = vim.g.bc.horiz, horizup = vim.g.bc.horizup, horizdown = vim.g.bc.horizdown, vert = vim.g.bc.vert, vertright = vim.g.bc.vertright, vertleft = vim.g.bc.vertleft, verthoriz = vim.g.bc.verthoriz })
-
-if vim.g.neovide then
-	vim.g.neovide_refresh_rate = 60
-	vim.g.neovide_refresh_rate_idle = 5
-	vim.g.neovide_cursor_vfx_mode = "ripple"
-	vim.g.neovide_scroll_animation_length = 0.3
-	vim.g.neovide_input_macos_alt_is_meta = true
-	vim.g.neovide_hide_mouse_when_typing = true
-	vim.keymap.set("n", "<M-CR>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {
-		noremap = true,
-		silent = true,
-	})
-	vim.opt.guifont = { "BerkeleyMono Nerd Font", "h14", "#e-subpixelantialias" }
-end
+vim.opt.fillchars:append({
+	horiz = vim.g.bc.horiz,
+	horizup = vim.g.bc.horizup,
+	horizdown = vim.g.bc.horizdown,
+	vert = vim.g.bc.vert,
+	vertright = vim.g.bc.vertright,
+	vertleft = vim.g.bc.vertleft,
+	verthoriz = vim.g.bc.verthoriz,
+})
