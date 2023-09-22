@@ -35,17 +35,19 @@ return function()
 	-- Re-order to previous/next
 	nmap("<A-<>", "<Cmd>BufferLineMovePrev<CR>")
 	nmap("<A->>", "<Cmd>BufferLineMoveNext<CR>")
+  -- stylua: ignore start
 	-- Goto buffer in position...
-	nmap("<A-1>", "<Cmd>BufferLineGoToBuffer 1<CR>")
-	nmap("<A-2>", "<Cmd>BufferLineGoToBuffer 2<CR>")
-	nmap("<A-3>", "<Cmd>BufferLineGoToBuffer 3<CR>")
-	nmap("<A-4>", "<Cmd>BufferLineGoToBuffer 4<CR>")
-	nmap("<A-5>", "<Cmd>BufferLineGoToBuffer 5<CR>")
-	nmap("<A-6>", "<Cmd>BufferLineGoToBuffer 6<CR>")
-	nmap("<A-7>", "<Cmd>BufferLineGoToBuffer 7<CR>")
-	nmap("<A-8>", "<Cmd>BufferLineGoToBuffer 8<CR>")
-	nmap("<A-9>", "<Cmd>BufferLineGoToBuffer 9<CR>")
-	nmap("<A-0>", "<Cmd>BufferLineGoToBuffer -1<CR>")
+	nmap("<A-1>", "<cmd>lua require('bufferline').go_to(1, true)<cr>")
+	nmap("<A-2>", "<cmd>lua require('bufferline').go_to(2, true)<cr>")
+	nmap("<A-3>", "<cmd>lua require('bufferline').go_to(3, true)<cr>")
+	nmap("<A-4>", "<cmd>lua require('bufferline').go_to(4, true)<cr>")
+	nmap("<A-5>", "<cmd>lua require('bufferline').go_to(5, true)<cr>")
+	nmap("<A-6>", "<cmd>lua require('bufferline').go_to(6, true)<cr>")
+	nmap("<A-7>", "<cmd>lua require('bufferline').go_to(7, true)<cr>")
+	nmap("<A-8>", "<cmd>lua require('bufferline').go_to(8, true)<cr>")
+	nmap("<A-9>", "<cmd>lua require('bufferline').go_to(9, true)<cr>")
+	nmap("<A-0>", "<cmd>lua require('bufferline').go_to(-1, true)<cr>")
+	-- stylua: ignore end
 	-- Pin/unpin buffer
 	nmap("<A-p>", "<Cmd>BufferLineTogglePin<CR>")
 	-- Close buffer
