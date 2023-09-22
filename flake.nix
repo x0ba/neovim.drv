@@ -87,9 +87,12 @@
             just
             nix-tree
           ];
-          pre-commit.hooks = {
-            alejandra.enable = true;
-            stylua.enable = true;
+          pre-commit = {
+            excludes = ["_sources/.+"];
+            hooks = {
+              alejandra.enable = true;
+              stylua.enable = true;
+            };
           };
         };
 
