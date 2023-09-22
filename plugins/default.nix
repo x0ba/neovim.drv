@@ -15,8 +15,11 @@ in rec {
   nvim-tree = {
     src = srcs.nvim-tree-lua;
     config = {
-      renderer.indent_markers.enable = true;
+      sync_root_with_cwd = true;
       diagnostics.enable = true;
+      renderer.indent_markers.enable = true;
+      modified.enable = true;
+      renderer.icons.web_devicons.folder.enable = true;
     };
     dependencies = {inherit plenary nvim-web-devicons;};
   };
