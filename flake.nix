@@ -98,6 +98,11 @@
         packages = rec {
           default = neovim;
           neovim = config.neovim.final;
+          neovide = pkgs.writeShellApplication {
+            name = "neovide-winston";
+            runtimeInputs = [neovim pkgs.neovide];
+            text = "neovide --neovim-bin ${neovim}/bin/nvim";
+          };
           nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter {};
           markdown-preview = pkgs.callPackage ./pkgs/markdown-preview {};
         };
