@@ -15,11 +15,13 @@ M.setup = function(opts)
 		lsp_gofumpt = true,
 		lsp_keymaps = false,
 		lsp_codelens = true,
-		lsp_diag_hdlr = true,
-		lsp_diag_underline = true,
-		lsp_diag_virtual_text = { space = 0, prefix = " " },
-		lsp_diag_signs = true,
-		lsp_diag_update_in_insert = false,
+		diagnostic = {
+			hdlr = true,
+			underline = true,
+			virtual_text = { space = 0, prefix = " " },
+			signs = true,
+			update_in_insert = false,
+		},
 		lsp_document_formatting = false,
 		lsp_inlay_hints = {
 			enable = true,
