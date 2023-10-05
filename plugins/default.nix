@@ -289,11 +289,13 @@ in rec {
       cmp-cmdline.src = srcs.cmp-cmdline;
       cmp-nvim-lsp.src = srcs.cmp-nvim-lsp;
       cmp-path.src = srcs.cmp-path;
-      luasnip.src = srcs.luasnip;
+      luasnip = {
+        src = srcs.luasnip;
+        dependencies.friendly-snippets.src = srcs.friendly-snippets;
+      };
       cmp_luasnip.src = srcs.cmp_luasnip;
       cmp-git.src = srcs.cmp-git;
       lspkind.src = srcs.lspkind;
-      friendly-snippets.src = srcs.friendly-snippets;
       null-ls.src = srcs.null-ls;
       trouble = {
         src = srcs.trouble;

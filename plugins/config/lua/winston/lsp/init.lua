@@ -6,16 +6,13 @@ local cmp_present, cmp = pcall(require, "cmp")
 local navic_present, navic = pcall(require, "nvim-navic")
 local luasnip_present, luasnip = pcall(require, "luasnip")
 
-if not (cmp_present and lsp_present and luasnip_present) then
+if not (cmp_present and lsp_present and luasnip_present and neoconf_present) then
 	vim.notify("lsp, cmp, luasnip not present", vim.log.levels.ERROR)
 	return
 end
 
 vim.opt.completeopt = "menu,menuone,noselect"
 require("luasnip.loaders.from_vscode").lazy_load()
-require("luasnip.loaders.from_vscode").load({
-	path = { vim.fn.stdpath("config") .. "/snippets" },
-})
 vim.lsp.set_log_level("error")
 
 -- border style
@@ -189,10 +186,6 @@ pcall(require("rust-tools").setup, {
 				cargo = {
 					autoReload = true,
 				},
-				check = {
-					allTargets = true,
-				},
-				checkOnSave = true,
 			},
 		},
 	},
@@ -218,6 +211,7 @@ local servers = {
 	"jqls",
 	"lua_ls",
 	"serve_d",
+	"sourcekit",
 	"taplo",
 	"teal_ls",
 }

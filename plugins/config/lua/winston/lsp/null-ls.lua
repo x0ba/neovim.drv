@@ -29,11 +29,12 @@ null.setup({
 		null.builtins.formatting.rustfmt,
 		null.builtins.formatting.shfmt,
 		null.builtins.formatting.stylua,
+		null.builtins.formatting.swiftformat.with({
+			command = "swift-format",
+		}),
 		null.builtins.formatting.taplo,
 		null.builtins.diagnostics.alex,
 		null.builtins.diagnostics.proselint,
-		null.builtins.hover.dictionary,
-		null.builtins.hover.printenv,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

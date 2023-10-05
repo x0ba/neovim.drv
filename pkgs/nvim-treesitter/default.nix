@@ -56,6 +56,10 @@
     python = {};
     rust = {};
     scss = {};
+    swift.overrides = {
+      buildInputs = [pkgs.nodejs];
+      preBuild = "${tree-sitter}/bin/tree-sitter generate";
+    };
     typescript = {};
     tsv = {};
     tsx = {};
