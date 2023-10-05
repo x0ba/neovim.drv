@@ -1,18 +1,18 @@
 return function()
-	require("indent_blankline").setup({
-		space_char_blankline = " ",
+	require("ibl").setup({
+		exclude = {
+			filetypes = {
+				"alpha",
+				"fugitive",
+				"help",
+				"lazy",
+				"NeogitCommitView",
+				"NeogitConsole",
+				"NeogitStatus",
+				"NvimTree",
+				"TelescopePrompt",
+				"Trouble",
+			},
+		},
 	})
-
-	vim.g.indent_blankline_filetype_exclude = {
-		"alpha",
-		"fugitive",
-		"help",
-		"lazy",
-		"NeogitCommitView",
-		"NeogitConsole",
-		"NeogitStatus",
-		"NvimTree",
-		"TelescopePrompt",
-		"Trouble",
-	}
 end

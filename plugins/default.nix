@@ -291,7 +291,10 @@ in rec {
       cmp-path.src = srcs.cmp-path;
       luasnip = {
         src = srcs.luasnip;
-        dependencies.friendly-snippets.src = srcs.friendly-snippets;
+        dependencies = {
+          friendly-snippets.src = srcs.friendly-snippets;
+          my-snippets.src = pkgs.callPackage ../pkgs/snippets {};
+        };
       };
       cmp_luasnip.src = srcs.cmp_luasnip;
       cmp-git.src = srcs.cmp-git;

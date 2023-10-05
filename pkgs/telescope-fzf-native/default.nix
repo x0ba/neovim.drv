@@ -6,4 +6,6 @@
 in
   vimUtils.buildVimPlugin {
     inherit (nvfetcher) pname version src;
+
+    buildPhase = "make";
   }
