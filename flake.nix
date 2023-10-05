@@ -10,12 +10,6 @@
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    devenv = {
-      url = "github:cachix/devenv";
-      inputs.flake-compat.follows = "flake-compat";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.pre-commit-hooks.follows = "pre-commit-nix";
-    };
 
     neovim = {
       url = "github:neovim/neovim?dir=contrib";
@@ -43,18 +37,11 @@
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat.url = "github:edolstra/flake-compat";
     flake-compat.flake = false;
-    nvfetcher = {
-      url = "github:berberman/nvfetcher";
-      inputs.flake-compat.follows = "flake-compat";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
-        inputs.devenv.flakeModule
         inputs.neovim-nix.flakeModule
         ./neovim.nix
       ];
@@ -80,20 +67,20 @@
           ];
         };
 
-        devenv.shells.default = {
-          containers = pkgs.lib.mkForce {};
-          packages = with pkgs; [
-            inputs'.nvfetcher.packages.default
-            just
-            nix-tree
-          ];
-          pre-commit = {
+        checks = {
+          pre-commit-check = inputs.pre-commit-nix.lib.${system}.run {
+            src = ./.;
             excludes = ["_sources/.+"];
             hooks = {
               alejandra.enable = true;
               stylua.enable = true;
             };
           };
+        };
+
+        devShells.default = pkgs.mkShell {
+          inherit (inputs.self.checks.${system}.pre-commit-check) shellHook;
+          buildInputs = with pkgs; [just nix-tree];
         };
 
         formatter = pkgs.alejandra;

@@ -3,9 +3,9 @@ default:
   @just --choose
 
 fetch-plugins:
-  nvfetcher
+  nix run github:berberman/nvfetcher
 
 fetch-grammars:
-  nvfetcher \
+  nix run github:berberman/nvfetcher -- \
     -o pkgs/nvim-treesitter/_sources \
     -c pkgs/nvim-treesitter/nvfetcher.toml
