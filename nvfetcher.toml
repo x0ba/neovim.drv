@@ -351,3 +351,8 @@ src.git = "https://github.com/dhruvasagar/vim-table-mode"
 [which-key]
 fetch.github = "folke/which-key.nvim"
 src.git = "https://github.com/folke/which-key.nvim"
+
+[neovide]
+src.github = "neovide/neovide"
+fetch.github = "neovide/neovide"
+cargo_locks = ["Cargo.lock"]

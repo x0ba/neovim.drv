@@ -35,7 +35,10 @@ in rec {
     dependencies = {
       nvim-treesitter-context = {
         src = srcs.nvim-treesitter-context;
-        config.mode = "topline";
+        config = {
+          enable = false;
+          mode = "topline";
+        };
       };
       nvim-treesitter-playground.src = srcs.playground;
       nvim-treesitter-textobjects.src = srcs.nvim-treesitter-textobjects;
@@ -221,10 +224,10 @@ in rec {
   };
   diffview.src = srcs.diffview;
 
-  presence = {
-    src = srcs.presence;
-    config = ./presence.lua;
-  };
+  # presence = {
+  #   src = srcs.presence;
+  #   config = ./presence.lua;
+  # };
 
   # wakatime.src = srcs.wakatime;
 

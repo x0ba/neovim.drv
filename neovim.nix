@@ -6,9 +6,7 @@
       ...
     }: {
       neovim = {
-        # NB: neovim-nightly is currently broken on darwin
-        # see https://github.com/NixOS/nixpkgs/issues/229275
-        package = inputs'.neovim.packages.default;
+        package = pkgs.neovim-unwrapped;
 
         paths = with pkgs; [
           # external deps

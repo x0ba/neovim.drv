@@ -11,15 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    neovim = {
-      url = "github:neovim/neovim?dir=contrib";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     neovim-nix = {
       url = "github:willruggiano/neovim.nix";
       inputs.flake-parts.follows = "flake-parts";
-      inputs.neovim.follows = "neovim";
+      inputs.neovim.follows = "";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pre-commit-nix.follows = "pre-commit-nix";
     };
@@ -88,10 +83,12 @@
         packages = rec {
           default = neovim;
           neovim = config.neovim.final;
-          neovide = pkgs.writeShellApplication {
-            name = "neovide-winston";
-            runtimeInputs = [neovim pkgs.neovide];
-            text = "neovide --neovim-bin ${neovim}/bin/nvim";
+          neovide = pkgs.callPackage ./pkgs/neovide {
+            env = {
+              NEOVIDE_FRAME = "none";
+              NEOVIDE_MULTIGRID = "1";
+              NEOVIM_BIN = "${neovim}/bin/nvim";
+            };
           };
           nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter {};
           telescope-fzf-native = pkgs.callPackage ./pkgs/telescope-fzf-native {};

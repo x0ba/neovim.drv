@@ -13,7 +13,7 @@ end
 
 vim.opt.completeopt = "menu,menuone,noselect"
 require("luasnip.loaders.from_vscode").lazy_load()
-vim.lsp.set_log_level("error")
+vim.lsp.set_log_level("trace")
 
 -- border style
 require("lspconfig.ui.windows").default_options.border = "double"
