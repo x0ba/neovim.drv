@@ -26,12 +26,7 @@
           luaPackages.teal-language-server
 
           # go
-          go
           repos.nekowinston.gonvim-tools
-
-          repos.nixd.dfmt
-          repos.nixd.dcd
-          repos.nixd.serve-d-bin
 
           # webdev
           nodePackages.nodejs
@@ -47,11 +42,6 @@
           nodePackages.typescript-language-server
           nodePackages.vscode-langservers-extracted
           nodePackages.yaml-language-server
-
-          # rust
-          cargo
-          rust-analyzer
-          rustfmt
 
           # etc
           alejandra
