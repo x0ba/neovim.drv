@@ -1,6 +1,6 @@
 return function()
 	require("catppuccin").setup({
-		transparent_background = not vim.g.neovide,
+		transparent_background = false,
 		dim_inactive = {
 			enabled = false,
 			shade = "dark",
