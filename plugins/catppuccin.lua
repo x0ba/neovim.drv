@@ -1,6 +1,10 @@
 return function()
 	require("catppuccin").setup({
 		transparent_background = false,
+		background = {
+			light = "latte",
+			dark = "frappe",
+		},
 		dim_inactive = {
 			enabled = false,
 			shade = "dark",
