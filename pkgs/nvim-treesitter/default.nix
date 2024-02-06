@@ -10,6 +10,11 @@
   nvgrammars = callPackage ./_sources/generated.nix {};
   nvim-treesitter = nvplugins.nvim-treesitter;
 
+  ts-generate = {
+    overrides.buildInputs = [pkgs.nodejs];
+    overrides.preBuild = "${tree-sitter}/bin/tree-sitter generate";
+  };
+
   grammars = {
     arduino = {};
     astro = {};
@@ -18,10 +23,7 @@
     beancount = {};
     c = {};
     cpp = {};
-    d.overrides = {
-      buildInputs = [pkgs.nodejs];
-      preBuild = "${tree-sitter}/bin/tree-sitter generate";
-    };
+    d = ts-generate;
     css = {};
     csv = {};
     dhall = {};
@@ -41,6 +43,7 @@
     hlsl = {};
     html = {};
     javascript = {};
+    just = ts-generate;
     jsdoc = {};
     json = {};
     jsonc = {};
@@ -56,15 +59,13 @@
     python = {};
     rust = {};
     scss = {};
-    swift.overrides = {
-      buildInputs = [pkgs.nodejs];
-      preBuild = "${tree-sitter}/bin/tree-sitter generate";
-    };
+    swift = ts-generate;
     typescript = {};
     tsv = {};
     tsx = {};
     svelte = {};
-    vhs = {};
+    vim = {};
+    vimdoc = {};
     vue = {};
     yaml = {};
   };

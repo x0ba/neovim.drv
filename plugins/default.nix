@@ -224,12 +224,12 @@ in rec {
   };
   diffview.src = srcs.diffview;
 
-  # presence = {
-  #   src = srcs.presence;
-  #   config = ./presence.lua;
-  # };
+  presence = {
+    src = srcs.presence;
+    config = ./presence.lua;
+  };
 
-  # wakatime.src = srcs.wakatime;
+  wakatime.src = pkgs.vimPlugins.vim-wakatime;
 
   vim-dadbod.src = srcs.vim-dadbod;
   vim-dadbod-completion.src = srcs.vim-dadbod-completion;
@@ -392,4 +392,6 @@ in rec {
     };
     dependencies = {inherit plenary;};
   };
+
+  direnv.src = srcs.direnv-vim;
 }

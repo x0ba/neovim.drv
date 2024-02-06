@@ -7,16 +7,16 @@
     }: {
       neovim = {
         package = pkgs.neovim-unwrapped;
-
         paths = with pkgs; [
           # external deps
           fd
           git
+          gh
           ripgrep
+          wakatime
 
           # python
-          black
-          isort
+          ruff
           nodePackages.pyright
 
           # lua

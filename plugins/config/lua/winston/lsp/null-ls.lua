@@ -9,7 +9,6 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null.setup({
 	sources = {
 		null.builtins.formatting.alejandra,
-		null.builtins.formatting.black,
 		null.builtins.formatting.dfmt,
 		null.builtins.formatting.deno_fmt.with({
 			filetypes = {
@@ -20,12 +19,12 @@ null.setup({
 			},
 		}),
 		null.builtins.formatting.gofumpt,
-		null.builtins.formatting.isort,
 		null.builtins.formatting.prettier.with({
 			filetypes = {
 				"astro",
 			},
 		}),
+		null.builtins.formatting.ruff,
 		null.builtins.formatting.rustfmt,
 		null.builtins.formatting.shfmt,
 		null.builtins.formatting.stylua,

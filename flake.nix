@@ -14,7 +14,6 @@
     neovim-nix = {
       url = "github:willruggiano/neovim.nix";
       inputs.flake-parts.follows = "flake-parts";
-      inputs.neovim.follows = "";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pre-commit-nix.follows = "pre-commit-nix";
     };
@@ -36,15 +35,13 @@
 
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
-      imports = [
-        inputs.neovim-nix.flakeModule
-        ./neovim.nix
-      ];
+      imports = [inputs.neovim-nix.flakeModule ./neovim.nix];
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
       perSystem = {
         config,
         inputs',
         pkgs,
+        self',
         system,
         ...
       }: {
@@ -74,7 +71,7 @@
         };
 
         devShells.default = pkgs.mkShell {
-          inherit (inputs.self.checks.${system}.pre-commit-check) shellHook;
+          inherit (self'.checks.pre-commit-check) shellHook;
           buildInputs = with pkgs; [just nix-tree];
         };
 
