@@ -95,5 +95,16 @@ return function()
 	}
 
 	alpha.setup(theta.config)
-	vim.cmd([[autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2]])
+
+	vim.api.nvim_create_autocmd("User", {
+		pattern = { "AlphaReady" },
+		callback = function()
+			vim.o.showtabline = 0
+		end,
+	})
+	vim.api.nvim_create_autocmd("BufUnload", {
+		callback = function()
+			vim.o.showtabline = 2
+		end,
+	})
 end
