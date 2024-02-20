@@ -11,8 +11,12 @@ vim.g.neovide_input_macos_alt_is_meta = system == "Darwin"
 vim.g.neovide_refresh_rate = 60
 vim.g.neovide_refresh_rate_idle = 5
 vim.g.neovide_scroll_animation_length = 0.3
-vim.g.neovide_transparency = 0.8
-vim.g.neovide_window_blurred = true
+
+-- options only currently available on macOS
+if vim.loop.os_uname().sysname == "Darwin" then
+	vim.g.neovide_transparency = 0.8
+	vim.g.neovide_window_blurred = true
+end
 
 vim.keymap.set("n", "<M-CR>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {
 	noremap = true,
