@@ -229,7 +229,10 @@ in rec {
     config = ./presence.lua;
   };
 
-  wakatime.src = pkgs.vimPlugins.vim-wakatime;
+  wakatime = {
+    src = pkgs.vimPlugins.vim-wakatime;
+    paths = [pkgs.wakatime];
+  };
 
   vim-dadbod.src = srcs.vim-dadbod;
   vim-dadbod-completion.src = srcs.vim-dadbod-completion;
@@ -333,6 +336,7 @@ in rec {
         dependencies = {
           guihua-lua.src = srcs.guihua-lua;
         };
+        paths = [pkgs.repos.nekowinston.gonvim-tools];
       };
       nvim-dap = {
         src = srcs.nvim-dap;
@@ -373,6 +377,11 @@ in rec {
     src = srcs.nvim-spectre;
     config.replace_engine.sed.cmd = "sed";
     dependencies = {inherit plenary;};
+    paths = [
+      pkgs.gnused
+      # alias for darwin
+      (pkgs.writeShellScriptBin "gsed" "exec ${pkgs.gnused}/bin/sed")
+    ];
   };
 
   neorg = {

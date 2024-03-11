@@ -434,6 +434,18 @@
     "app/yarn.lock" = builtins.readFile ./markdown-preview-a923f5fc5ba36a3b17e289dc35dc17f66d0548ee/app/yarn.lock;
     date = "2023-10-17";
   };
+  monochrome = {
+    pname = "monochrome";
+    version = "2de78d9688ea4a177bcd9be554ab9192337d35ff";
+    src = fetchFromGitHub {
+      owner = "kdheepak";
+      repo = "monochrome.nvim";
+      rev = "2de78d9688ea4a177bcd9be554ab9192337d35ff";
+      fetchSubmodules = false;
+      sha256 = "sha256-TgilR5jnos2YZeaJUuej35bQ9yE825MQk0s6gxwkAbA=";
+    };
+    date = "2021-07-14";
+  };
   neoconf = {
     pname = "neoconf";
     version = "435d70c1bc5a5bd21ecb98163baa8262480c4019";

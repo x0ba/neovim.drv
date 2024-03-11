@@ -721,6 +721,26 @@
         },
         "version": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee"
     },
+    "monochrome": {
+        "cargoLocks": null,
+        "date": "2021-07-14",
+        "extract": null,
+        "name": "monochrome",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kdheepak",
+            "repo": "monochrome.nvim",
+            "rev": "2de78d9688ea4a177bcd9be554ab9192337d35ff",
+            "sha256": "sha256-TgilR5jnos2YZeaJUuej35bQ9yE825MQk0s6gxwkAbA=",
+            "type": "github"
+        },
+        "version": "2de78d9688ea4a177bcd9be554ab9192337d35ff"
+    },
     "neoconf": {
         "cargoLocks": null,
         "date": "2024-02-04",

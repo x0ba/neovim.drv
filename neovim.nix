@@ -13,7 +13,6 @@
           git
           gh
           ripgrep
-          wakatime
 
           # python
           ruff
@@ -24,9 +23,6 @@
           lua-language-server
           luaPackages.tl
           luaPackages.teal-language-server
-
-          # go
-          repos.nekowinston.gonvim-tools
 
           # webdev
           nodePackages.nodejs
@@ -56,11 +52,6 @@
           repos.bandithedoge.nodePackages.emmet-ls
           repos.nekowinston.helm-ls
           repos.nekowinston.jq-lsp
-
-          # nvim-spectre
-          gnused
-          # alias for darwin
-          (writeShellScriptBin "gsed" "exec ${gnused}/bin/sed")
         ];
 
         lazy = {
