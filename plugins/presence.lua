@@ -1,34 +1,32 @@
+local blacklist = {
+	[vim.fn.expand("~/Code/freelance")] = "Using nvim to freelance.",
+	[vim.fn.expand("~/Code/work")] = "Using nvim at work.",
+}
+
+---@param activity string?
+---@param info string?
+---@return {text: string, state: boolean}
+local conceal = function(activity, info)
+	local cur_file = vim.fn.expand("%:p")
+	for k, v in pairs(blacklist) do
+		if cur_file:find("^" .. k) ~= nil then
+			return { text = v, state = true }
+		end
+	end
+	if info ~= nil then
+		return { text = activity .. " " .. info, state = false }
+	end
+	return { text = activity, state = false }
+end
+
 return function()
 	local presence = require("presence")
-
-	local code = vim.fn.expand("$HOME/Code")
-	local blacklist = {
-		[vim.fn.resolve(code .. "work")] = "Using nvim at work.",
-		[vim.fn.resolve(code .. "freelance")] = "Using nvim to freelance.",
-	}
-
-	---@param activity string?
-	---@param info string?
-	---@return {text: string, state: boolean}
-	local conceal = function(activity, info)
-		local cur_file = vim.fn.expand("%:p")
-		for k, v in pairs(blacklist) do
-			if cur_file:find("^" .. k) ~= nil then
-				return { text = v, state = true }
-			end
-		end
-		if info ~= nil then
-			return { text = activity .. " " .. info, state = false }
-		end
-		return { text = activity, state = false }
-	end
 
 	local v = vim.version()
 	presence:setup({
 		auto_update = true,
 		debounce_timeout = 10,
 		neovim_image_text = string.format("Neovim v%d.%d.%d", v.major, v.minor, v.patch),
-		-- Main image display (either "neovim" or "file")
 		main_image = "file",
 		show_time = true,
 		enable_line_number = true,

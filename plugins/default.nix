@@ -399,7 +399,13 @@ in rec {
         };
       };
     };
-    dependencies = {inherit plenary;};
+    dependencies = {
+      inherit plenary;
+      lua-utils.src = srcs.lua-utils;
+      nui.src = srcs.nui;
+      nvim-nio.src = srcs.nvim-nio;
+      pathlib-nvim.src = srcs.pathlib-nvim;
+    };
   };
 
   direnv.src = srcs.direnv-vim;

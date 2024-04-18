@@ -4,33 +4,24 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    pre-commit-nix = {
-      url = "github:cachix/pre-commit-hooks.nix";
-      inputs.flake-compat.follows = "flake-compat";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    flake-utils.url = "github:numtide/flake-utils";
     neovim-nix = {
       url = "github:willruggiano/neovim.nix";
       inputs.flake-parts.follows = "flake-parts";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pre-commit-nix.follows = "pre-commit-nix";
     };
-
-    # LSP
-    nixd = {
-      url = "github:nekowinston/nixd";
+    pre-commit-nix = {
+      url = "github:cachix/pre-commit-hooks.nix";
+      inputs.flake-compat.follows = "";
+      inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
     };
-    nekowinston-nur.url = "github:nekowinston/nur";
-    bandithedoge-nur.url = "github:bandithedoge/nur-packages";
 
-    # maintenance
-    flake-utils.url = "github:numtide/flake-utils";
-    flake-compat.url = "github:edolstra/flake-compat";
-    flake-compat.flake = false;
+    nekowinston-nur = {
+      url = "github:nekowinston/nur";
+      inputs.fenix.follows = "";
+    };
   };
 
   outputs = {flake-parts, ...} @ inputs:
@@ -51,8 +42,6 @@
           overlays = [
             (f: p: {
               repos = {
-                nixd = inputs'.nixd.packages;
-                bandithedoge = import inputs.bandithedoge-nur {inherit (p) pkgs;};
                 nekowinston = import inputs.nekowinston-nur {inherit (p) pkgs;};
               };
             })
@@ -96,12 +85,10 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://bandithedoge.cachix.org"
       "https://nekowinston.cachix.org"
       "https://pre-commit-hooks.cachix.org"
     ];
     extra-trusted-public-keys = [
-      "bandithedoge.cachix.org-1:ZtcHw1anyEa4t6H8m3o/ctYFrwYFPAwoENSvofamE6g="
       "nekowinston.cachix.org-1:lucpmaO+JwtoZj16HCO1p1fOv68s/RL1gumpVzRHRDs="
       "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
     ];

@@ -119,6 +119,10 @@ src.git = "https://github.com/lukas-reineke/indent-blankline.nvim"
 fetch.github = "folke/lazy.nvim"
 src.git = "https://github.com/folke/lazy.nvim"
 
+[lua-utils]
+fetch.github = "nvim-neorg/lua-utils.nvim"
+src.git = "https://github.com/nvim-neorg/lua-utils.nvim"
+
 [lsp-status]
 fetch.github = "nvim-lua/lsp-status.nvim"
 src.git = "https://github.com/nvim-lua/lsp-status.nvim"
@@ -172,6 +176,10 @@ src.git = "https://github.com/Shatur/neovim-session-manager"
 fetch.github = "jose-elias-alvarez/null-ls.nvim"
 src.git = "https://github.com/jose-elias-alvarez/null-ls.nvim"
 
+[nui]
+fetch.github = "MunifTanjim/nui.nvim"
+src.git = "https://github.com/MunifTanjim/nui.nvim"
+
 [nvim-autopairs]
 fetch.github = "windwp/nvim-autopairs"
 src.git = "https://github.com/windwp/nvim-autopairs"
@@ -203,6 +211,10 @@ src.git = "https://github.com/neovim/nvim-lspconfig"
 [nvim-navic]
 fetch.github = "SmiteshP/nvim-navic"
 src.git = "https://github.com/SmiteshP/nvim-navic"
+
+[nvim-nio]
+fetch.github = "nvim-neotest/nvim-nio"
+src.git = "https://github.com/nvim-neotest/nvim-nio"
 
 [nvim-notify]
 fetch.github = "rcarriga/nvim-notify"
@@ -243,6 +255,10 @@ src.git = "https://github.com/nvim-tree/nvim-web-devicons"
 [octo]
 fetch.github = "pwntester/octo.nvim"
 src.git = "https://github.com/pwntester/octo.nvim"
+
+[pathlib-nvim]
+fetch.github = "pysan3/pathlib.nvim"
+src.git = "https://github.com/pysan3/pathlib.nvim"
 
 [playground]
 fetch.github = "nvim-treesitter/playground"

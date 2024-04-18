@@ -42,16 +42,15 @@
           # etc
           alejandra
           deno
+          emmet-ls
+          helm-ls
+          jq-lsp
           ltex-ls
           nil
-          nodePackages.prettier
           proselint
           shellcheck
           shfmt
           taplo
-          repos.bandithedoge.nodePackages.emmet-ls
-          repos.nekowinston.helm-ls
-          repos.nekowinston.jq-lsp
         ];
 
         lazy = {
