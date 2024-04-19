@@ -74,14 +74,9 @@ src.git = "https://github.com/direnv/direnv.vim"
 fetch.github = "stevearc/dressing.nvim"
 src.git = "https://github.com/stevearc/dressing.nvim"
 
-[editorconfig]
-fetch.github = "gpanders/editorconfig.nvim"
-src.git = "https://github.com/gpanders/editorconfig.nvim"
-
 [fidget]
 fetch.github = "j-hui/fidget.nvim"
 src.git = "https://github.com/j-hui/fidget.nvim"
-src.branch = "legacy"
 
 [flash]
 fetch.github = "folke/flash.nvim"
@@ -119,10 +114,6 @@ src.git = "https://github.com/lukas-reineke/indent-blankline.nvim"
 fetch.github = "folke/lazy.nvim"
 src.git = "https://github.com/folke/lazy.nvim"
 
-[lua-utils]
-fetch.github = "nvim-neorg/lua-utils.nvim"
-src.git = "https://github.com/nvim-neorg/lua-utils.nvim"
-
 [lsp-status]
 fetch.github = "nvim-lua/lsp-status.nvim"
 src.git = "https://github.com/nvim-lua/lsp-status.nvim"
@@ -134,6 +125,10 @@ src.git = "https://github.com/onsails/lspkind.nvim"
 [ltex-extra]
 fetch.github = "barreiroleo/ltex-extra.nvim"
 src.git = "https://github.com/barreiroleo/ltex-extra.nvim"
+
+[lua-utils]
+fetch.github = "nvim-neorg/lua-utils.nvim"
+src.git = "https://github.com/nvim-neorg/lua-utils.nvim"
 
 [lualine]
 fetch.github = "nvim-lualine/lualine.nvim"
@@ -160,25 +155,29 @@ src.git = "https://github.com/folke/neodev.nvim"
 fetch.github = "NeogitOrg/neogit"
 src.git = "https://github.com/NeogitOrg/neogit"
 
+[neorepl]
+fetch.github = "ii14/neorepl.nvim"
+src.git = "https://github.com/ii14/neorepl.nvim"
+
 [neorg]
 fetch.github = "nvim-neorg/neorg"
 src.git = "https://github.com/nvim-neorg/neorg"
 
-[neorepl]
-fetch.github = "ii14/neorepl.nvim"
-src.git = "https://github.com/ii14/neorepl.nvim"
+[neorg-telescope]
+fetch.github = "nvim-neorg/neorg-telescope"
+src.git = "https://github.com/nvim-neorg/neorg-telescope"
 
 [neovim-session-manager]
 fetch.github = "Shatur/neovim-session-manager"
 src.git = "https://github.com/Shatur/neovim-session-manager"
 
-[null-ls]
-fetch.github = "jose-elias-alvarez/null-ls.nvim"
-src.git = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-
 [nui]
 fetch.github = "MunifTanjim/nui.nvim"
 src.git = "https://github.com/MunifTanjim/nui.nvim"
+
+[null-ls]
+fetch.github = "jose-elias-alvarez/null-ls.nvim"
+src.git = "https://github.com/jose-elias-alvarez/null-ls.nvim"
 
 [nvim-autopairs]
 fetch.github = "windwp/nvim-autopairs"
@@ -215,10 +214,6 @@ src.git = "https://github.com/SmiteshP/nvim-navic"
 [nvim-nio]
 fetch.github = "nvim-neotest/nvim-nio"
 src.git = "https://github.com/nvim-neotest/nvim-nio"
-
-[nvim-notify]
-fetch.github = "rcarriga/nvim-notify"
-src.git = "https://github.com/rcarriga/nvim-notify"
 
 [nvim-spectre]
 fetch.github = "nvim-pack/nvim-spectre"
@@ -259,10 +254,6 @@ src.git = "https://github.com/pwntester/octo.nvim"
 [pathlib-nvim]
 fetch.github = "pysan3/pathlib.nvim"
 src.git = "https://github.com/pysan3/pathlib.nvim"
-
-[playground]
-fetch.github = "nvim-treesitter/playground"
-src.git = "https://github.com/nvim-treesitter/playground"
 
 [plenary]
 fetch.github = "nvim-lua/plenary.nvim"

@@ -1,8 +1,4 @@
 return function()
-	require("session_manager").setup({
-		autoload_mode = "CurrentDir",
-	})
-
 	local function apply_gradient_hl(text)
 		local lines = {}
 		for i, line in ipairs(text) do

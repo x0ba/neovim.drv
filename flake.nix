@@ -6,7 +6,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-utils.url = "github:numtide/flake-utils";
     neovim-nix = {
-      url = "github:willruggiano/neovim.nix";
+      url = "github:nekowinston/neovim.nix/feat/add-pluginspec-main-field";
       inputs.flake-parts.follows = "flake-parts";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pre-commit-nix.follows = "pre-commit-nix";
@@ -40,9 +40,9 @@
           inherit system;
           config.allowUnfree = true;
           overlays = [
-            (f: p: {
+            (_: _: {
               repos = {
-                nekowinston = import inputs.nekowinston-nur {inherit (p) pkgs;};
+                nekowinston = import inputs.nekowinston-nur {inherit pkgs;};
               };
             })
           ];
@@ -79,6 +79,16 @@
           nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter {};
           telescope-fzf-native = pkgs.callPackage ./pkgs/telescope-fzf-native {};
           markdown-preview = pkgs.callPackage ./pkgs/markdown-preview {};
+          docker = pkgs.dockerTools.buildImage {
+            name = "nekowinston-nvim";
+            copyToRoot = with pkgs.dockerTools; [
+              pkgs.dockerTools.usrBinEnv
+              pkgs.dockerTools.binSh
+              pkgs.dockerTools.caCertificates
+              pkgs.dockerTools.fakeNss
+              neovim
+            ];
+          };
         };
       };
     };

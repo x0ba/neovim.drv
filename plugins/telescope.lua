@@ -23,7 +23,6 @@ return function()
 	telescope.load_extension("asynctasks")
 	telescope.load_extension("file_browser")
 	telescope.load_extension("fzf")
-	telescope.load_extension("notify")
 	telescope.load_extension("project")
 	telescope.load_extension("ui-select")
 
@@ -71,7 +70,6 @@ return function()
 			d = { "<cmd>Telescope find_files<cr>", "Find file" },
 			g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
 			h = { "<cmd>Telescope help_tags<cr>", "Help tags" },
-			n = { "<cmd>Telescope notify<cr>", "Show notifications" },
 			p = { "<cmd>Telescope project<cr>", "Project" },
 			r = { "<cmd>Telescope asynctasks all<cr>", "Run asynctasks" },
 			s = { "<cmd>SessionManager load_session<cr>", "Show sessions" },

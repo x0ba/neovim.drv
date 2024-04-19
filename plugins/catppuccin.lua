@@ -54,36 +54,6 @@ return function()
 			vimwiki = true,
 			notify = true,
 		},
-		color_overrides = {
-			mocha = {
-				rosewater = "#ece3e1",
-				flamingo = "#e1d2d2",
-				pink = "#ddccd8",
-				mauve = "#bbb2c9",
-				red = "#c4a2aa",
-				maroon = "#cbadb1",
-				peach = "#d5beb4",
-				yellow = "#ece3d3",
-				green = "#b9ddb6",
-				teal = "#badad4",
-				sky = "#b8d4db",
-				sapphire = "#a9c0ce",
-				blue = "#aab3c7",
-				lavender = "#bfc1d2",
-				text = "#d3d6e1",
-				subtext1 = "#bec2d2",
-				subtext0 = "#a8adc3",
-				overlay2 = "#9299b4",
-				overlay1 = "#7c84a5",
-				overlay0 = "#686f94",
-				surface2 = "#555a7b",
-				surface1 = "#434664",
-				surface0 = "#30314b",
-				base = "#101010",
-				mantle = "#090909",
-				crust = "#080808",
-			},
-		},
 		highlight_overrides = {
 			all = function(colors)
 				local overrides = {
@@ -103,14 +73,6 @@ return function()
 					BufferLineTabSeparator = { link = "FloatBorder" },
 					BufferLineSeparator = { link = "FloatBorder" },
 					BufferLineOffsetSeparator = { link = "FloatBorder" },
-					--
-					FidgetTitle = { fg = colors.subtext1 },
-					FidgetTask = { fg = colors.subtext0 },
-
-					NotifyBackground = { bg = colors.base },
-					NotifyINFOBorder = { link = "NotifyInfoTitle" },
-					NotifyINFOIcon = { link = "NotifyINFOTitle" },
-					NotifyINFOTitle = { fg = colors.pink },
 				}
 
 				local U = require("catppuccin.utils.colors")

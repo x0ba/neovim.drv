@@ -72,14 +72,6 @@ return function()
 				"Prisma",
 				"https://github.com/prisma.png",
 			},
-			["bu"] = {
-				"Butane Config",
-				"https://github.com/coreos.png",
-			},
-			["ign"] = {
-				"CoreOS Ignition",
-				"https://github.com/coreos.png",
-			},
 		},
 		-- Rich Presence text options
 		editing_text = function(s)

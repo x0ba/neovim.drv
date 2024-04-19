@@ -1,5 +1,6 @@
 {pkgs}: let
   srcs = builtins.mapAttrs (name: pkg: pkg.src) (pkgs.callPackage ../_sources/generated.nix {});
+  inherit (pkgs.lib.generators) mkLuaInline;
 in rec {
   config = {
     src = ./config;
@@ -19,19 +20,29 @@ in rec {
       diagnostics.enable = true;
       renderer.indent_markers.enable = true;
       modified.enable = true;
-      renderer.icons.web_devicons.folder.enable = true;
     };
     dependencies = {inherit plenary nvim-web-devicons;};
+    event = "VeryLazy";
   };
   nvim-web-devicons = {
     src = srcs.nvim-web-devicons;
     config = ./nvim-web-devicons.lua;
     dependencies = {inherit catppuccin;};
+    event = "VeryLazy";
   };
 
   nvim-treesitter = {
     package = pkgs.callPackage ../pkgs/nvim-treesitter {};
-    config = ./tree-sitter.lua;
+    main = "nvim-treesitter.configs";
+    config = {
+      auto_install = false;
+      highlight.enable = true;
+      rainbow = {
+        enable = true;
+        extended_mode = true;
+        max_file_lines = 8192;
+      };
+    };
     dependencies = {
       nvim-treesitter-context = {
         src = srcs.nvim-treesitter-context;
@@ -40,46 +51,72 @@ in rec {
           mode = "topline";
         };
       };
-      nvim-treesitter-playground.src = srcs.playground;
       nvim-treesitter-textobjects.src = srcs.nvim-treesitter-textobjects;
       nvim-ts-autotag.src = srcs.nvim-ts-autotag;
       rainbow-delimiters.src = srcs.rainbow-delimiters;
     };
+    event = "VeryLazy";
   };
-  vim-helm.src = srcs.vim-helm;
-  vim-just.src = srcs.vim-just;
+  vim-helm = {
+    src = srcs.vim-helm;
+    event = "VeryLazy";
+  };
+  vim-just = {
+    src = srcs.vim-just;
+    event = "VeryLazy";
+  };
 
-  # markdown headers
   headlines = {
     src = srcs.headlines;
     config = true;
     dependencies = {inherit nvim-treesitter;};
+    event = "VeryLazy";
   };
   markdown-preview = {
     package = pkgs.callPackage ../pkgs/markdown-preview {};
+    event = "VeryLazy";
   };
-  vim-gnupg.src = srcs.vim-gnupg;
+  vim-gnupg = {
+    src = srcs.vim-gnupg;
+    event = "VeryLazy";
+  };
   vim-table-mode = {
     src = srcs.vim-table-mode;
-    config = ./vim-table-mode.lua;
+    config = ''
+      function()
+        vim.cmd([[autocmd FileType markdown let g:table_mode_corner='|']])
+      end
+    '';
+    event = "VeryLazy";
   };
 
-  dressing.src = srcs.dressing;
+  dressing = {
+    src = srcs.dressing;
+    event = "VeryLazy";
+  };
   glance = {
     src = srcs.glance;
     config = true;
+    event = "VeryLazy";
   };
 
-  asyncrun-vim.src = srcs.asyncrun-vim;
-  asynctasks-vim.src = srcs.asynctasks-vim;
+  asyncrun-vim = {
+    src = srcs.asyncrun-vim;
+    event = "VeryLazy";
+  };
+  asynctasks-vim = {
+    src = srcs.asynctasks-vim;
+    event = "VeryLazy";
+  };
 
-  # pure rice
   alpha = {
     src = srcs.alpha-nvim;
     config = ./alpha.lua;
     dependencies = {
       neovim-session-manager = {
         src = srcs.neovim-session-manager;
+        main = "session_manager";
+        config.autoload_mode = "CurrentDir";
         dependencies = {inherit plenary;};
       };
     };
@@ -87,48 +124,40 @@ in rec {
   catppuccin = {
     src = srcs.catppuccin;
     config = ./catppuccin.lua;
+    lazy = false;
     priority = 1000;
   };
   auto-dark-mode = {
     src = srcs.auto-dark-mode;
     config = true;
+    lazy = false;
+    priority = 1000;
   };
 
   flash = {
     src = srcs.flash;
     config = ./flash.lua;
-    # TODO: improve how neovim.nix does
-    # plugin.<name>.keys = [];
     dependencies = {inherit which-key;};
+    event = "VeryLazy";
   };
 
   fidget = {
     src = srcs.fidget;
     config = {
-      text = {
-        spinner = "dots";
-        done = "󰗡";
-        commenced = "init";
-        completed = "done";
+      progress = {
+        ignore = ["copilot" "null-ls"];
+        display.done_icon = "󰗡";
       };
-      window.blend = 0;
-      sources = {
-        "copilot".ignore = true;
-        "null-ls".ignore = true;
-      };
+      notification.override_vim_notify = true;
     };
+    event = "VeryLazy";
   };
 
   bufferline = {
     src = srcs.bufferline;
     config = ./bufferline.lua;
     dependencies = {inherit catppuccin;};
-  };
-
-  notify = {
-    src = srcs.nvim-notify;
-    config = ./notify.lua;
-    lazy = false;
+    event = "VeryLazy";
   };
 
   nvim-colorizer = {
@@ -157,31 +186,64 @@ in rec {
         "!prompt"
       ];
     };
+    event = "VeryLazy";
   };
   color-picker = {
     src = srcs.color-picker;
     config = true;
+    event = "VeryLazy";
   };
 
   comment = {
     src = srcs.comment;
     config = true;
+    event = "VeryLazy";
   };
   indent-blankline = {
     src = srcs.indent-blankline;
-    config = ./indent-blankline.lua;
+    main = "ibl";
+    config.exclude.filetypes = [
+      "alpha"
+      "fugitive"
+      "help"
+      "lazy"
+      "NeogitCommitView"
+      "NeogitConsole"
+      "NeogitStatus"
+      "NvimTree"
+      "TelescopePrompt"
+      "Trouble"
+    ];
+    event = "VeryLazy";
   };
   nvim-surround = {
     src = srcs.nvim-surround;
     config = true;
+    event = "VeryLazy";
   };
   tagalong-vim = {
     src = srcs.tagalong-vim;
-    config = ./tagalong.lua;
+    config = ''
+      function()
+        vim.g.tagalong_filetypes = {
+          "astro",
+          "ejs",
+          "html",
+          "htmldjango",
+          "javascriptreact",
+          "jsx",
+          "php",
+          "typescriptreact",
+          "xml",
+        }
+      end
+    '';
+    event = "VeryLazy";
   };
   todo-comments = {
     src = srcs.todo-comments;
     config = true;
+    event = "VeryLazy";
   };
 
   copilot-lua = {
@@ -208,44 +270,94 @@ in rec {
       copilot_node_command = "node";
       server_opts_overrides = {};
     };
+    event = "VeryLazy";
   };
 
-  # git stuff
-  fugitive.src = srcs.vim-fugitive;
+  fugitive = {
+    src = srcs.vim-fugitive;
+    event = "VeryLazy";
+  };
   gitsigns = {
     src = srcs.gitsigns;
     config = ./gitsigns.lua;
     dependencies = {inherit which-key;};
+    event = "VeryLazy";
   };
   neogit = {
     src = srcs.neogit;
     config.integrations.diffview = true;
-    dependencies = {inherit plenary diffview;};
+    dependencies = {
+      inherit plenary;
+      diffview.src = srcs.diffview;
+    };
+    event = "VeryLazy";
   };
-  diffview.src = srcs.diffview;
 
   presence = {
     src = srcs.presence;
     config = ./presence.lua;
+    event = "VeryLazy";
   };
 
   wakatime = {
     src = pkgs.vimPlugins.vim-wakatime;
     paths = [pkgs.wakatime];
+    event = "VeryLazy";
   };
 
-  vim-dadbod.src = srcs.vim-dadbod;
-  vim-dadbod-completion.src = srcs.vim-dadbod-completion;
+  vim-dadbod = {
+    src = srcs.vim-dadbod;
+    event = "VeryLazy";
+  };
+  vim-dadbod-completion = {
+    src = srcs.vim-dadbod-completion;
+    event = "VeryLazy";
+  };
   vim-dadbod-ui = {
     src = srcs.vim-dadbod-ui;
-    # TODO: config:
-    # vim.g.db_ui_use_nerd_fonts = true
-    # vim.g.db_ui_win_position = "right"
+    config = ''
+      function()
+        vim.g.db_ui_use_nerd_fonts = true
+        vim.g.db_ui_use_nvim_notify = true
+        vim.g.db_ui_win_position = "right"
+      end
+    '';
+    event = "VeryLazy";
   };
 
   lualine = {
     src = srcs.lualine;
-    config = ./lualine.lua;
+    config = {
+      options = {
+        icons_enabled = true;
+        theme = "catppuccin";
+        disabled_filetypes = let
+          ft = ["alpha"];
+        in {
+          statusline = ft;
+          winbar = ft;
+        };
+        component_separators = {
+          left = "";
+          right = "";
+        };
+        section_separators = {
+          left = "";
+          right = "";
+        };
+      };
+      sections = {
+        lualine_a = ["mode"];
+        lualine_b = ["branch" "diff" "diagnostics"];
+        lualine_c = ["searchcount"];
+        lualine_x = ["filetype"];
+        lualine_y = ["progress"];
+        lualine_z = ["location"];
+      };
+      winbar.lualine_c = [
+        (mkLuaInline "{ 'navic', draw_empty = true }")
+      ];
+    };
     dependencies = {
       navic = {
         src = srcs.nvim-navic;
@@ -288,7 +400,11 @@ in rec {
 
   nvim-lspconfig = {
     src = srcs.nvim-lspconfig;
-    config = ./lsp.lua;
+    config = ''
+      function()
+        require("winston.lsp")
+      end
+    '';
     dependencies = rec {
       cmp.src = srcs.nvim-cmp;
       cmp-buffer.src = srcs.cmp-buffer;
@@ -318,7 +434,15 @@ in rec {
       neorepl.src = srcs.neorepl;
       nvim-autopairs = {
         src = srcs.nvim-autopairs;
-        config = ./autopairs.lua;
+        config = ''
+          function()
+          	require("nvim-autopairs").setup()
+
+          	local cmp = require("cmp")
+          	local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+          	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+          end
+        '';
         dependencies = {inherit cmp;};
       };
       lsp-status.src = srcs.lsp-status;
@@ -346,6 +470,7 @@ in rec {
         };
       };
     };
+    event = "VeryLazy";
   };
 
   telescope = {
@@ -363,6 +488,7 @@ in rec {
         config = true;
       };
     };
+    event = "VeryLazy";
   };
 
   toggleterm = {
@@ -371,6 +497,7 @@ in rec {
       open_mapping = "<C-t>";
       shade_terminals = false;
     };
+    event = "VeryLazy";
   };
 
   spectre = {
@@ -382,6 +509,7 @@ in rec {
       # alias for darwin
       (pkgs.writeShellScriptBin "gsed" "exec ${pkgs.gnused}/bin/sed")
     ];
+    event = "VeryLazy";
   };
 
   neorg = {
@@ -389,14 +517,18 @@ in rec {
     config = {
       load = {
         "core.defaults" = {};
+        "core.completion".config = {
+          engine = "nvim-cmp";
+        };
         "core.concealer" = {};
-        "core.dirman" = {
-          config = {
-            workspaces = {
-              notes = "~/notes";
-            };
+        "core.dirman".config = {
+          workspaces = {
+            notes = "~/notes";
           };
         };
+        "core.export" = {};
+        "core.export.markdown" = {};
+        "core.integrations.telescope" = {};
       };
     };
     dependencies = {
@@ -405,8 +537,13 @@ in rec {
       nui.src = srcs.nui;
       nvim-nio.src = srcs.nvim-nio;
       pathlib-nvim.src = srcs.pathlib-nvim;
+      neorg-telescope.src = srcs.neorg-telescope;
     };
+    event = "VeryLazy";
   };
 
-  direnv.src = srcs.direnv-vim;
+  direnv = {
+    src = srcs.direnv-vim;
+    event = "VeryLazy";
+  };
 }
