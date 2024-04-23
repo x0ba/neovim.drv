@@ -355,6 +355,10 @@ src.git = "https://github.com/towolf/vim-helm"
 fetch.github = "NoahTheDuke/vim-just"
 src.git = "https://github.com/NoahTheDuke/vim-just"
 
+[vim-kdl]
+fetch.github = "imsnif/kdl.vim"
+src.git = "https://github.com/imsnif/kdl.vim"
+
 [vim-table-mode]
 fetch.github = "dhruvasagar/vim-table-mode"
 src.git = "https://github.com/dhruvasagar/vim-table-mode"

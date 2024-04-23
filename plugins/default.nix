@@ -65,6 +65,10 @@ in rec {
     src = srcs.vim-just;
     event = "VeryLazy";
   };
+  vim-kdl = {
+    src = srcs.vim-kdl;
+    event = "VeryLazy";
+  };
 
   headlines = {
     src = srcs.headlines;

@@ -1781,6 +1781,26 @@
         },
         "version": "a2777b4b113dafc639f541ad4f0f7da0adc640f4"
     },
+    "vim-kdl": {
+        "cargoLocks": null,
+        "date": "2023-02-20",
+        "extract": null,
+        "name": "vim-kdl",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "imsnif",
+            "repo": "kdl.vim",
+            "rev": "b84d7d3a15d8d30da016cf9e98e2cfbe35cddee5",
+            "sha256": "sha256-IajKK1EjrKs6b2rotOj+RlBBge9Ii2m/iuIuefnjAE4=",
+            "type": "github"
+        },
+        "version": "b84d7d3a15d8d30da016cf9e98e2cfbe35cddee5"
+    },
     "vim-table-mode": {
         "cargoLocks": null,
         "date": "2024-03-14",

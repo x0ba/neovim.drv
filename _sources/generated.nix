@@ -1070,6 +1070,18 @@
     };
     date = "2024-04-09";
   };
+  vim-kdl = {
+    pname = "vim-kdl";
+    version = "b84d7d3a15d8d30da016cf9e98e2cfbe35cddee5";
+    src = fetchFromGitHub {
+      owner = "imsnif";
+      repo = "kdl.vim";
+      rev = "b84d7d3a15d8d30da016cf9e98e2cfbe35cddee5";
+      fetchSubmodules = false;
+      sha256 = "sha256-IajKK1EjrKs6b2rotOj+RlBBge9Ii2m/iuIuefnjAE4=";
+    };
+    date = "2023-02-20";
+  };
   vim-table-mode = {
     pname = "vim-table-mode";
     version = "e4365bde024f73e205eefa2fb78e3029ddb92ea9";
