@@ -169,6 +169,18 @@
     };
     date = "2023-08-07";
   };
+  conform-nvim = {
+    pname = "conform-nvim";
+    version = "a6965ac128eba75537ec2bc5ddd5d5e357062bdc";
+    src = fetchFromGitHub {
+      owner = "stevearc";
+      repo = "conform.nvim";
+      rev = "a6965ac128eba75537ec2bc5ddd5d5e357062bdc";
+      fetchSubmodules = false;
+      sha256 = "sha256-PsKq/dpFmk9aDLmjezO2TIhzI1gd96nRCXbrWmjbdgI=";
+    };
+    date = "2024-04-17";
+  };
   copilot-lua = {
     pname = "copilot-lua";
     version = "f7612f5af4a7d7615babf43ab1e67a2d790c13a6";
@@ -529,18 +541,6 @@
       sha256 = "sha256-Zr5CNx6BIM6naCXW8YBc/Oj1qOtWV/3tuMoaaZjoSZA=";
     };
     date = "2024-03-18";
-  };
-  null-ls = {
-    pname = "null-ls";
-    version = "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7";
-    src = fetchFromGitHub {
-      owner = "jose-elias-alvarez";
-      repo = "null-ls.nvim";
-      rev = "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7";
-      fetchSubmodules = false;
-      sha256 = "sha256-cWA0rzkOp/ekVKaFee7iea1lhnqKtWUIU+fW5M950wI=";
-    };
-    date = "2023-08-11";
   };
   nvim-autopairs = {
     pname = "nvim-autopairs";

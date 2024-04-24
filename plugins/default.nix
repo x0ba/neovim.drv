@@ -54,6 +54,10 @@ in rec {
       nvim-treesitter-textobjects.src = srcs.nvim-treesitter-textobjects;
       nvim-ts-autotag.src = srcs.nvim-ts-autotag;
       rainbow-delimiters.src = srcs.rainbow-delimiters;
+      headlines = {
+        src = srcs.headlines;
+        config = true;
+      };
     };
     event = "VeryLazy";
   };
@@ -70,15 +74,9 @@ in rec {
     event = "VeryLazy";
   };
 
-  headlines = {
-    src = srcs.headlines;
-    config = true;
-    dependencies = {inherit nvim-treesitter;};
-    event = "VeryLazy";
-  };
   markdown-preview = {
     package = pkgs.callPackage ../pkgs/markdown-preview {};
-    event = "VeryLazy";
+    ft = "markdown";
   };
   vim-gnupg = {
     src = srcs.vim-gnupg;
@@ -91,7 +89,7 @@ in rec {
         vim.cmd([[autocmd FileType markdown let g:table_mode_corner='|']])
       end
     '';
-    event = "VeryLazy";
+    ft = "markdown";
   };
 
   dressing = {
@@ -149,7 +147,7 @@ in rec {
     src = srcs.fidget;
     config = {
       progress = {
-        ignore = ["copilot" "null-ls"];
+        ignore = ["copilot"];
         display.done_icon = "󰗡";
       };
       notification.override_vim_notify = true;
@@ -425,7 +423,6 @@ in rec {
       cmp_luasnip.src = srcs.cmp_luasnip;
       cmp-git.src = srcs.cmp-git;
       lspkind.src = srcs.lspkind;
-      null-ls.src = srcs.null-ls;
       trouble = {
         src = srcs.trouble;
         config.padding = false;
@@ -447,7 +444,6 @@ in rec {
           	cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
           end
         '';
-        dependencies = {inherit cmp;};
       };
       lsp-status.src = srcs.lsp-status;
       ltex-extra.src = srcs.ltex-extra;
@@ -475,6 +471,12 @@ in rec {
       };
     };
     event = "VeryLazy";
+  };
+
+  conform = {
+    src = srcs.conform-nvim;
+    config = ./conform.lua;
+    event = "BufWritePre";
   };
 
   telescope = {

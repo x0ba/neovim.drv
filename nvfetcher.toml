@@ -54,6 +54,10 @@ src.git = "https://github.com/ziontee113/color-picker.nvim"
 fetch.github = "numtostr/comment.nvim"
 src.git = "https://github.com/numtostr/comment.nvim"
 
+[conform-nvim]
+fetch.github = "stevearc/conform.nvim"
+src.git = "https://github.com/stevearc/conform.nvim"
+
 [copilot-lua]
 fetch.github = "zbirenbaum/copilot.lua"
 src.git = "https://github.com/zbirenbaum/copilot.lua"
@@ -174,10 +178,6 @@ src.git = "https://github.com/Shatur/neovim-session-manager"
 [nui]
 fetch.github = "MunifTanjim/nui.nvim"
 src.git = "https://github.com/MunifTanjim/nui.nvim"
-
-[null-ls]
-fetch.github = "jose-elias-alvarez/null-ls.nvim"
-src.git = "https://github.com/jose-elias-alvarez/null-ls.nvim"
 
 [nvim-autopairs]
 fetch.github = "windwp/nvim-autopairs"

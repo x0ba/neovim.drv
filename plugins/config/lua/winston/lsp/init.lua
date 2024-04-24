@@ -1,12 +1,14 @@
 local neoconf_present, neoconf = pcall(require, "neoconf")
-neoconf.setup()
+if neoconf_present then
+	neoconf.setup()
+end
 
 local lsp_present, lspconfig = pcall(require, "lspconfig")
 local cmp_present, cmp = pcall(require, "cmp")
 local navic_present, navic = pcall(require, "nvim-navic")
 local luasnip_present, luasnip = pcall(require, "luasnip")
 
-if not (cmp_present and lsp_present and luasnip_present and neoconf_present) then
+if not (cmp_present and lsp_present and luasnip_present) then
 	vim.notify("lsp, cmp, luasnip not present", vim.log.levels.ERROR)
 	return
 end
@@ -90,7 +92,7 @@ cmp.setup({
 		format = require("lspkind").cmp_format({
 			mode = "symbol_text",
 			maxwidth = 50,
-			ellipsis_char = "...",
+			ellipsis_char = "…",
 		}),
 	},
 })
@@ -173,8 +175,6 @@ local common = { capabilities = capabilities }
 
 require("winston.lsp.go").setup(common)
 require("winston.lsp.ltex").setup(common)
-require("winston.lsp.helm-ls")
-require("winston.lsp.null-ls")
 require("winston.lsp.validation").setup(common)
 require("winston.lsp.webdev").setup(common)
 -- external dependencies
@@ -197,7 +197,6 @@ pcall(require("rust-tools").setup, {
 lspconfig.nil_ls.setup(vim.tbl_extend("keep", {
 	settings = {
 		["nil"] = {
-			formatting = { command = { "alejandra" } },
 			nix = { maxMemoryMB = nil },
 		},
 	},
