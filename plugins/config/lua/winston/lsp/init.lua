@@ -15,10 +15,9 @@ end
 
 vim.opt.completeopt = "menu,menuone,noselect"
 require("luasnip.loaders.from_vscode").lazy_load()
-vim.lsp.set_log_level("trace")
 
 -- border style
-require("lspconfig.ui.windows").default_options.border = "double"
+require("lspconfig.ui.windows").default_options.border = vim.g.bc.style
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 	border = vim.g.bc.style,
 })
@@ -168,19 +167,88 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
--- register jq for jqls
-vim.cmd([[au BufRead,BufNewFile *.jq setfiletype jq]])
-
 local common = { capabilities = capabilities }
 
-require("winston.lsp.go").setup(common)
-require("winston.lsp.ltex").setup(common)
-require("winston.lsp.validation").setup(common)
-require("winston.lsp.webdev").setup(common)
--- external dependencies
 pcall(require("py_lsp").setup, common)
-pcall(require("rust-tools").setup, {
-	server = {
+pcall(require("typescript-tools").setup, {
+	single_file_support = false,
+	root_dir = function(fname)
+		local root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git")(fname)
+
+		-- this is needed to make sure we don't pick up root_dir inside node_modules
+		local node_modules_index = root_dir and root_dir:find("node_modules", 1, true)
+		if node_modules_index and node_modules_index > 0 then
+			---@diagnostic disable-next-line: need-check-nil
+			root_dir = root_dir:sub(1, node_modules_index - 2)
+		end
+
+		return root_dir
+	end,
+	settings = {
+		expose_as_code_action = {
+			"add_missing_imports",
+			"fix_all",
+			"remove_unused",
+		},
+      -- Nix silliness
+      -- stylua: ignore
+      tsserver_path = vim.fn.resolve(vim.fn.exepath("tsserver") .. "/../../lib/node_modules/typescript/bin/tsserver"),
+	},
+})
+
+local schemastore = require("schemastore")
+
+local servers = {
+	astro = {},
+	bashls = {},
+	cssls = {},
+	denols = {
+		root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc", ".git"),
+		single_file_support = false,
+	},
+	dockerls = {},
+	emmet_ls = {},
+	gopls = {},
+	graphql = {
+		filetypes = {
+			"graphql",
+			"typescriptreact",
+			"javascriptreact",
+			"typescript",
+		},
+	},
+	helm_ls = {},
+	jqls = {},
+	jsonls = {
+		settings = {
+			json = {
+				schemas = schemastore.json.schemas(),
+				validate = { enable = true },
+			},
+		},
+	},
+	lua_ls = {},
+	html = {},
+	ltex = {
+		on_attach = function()
+			require("ltex_extra").setup({
+				load_langs = { "en-US", "de-AT" },
+				path = vim.fn.stdpath("data") .. "/dictionary",
+			})
+		end,
+		settings = {
+			ltex = {
+				language = "en-US",
+				additionalRules = {
+					enablePickyRules = true,
+					motherTongue = "de_AT",
+				},
+			},
+		},
+	},
+	nixd = {},
+	phpactor = {},
+	rust_analyzer = {
 		settings = {
 			["rust-analyzer"] = {
 				cargo = {
@@ -189,32 +257,60 @@ pcall(require("rust-tools").setup, {
 			},
 		},
 	},
-	tools = {
-		executor = require("rust-tools.executors").toggleterm,
-	},
-})
-
-lspconfig.nil_ls.setup(vim.tbl_extend("keep", {
-	settings = {
-		["nil"] = {
-			nix = { maxMemoryMB = nil },
+	serve_d = {},
+	sourcekit = {},
+	tailwindcss = {},
+	taplo = {},
+	teal_ls = {},
+	yamlls = {
+		settings = {
+			yaml = {
+				completion = true,
+				validate = true,
+				suggest = {
+					parentSkeletonSelectedFirst = true,
+				},
+				schemas = vim.tbl_extend("keep", {
+          -- https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.30.0-standalone/all.json
+          -- stylua: ignore
+          kubernetes = {
+            'deployment.yaml', 'deployment.yml', 'deployment-*.yaml', 'deployment-*.yml', '*-deployment.yaml', '*-deployment.yml',
+            'clusterrole-contour.yaml', 'clusterrole-contour.yml',
+            'clusterrole.yaml', 'clusterrole.yml',
+            'clusterrolebinding.yaml', 'clusterrolebinding.yml',
+            'configmap.yaml', 'configmap.yml',
+            'cronjob.yaml', 'cronjob.yml',
+            'daemonset.yaml', 'daemonset.yml',
+            'hpa.yaml', 'hpa.yml',
+            'ingress.yaml', 'ingress.yml',
+            'job.yaml', 'job.yml',
+            'kubectl-edit-*.yaml',
+            'namespace.yaml', 'namespace.yml',
+            'pvc.yaml', 'pvc.yml',
+            'rbac.yaml', 'rbac.yml',
+            'replicaset.yaml', 'replicaset.yml',
+            'role.yaml', 'role.yml',
+            'rolebinding.yaml', 'rolebinding.yml',
+            'secret.yaml', 'secret.yml',
+            'service.yaml', 'service.yml', 'service-*.yaml', 'service-*.yml', '*-service.yaml', '*-service.yml',
+            'service-account.yaml', 'service-account.yml', 'serviceaccount.yaml', 'serviceaccount.yml', 'serviceaccounts.yaml', 'serviceaccounts.yml', 'sa.yaml', 'sa.yml',
+            'statefulset.yaml', 'statefulset.yml'
+          },
+				}, schemastore.yaml.schemas()),
+			},
+			redhat = {
+				telemetry = {
+					enabled = false,
+				},
+			},
 		},
 	},
-}, common))
-
-local servers = {
-	"astro",
-	"bashls",
-	"dockerls",
-	"helm_ls",
-	"jqls",
-	"lua_ls",
-	"serve_d",
-	"sourcekit",
-	"taplo",
-	"teal_ls",
 }
 
-for _, server in ipairs(servers) do
-	lspconfig[server].setup(common)
+for server, config in pairs(servers) do
+	if config == {} then
+		lspconfig[server].setup(common)
+	else
+		lspconfig[server].setup(vim.tbl_extend("force", common, config))
+	end
 end

@@ -11,19 +11,19 @@
   nvim-treesitter = nvplugins.nvim-treesitter;
 
   ts-generate = {
-    overrides.buildInputs = [pkgs.nodejs];
-    overrides.preBuild = "${tree-sitter}/bin/tree-sitter generate";
+    overrides.nativeBuildInputs = [pkgs.nodejs pkgs.tree-sitter];
+    overrides.preBuild = "tree-sitter generate";
   };
 
   grammars = {
+    # d = ts-generate;
     arduino = {};
     astro = {};
     awk = {};
     bash = {};
-    beancount = {};
+    blade = {};
     c = {};
     cpp = {};
-    d = ts-generate;
     css = {};
     csv = {};
     dhall = {};
@@ -43,27 +43,29 @@
     hlsl = {};
     html = {};
     javascript = {};
-    just = ts-generate;
     jsdoc = {};
     json = {};
     jsonc = {};
+    just = ts-generate;
+    kdl = {};
     lua = {};
     make = {};
     markdown = {};
     markdown_inline = {};
+    nix = {};
     norg = {};
     norg_meta = {};
-    nix = {};
     php = {};
+    php_only = {};
     pug = {};
     python = {};
     rust = {};
     scss = {};
+    svelte = {};
     swift = ts-generate;
-    typescript = {};
     tsv = {};
     tsx = {};
-    svelte = {};
+    typescript = {};
     vim = {};
     vimdoc = {};
     vue = {};

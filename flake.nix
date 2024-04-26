@@ -17,11 +17,6 @@
       inputs.flake-utils.follows = "flake-utils";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nekowinston-nur = {
-      url = "github:nekowinston/nur";
-      inputs.fenix.follows = "";
-    };
   };
 
   outputs = {flake-parts, ...} @ inputs:
@@ -30,7 +25,6 @@
       systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
       perSystem = {
         config,
-        inputs',
         pkgs,
         self',
         system,
@@ -66,9 +60,11 @@
 
         formatter = pkgs.alejandra;
 
-        packages = rec {
-          default = neovim;
+        packages = let
           neovim = config.neovim.final;
+        in {
+          default = neovim;
+          neovim = neovim;
           neovide = pkgs.callPackage ./pkgs/neovide {
             env = {
               NEOVIDE_FRAME = "none";
@@ -81,13 +77,9 @@
           markdown-preview = pkgs.callPackage ./pkgs/markdown-preview {};
           docker = pkgs.dockerTools.buildImage {
             name = "nekowinston-nvim";
-            copyToRoot = with pkgs.dockerTools; [
-              pkgs.dockerTools.usrBinEnv
-              pkgs.dockerTools.binSh
-              pkgs.dockerTools.caCertificates
-              pkgs.dockerTools.fakeNss
-              neovim
-            ];
+            copyToRoot =
+              (with pkgs.dockerTools; [usrBinEnv binSh caCertificates fakeNss])
+              ++ [neovim];
           };
         };
       };
@@ -95,11 +87,9 @@
 
   nixConfig = {
     extra-substituters = [
-      "https://nekowinston.cachix.org"
       "https://pre-commit-hooks.cachix.org"
     ];
     extra-trusted-public-keys = [
-      "nekowinston.cachix.org-1:lucpmaO+JwtoZj16HCO1p1fOv68s/RL1gumpVzRHRDs="
       "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
     ];
   };

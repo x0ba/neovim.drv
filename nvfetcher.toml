@@ -98,14 +98,6 @@ src.git = "https://github.com/lewis6991/gitsigns.nvim"
 fetch.github = "dnlhc/glance.nvim"
 src.git = "https://github.com/dnlhc/glance.nvim"
 
-[go-nvim]
-fetch.github = "ray-x/go.nvim"
-src.git = "https://github.com/ray-x/go.nvim"
-
-[guihua-lua]
-fetch.github = "ray-x/guihua.lua"
-src.git = "https://github.com/ray-x/guihua.lua"
-
 [headlines]
 fetch.github = "lukas-reineke/headlines.nvim"
 src.git = "https://github.com/lukas-reineke/headlines.nvim"
@@ -271,10 +263,6 @@ src.git = "https://github.com/hallerpatrick/py_lsp.nvim"
 fetch.github = "hiphish/rainbow-delimiters.nvim"
 src.git = "https://github.com/hiphish/rainbow-delimiters.nvim"
 
-[rust-tools]
-fetch.github = "simrat39/rust-tools.nvim"
-src.git = "https://github.com/simrat39/rust-tools.nvim"
-
 [schemastore]
 fetch.github = "b0o/schemastore.nvim"
 src.git = "https://github.com/b0o/schemastore.nvim"
@@ -350,14 +338,6 @@ src.git = "https://github.com/jamessan/vim-gnupg"
 [vim-helm]
 fetch.github = "towolf/vim-helm"
 src.git = "https://github.com/towolf/vim-helm"
-
-[vim-just]
-fetch.github = "NoahTheDuke/vim-just"
-src.git = "https://github.com/NoahTheDuke/vim-just"
-
-[vim-kdl]
-fetch.github = "imsnif/kdl.vim"
-src.git = "https://github.com/imsnif/kdl.vim"
 
 [vim-table-mode]
 fetch.github = "dhruvasagar/vim-table-mode"

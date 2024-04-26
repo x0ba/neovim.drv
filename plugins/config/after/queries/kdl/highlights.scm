@@ -1,0 +1,4 @@
+;; extends
+[
+  (identifier)
+] @property.kdl

@@ -34,15 +34,7 @@ in rec {
   nvim-treesitter = {
     package = pkgs.callPackage ../pkgs/nvim-treesitter {};
     main = "nvim-treesitter.configs";
-    config = {
-      auto_install = false;
-      highlight.enable = true;
-      rainbow = {
-        enable = true;
-        extended_mode = true;
-        max_file_lines = 8192;
-      };
-    };
+    config = ./nvim-treesitter.lua;
     dependencies = {
       nvim-treesitter-context = {
         src = srcs.nvim-treesitter-context;
@@ -63,14 +55,6 @@ in rec {
   };
   vim-helm = {
     src = srcs.vim-helm;
-    event = "VeryLazy";
-  };
-  vim-just = {
-    src = srcs.vim-just;
-    event = "VeryLazy";
-  };
-  vim-kdl = {
-    src = srcs.vim-kdl;
     event = "VeryLazy";
   };
 
@@ -229,6 +213,7 @@ in rec {
       function()
         vim.g.tagalong_filetypes = {
           "astro",
+          "blade",
           "ejs",
           "html",
           "htmldjango",
@@ -248,7 +233,7 @@ in rec {
     event = "VeryLazy";
   };
 
-  copilot-lua = {
+  copilot = {
     src = srcs.copilot-lua;
     config = {
       panel.enabled = false;
@@ -259,20 +244,12 @@ in rec {
         keymap.accept = "<C-J>";
       };
       filetypes = {
-        "." = false;
-        cvs = false;
-        gitcommit = false;
-        gitrebase = false;
-        help = false;
-        hgcommit = false;
-        markdown = false;
-        svn = false;
+        gitcommit = true;
+        markdown = true;
         yaml = true;
       };
-      copilot_node_command = "node";
-      server_opts_overrides = {};
     };
-    event = "VeryLazy";
+    event = "InsertEnter";
   };
 
   fugitive = {
@@ -407,7 +384,7 @@ in rec {
         require("winston.lsp")
       end
     '';
-    dependencies = rec {
+    dependencies = {
       cmp.src = srcs.nvim-cmp;
       cmp-buffer.src = srcs.cmp-buffer;
       cmp-cmdline.src = srcs.cmp-cmdline;
@@ -449,19 +426,7 @@ in rec {
       ltex-extra.src = srcs.ltex-extra;
       schemastore.src = srcs.schemastore;
       py_lsp.src = srcs.py_lsp;
-      crates = {
-        src = srcs.crates;
-        config = true;
-      };
-      rust-tools.src = srcs.rust-tools;
       typescript-tools.src = srcs.typescript-tools;
-      go-nvim = {
-        src = srcs.go-nvim;
-        dependencies = {
-          guihua-lua.src = srcs.guihua-lua;
-        };
-        paths = [pkgs.repos.nekowinston.gonvim-tools];
-      };
       nvim-dap = {
         src = srcs.nvim-dap;
         dependencies = {
@@ -471,6 +436,12 @@ in rec {
       };
     };
     event = "VeryLazy";
+  };
+
+  crates = {
+    src = srcs.crates;
+    config = true;
+    event = "BufRead Cargo.toml";
   };
 
   conform = {
