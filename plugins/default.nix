@@ -38,8 +38,63 @@ rec {
   };
 
   nvim-treesitter = {
-    package = pkgs.callPackage ../pkgs/nvim-treesitter { };
-    main = "nvim-treesitter.configs";
+    package = (pkgs.callPackage ../pkgs/nvim-treesitter { }).override {
+      grammars = [
+        "arduino"
+        "astro"
+        "awk"
+        "bash"
+        "blade"
+        "c"
+        "cpp"
+        "css"
+        "csv"
+        "d"
+        "dhall"
+        "diff"
+        "dockerfile"
+        "git_config"
+        "git_rebase"
+        "gitattributes"
+        "gitcommit"
+        "gitignore"
+        "go"
+        "gomod"
+        "gosum"
+        "gpg"
+        "graphql"
+        "haskell"
+        "hlsl"
+        "html"
+        "javascript"
+        "jsdoc"
+        "json"
+        "jsonc"
+        "just"
+        "kdl"
+        "lua"
+        "make"
+        "markdown"
+        "markdown_inline"
+        "nix"
+        "norg"
+        "norg_meta"
+        "php"
+        "php_only"
+        "pug"
+        "python"
+        "rust"
+        "scss"
+        "svelte"
+        "tsv"
+        "tsx"
+        "typescript"
+        "vim"
+        "vimdoc"
+        "vue"
+        "yaml"
+      ];
+    };
     config = ./nvim-treesitter.lua;
     dependencies = {
       nvim-treesitter-context = {
