@@ -1,10 +1,10 @@
 {
   config = {
     perSystem =
-      { pkgs, ... }:
+      { pkgs, inputs', ... }:
       {
         neovim = {
-          package = pkgs.neovim-unwrapped;
+          package = inputs'.neovim.packages.neovim;
           paths = with pkgs; [
             # external deps
             fd

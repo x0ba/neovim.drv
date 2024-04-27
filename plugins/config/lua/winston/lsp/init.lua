@@ -143,6 +143,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			navic.attach(client, ev.buf)
 		end
 
+		if client.server_capabilities.inlayHintProvider then
+			vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+		end
+
 		local opts = { buffer = ev.buf }
 		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)

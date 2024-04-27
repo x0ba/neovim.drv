@@ -5,6 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-utils.url = "github:numtide/flake-utils";
+    neovim = {
+      url = "github:neovim/neovim?dir=contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     neovim-nix = {
       url = "github:nekowinston/neovim.nix/feat/add-pluginspec-main-field";
       inputs.flake-parts.follows = "flake-parts";
