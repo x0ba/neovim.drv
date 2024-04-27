@@ -1,33 +1,33 @@
-{
-  lib,
-  stdenvNoCC,
-}: let
+{ lib, stdenvNoCC }:
+let
   snippets = builtins.readDir ./src;
   packageJSON = builtins.toJSON {
     name = "my-snippets";
     engines.vscode = ">=1.0.0";
-    contributes.snippets =
-      builtins.mapAttrs (name: _: let
+    contributes.snippets = builtins.mapAttrs (
+      name: _:
+      let
         language = builtins.head (lib.splitString ".json" name);
-      in {
+      in
+      {
         inherit language;
         path = "./snippets/${name}";
-      })
-      snippets;
+      }
+    ) snippets;
   };
 in
-  stdenvNoCC.mkDerivation (finalAttrs: {
-    pname = "my-snippets";
-    version = "unstable";
+stdenvNoCC.mkDerivation {
+  pname = "my-snippets";
+  version = "unstable";
 
-    src = ./src;
+  src = ./src;
 
-    dontConfigure = true;
-    dontInstall = true;
+  dontConfigure = true;
+  dontInstall = true;
 
-    buildPhase = ''
-      mkdir -p $out/snippets
-      cp -r $src/* $out/snippets
-      echo '${packageJSON}' > $out/package.json
-    '';
-  })
+  buildPhase = ''
+    mkdir -p $out/snippets
+    cp -r $src/* $out/snippets
+    echo '${packageJSON}' > $out/package.json
+  '';
+}

@@ -9,9 +9,9 @@
       url = "github:nekowinston/neovim.nix/feat/add-pluginspec-main-field";
       inputs.flake-parts.follows = "flake-parts";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.pre-commit-nix.follows = "pre-commit-nix";
+      inputs.pre-commit-nix.follows = "pre-commit-hooks-nix";
     };
-    pre-commit-nix = {
+    pre-commit-hooks-nix = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.flake-compat.follows = "";
       inputs.flake-utils.follows = "flake-utils";
@@ -19,76 +19,98 @@
     };
   };
 
-  outputs = {flake-parts, ...} @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} {
-      imports = [inputs.neovim-nix.flakeModule ./neovim.nix];
-      systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
-      perSystem = {
-        config,
-        pkgs,
-        self',
-        system,
-        ...
-      }: {
-        _module.args.pkgs = import inputs.nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-          overlays = [
-            (_: _: {
-              repos = {
-                nekowinston = import inputs.nekowinston-nur {inherit pkgs;};
+  outputs =
+    { flake-parts, ... }@inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        ./neovim.nix
+        inputs.neovim-nix.flakeModule
+        inputs.pre-commit-hooks-nix.flakeModule
+      ];
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+      perSystem =
+        {
+          config,
+          pkgs,
+          system,
+          ...
+        }:
+        {
+          _module.args.pkgs = import inputs.nixpkgs {
+            inherit system;
+            config.allowUnfree = true;
+            overlays = [
+              (_: _: {
+                repos = {
+                  nekowinston = import inputs.nekowinston-nur { inherit pkgs; };
+                };
+              })
+            ];
+          };
+
+          pre-commit = {
+            settings = {
+              excludes = [ "_sources/.+" ];
+              hooks = {
+                deadnix.enable = true;
+                nixfmt = {
+                  enable = true;
+                  package = pkgs.nixfmt-rfc-style;
+                };
+                stylua.enable = true;
               };
-            })
-          ];
-        };
-
-        checks = {
-          pre-commit-check = inputs.pre-commit-nix.lib.${system}.run {
-            src = ./.;
-            excludes = ["_sources/.+"];
-            hooks = {
-              alejandra.enable = true;
-              stylua.enable = true;
             };
           };
-        };
 
-        devShells.default = pkgs.mkShell {
-          inherit (self'.checks.pre-commit-check) shellHook;
-          buildInputs = with pkgs; [just nix-tree];
-        };
+          devShells.default = pkgs.mkShell {
+            inherit (config.pre-commit.devShell) shellHook;
+            buildInputs = with pkgs; [
+              just
+              nix-tree
+            ];
+          };
 
-        formatter = pkgs.alejandra;
+          formatter = pkgs.alejandra;
 
-        packages = let
-          neovim = config.neovim.final;
-        in {
-          default = neovim;
-          neovim = neovim;
-          neovide = pkgs.callPackage ./pkgs/neovide {
-            env = {
-              NEOVIDE_FRAME = "none";
-              NEOVIDE_MULTIGRID = "1";
-              NEOVIM_BIN = "${neovim}/bin/nvim";
+          packages =
+            let
+              neovim = config.neovim.final;
+            in
+            {
+              default = neovim;
+              neovim = neovim;
+              neovide = pkgs.callPackage ./pkgs/neovide {
+                env = {
+                  NEOVIDE_FRAME = "none";
+                  NEOVIDE_MULTIGRID = "1";
+                  NEOVIM_BIN = "${neovim}/bin/nvim";
+                };
+              };
+              nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter { };
+              telescope-fzf-native = pkgs.callPackage ./pkgs/telescope-fzf-native { };
+              markdown-preview = pkgs.callPackage ./pkgs/markdown-preview { };
+              docker = pkgs.dockerTools.buildImage {
+                name = "nekowinston-nvim";
+                copyToRoot =
+                  (with pkgs.dockerTools; [
+                    usrBinEnv
+                    binSh
+                    caCertificates
+                    fakeNss
+                  ])
+                  ++ [ neovim ];
+              };
             };
-          };
-          nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter {};
-          telescope-fzf-native = pkgs.callPackage ./pkgs/telescope-fzf-native {};
-          markdown-preview = pkgs.callPackage ./pkgs/markdown-preview {};
-          docker = pkgs.dockerTools.buildImage {
-            name = "nekowinston-nvim";
-            copyToRoot =
-              (with pkgs.dockerTools; [usrBinEnv binSh caCertificates fakeNss])
-              ++ [neovim];
-          };
         };
-      };
     };
 
   nixConfig = {
-    extra-substituters = [
-      "https://pre-commit-hooks.cachix.org"
-    ];
+    extra-substituters = [ "https://pre-commit-hooks.cachix.org" ];
     extra-trusted-public-keys = [
       "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
     ];

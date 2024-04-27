@@ -39,7 +39,7 @@
     "gitignore": {
       "inputs": {
         "nixpkgs": [
-          "pre-commit-nix",
+          "pre-commit-hooks-nix",
           "nixpkgs"
         ]
       },
@@ -83,7 +83,7 @@
           "nixpkgs"
         ],
         "pre-commit-nix": [
-          "pre-commit-nix"
+          "pre-commit-hooks-nix"
         ]
       },
       "locked": {
@@ -151,7 +151,7 @@
         "type": "github"
       }
     },
-    "pre-commit-nix": {
+    "pre-commit-hooks-nix": {
       "inputs": {
         "flake-compat": [],
         "flake-utils": [
@@ -183,7 +183,7 @@
         "flake-utils": "flake-utils",
         "neovim-nix": "neovim-nix",
         "nixpkgs": "nixpkgs",
-        "pre-commit-nix": "pre-commit-nix"
+        "pre-commit-hooks-nix": "pre-commit-hooks-nix"
       }
     },
     "systems": {

@@ -1,7 +1,9 @@
-{pkgs}: let
-  srcs = builtins.mapAttrs (name: pkg: pkg.src) (pkgs.callPackage ../_sources/generated.nix {});
+{ pkgs }:
+let
+  srcs = builtins.mapAttrs (_: pkg: pkg.src) (pkgs.callPackage ../_sources/generated.nix { });
   inherit (pkgs.lib.generators) mkLuaInline;
-in rec {
+in
+rec {
   config = {
     src = ./config;
     lazy = false;
@@ -21,18 +23,22 @@ in rec {
       renderer.indent_markers.enable = true;
       modified.enable = true;
     };
-    dependencies = {inherit plenary nvim-web-devicons;};
+    dependencies = {
+      inherit plenary nvim-web-devicons;
+    };
     event = "VeryLazy";
   };
   nvim-web-devicons = {
     src = srcs.nvim-web-devicons;
     config = ./nvim-web-devicons.lua;
-    dependencies = {inherit catppuccin;};
+    dependencies = {
+      inherit catppuccin;
+    };
     event = "VeryLazy";
   };
 
   nvim-treesitter = {
-    package = pkgs.callPackage ../pkgs/nvim-treesitter {};
+    package = pkgs.callPackage ../pkgs/nvim-treesitter { };
     main = "nvim-treesitter.configs";
     config = ./nvim-treesitter.lua;
     dependencies = {
@@ -59,7 +65,7 @@ in rec {
   };
 
   markdown-preview = {
-    package = pkgs.callPackage ../pkgs/markdown-preview {};
+    package = pkgs.callPackage ../pkgs/markdown-preview { };
     ft = "markdown";
   };
   vim-gnupg = {
@@ -103,7 +109,9 @@ in rec {
         src = srcs.neovim-session-manager;
         main = "session_manager";
         config.autoload_mode = "CurrentDir";
-        dependencies = {inherit plenary;};
+        dependencies = {
+          inherit plenary;
+        };
       };
     };
   };
@@ -123,7 +131,9 @@ in rec {
   flash = {
     src = srcs.flash;
     config = ./flash.lua;
-    dependencies = {inherit which-key;};
+    dependencies = {
+      inherit which-key;
+    };
     event = "VeryLazy";
   };
 
@@ -131,7 +141,7 @@ in rec {
     src = srcs.fidget;
     config = {
       progress = {
-        ignore = ["copilot"];
+        ignore = [ "copilot" ];
         display.done_icon = "󰗡";
       };
       notification.override_vim_notify = true;
@@ -142,7 +152,9 @@ in rec {
   bufferline = {
     src = srcs.bufferline;
     config = ./bufferline.lua;
-    dependencies = {inherit catppuccin;};
+    dependencies = {
+      inherit catppuccin;
+    };
     event = "VeryLazy";
   };
 
@@ -161,7 +173,9 @@ in rec {
         css_fn = false;
         mode = "background";
         tailwind = "both";
-        sass = {enable = true;};
+        sass = {
+          enable = true;
+        };
         virtualtext = " ";
       };
       buftypes = [
@@ -259,7 +273,9 @@ in rec {
   gitsigns = {
     src = srcs.gitsigns;
     config = ./gitsigns.lua;
-    dependencies = {inherit which-key;};
+    dependencies = {
+      inherit which-key;
+    };
     event = "VeryLazy";
   };
   neogit = {
@@ -280,7 +296,7 @@ in rec {
 
   wakatime = {
     src = pkgs.vimPlugins.vim-wakatime;
-    paths = [pkgs.wakatime];
+    paths = [ pkgs.wakatime ];
     event = "VeryLazy";
   };
 
@@ -310,12 +326,14 @@ in rec {
       options = {
         icons_enabled = true;
         theme = "catppuccin";
-        disabled_filetypes = let
-          ft = ["alpha"];
-        in {
-          statusline = ft;
-          winbar = ft;
-        };
+        disabled_filetypes =
+          let
+            ft = [ "alpha" ];
+          in
+          {
+            statusline = ft;
+            winbar = ft;
+          };
         component_separators = {
           left = "";
           right = "";
@@ -326,16 +344,18 @@ in rec {
         };
       };
       sections = {
-        lualine_a = ["mode"];
-        lualine_b = ["branch" "diff" "diagnostics"];
-        lualine_c = ["searchcount"];
-        lualine_x = ["filetype"];
-        lualine_y = ["progress"];
-        lualine_z = ["location"];
+        lualine_a = [ "mode" ];
+        lualine_b = [
+          "branch"
+          "diff"
+          "diagnostics"
+        ];
+        lualine_c = [ "searchcount" ];
+        lualine_x = [ "filetype" ];
+        lualine_y = [ "progress" ];
+        lualine_z = [ "location" ];
       };
-      winbar.lualine_c = [
-        (mkLuaInline "{ 'navic', draw_empty = true }")
-      ];
+      winbar.lualine_c = [ (mkLuaInline "{ 'navic', draw_empty = true }") ];
     };
     dependencies = {
       navic = {
@@ -372,7 +392,9 @@ in rec {
             TypeParameter = " ";
           };
         };
-        dependencies = {inherit nvim-web-devicons;};
+        dependencies = {
+          inherit nvim-web-devicons;
+        };
       };
     };
   };
@@ -394,7 +416,7 @@ in rec {
         src = srcs.luasnip;
         dependencies = {
           friendly-snippets.src = srcs.friendly-snippets;
-          my-snippets.src = pkgs.callPackage ../pkgs/snippets {};
+          my-snippets.src = pkgs.callPackage ../pkgs/snippets { };
         };
       };
       cmp_luasnip.src = srcs.cmp_luasnip;
@@ -457,7 +479,7 @@ in rec {
       inherit plenary nvim-web-devicons;
       telescope-asynctasks.src = srcs.telescope-asynctasks;
       telescope-file-browser.src = srcs.telescope-file-browser;
-      telescope-fzf-native.package = pkgs.callPackage ../pkgs/telescope-fzf-native {};
+      telescope-fzf-native.package = pkgs.callPackage ../pkgs/telescope-fzf-native { };
       telescope-project.src = srcs.telescope-project;
       telescope-ui-select.src = srcs.telescope-ui-select;
       octo = {
@@ -480,7 +502,9 @@ in rec {
   spectre = {
     src = srcs.nvim-spectre;
     config.replace_engine.sed.cmd = "sed";
-    dependencies = {inherit plenary;};
+    dependencies = {
+      inherit plenary;
+    };
     paths = [
       pkgs.gnused
       # alias for darwin
@@ -493,19 +517,19 @@ in rec {
     src = srcs.neorg;
     config = {
       load = {
-        "core.defaults" = {};
+        "core.defaults" = { };
         "core.completion".config = {
           engine = "nvim-cmp";
         };
-        "core.concealer" = {};
+        "core.concealer" = { };
         "core.dirman".config = {
           workspaces = {
             notes = "~/notes";
           };
         };
-        "core.export" = {};
-        "core.export.markdown" = {};
-        "core.integrations.telescope" = {};
+        "core.export" = { };
+        "core.export.markdown" = { };
+        "core.integrations.telescope" = { };
       };
     };
     dependencies = {

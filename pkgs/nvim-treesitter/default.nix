@@ -5,88 +5,97 @@
   symlinkJoin,
   tree-sitter,
   pkgs,
-}: let
-  nvplugins = callPackage ../../_sources/generated.nix {};
-  nvgrammars = callPackage ./_sources/generated.nix {};
+}:
+let
+  nvplugins = callPackage ../../_sources/generated.nix { };
+  nvgrammars = callPackage ./_sources/generated.nix { };
   nvim-treesitter = nvplugins.nvim-treesitter;
 
   ts-generate = {
-    overrides.nativeBuildInputs = [pkgs.nodejs pkgs.tree-sitter];
+    overrides.nativeBuildInputs = [
+      pkgs.nodejs
+      pkgs.tree-sitter
+    ];
     overrides.preBuild = "tree-sitter generate";
   };
 
   grammars = {
     # d = ts-generate;
-    arduino = {};
-    astro = {};
-    awk = {};
-    bash = {};
-    blade = {};
-    c = {};
-    cpp = {};
-    css = {};
-    csv = {};
-    dhall = {};
-    diff = {};
-    dockerfile = {};
-    git_config = {};
-    git_rebase = {};
-    gitattributes = {};
-    gitcommit = {};
-    gitignore = {};
-    go = {};
-    gomod = {};
-    gosum = {};
-    gpg = {};
-    graphql = {};
-    haskell = {};
-    hlsl = {};
-    html = {};
-    javascript = {};
-    jsdoc = {};
-    json = {};
-    jsonc = {};
+    arduino = { };
+    astro = { };
+    awk = { };
+    bash = { };
+    blade = { };
+    c = { };
+    cpp = { };
+    css = { };
+    csv = { };
+    dhall = { };
+    diff = { };
+    dockerfile = { };
+    git_config = { };
+    git_rebase = { };
+    gitattributes = { };
+    gitcommit = { };
+    gitignore = { };
+    go = { };
+    gomod = { };
+    gosum = { };
+    gpg = { };
+    graphql = { };
+    haskell = { };
+    hlsl = { };
+    html = { };
+    javascript = { };
+    jsdoc = { };
+    json = { };
+    jsonc = { };
     just = ts-generate;
-    kdl = {};
-    lua = {};
-    make = {};
-    markdown = {};
-    markdown_inline = {};
-    nix = {};
-    norg = {};
-    norg_meta = {};
-    php = {};
-    php_only = {};
-    pug = {};
-    python = {};
-    rust = {};
-    scss = {};
-    svelte = {};
+    kdl = { };
+    lua = { };
+    make = { };
+    markdown = { };
+    markdown_inline = { };
+    nix = { };
+    norg = { };
+    norg_meta = { };
+    php = { };
+    php_only = { };
+    pug = { };
+    python = { };
+    rust = { };
+    scss = { };
+    svelte = { };
     swift = ts-generate;
-    tsv = {};
-    tsx = {};
-    typescript = {};
-    vim = {};
-    vimdoc = {};
-    vue = {};
-    yaml = {};
+    tsv = { };
+    tsx = { };
+    typescript = { };
+    vim = { };
+    vimdoc = { };
+    vue = { };
+    yaml = { };
   };
 
-  treesitterGrammars = lib.mapAttrsToList (name: attrs:
-    stdenv.mkDerivation (let
-      nvgrammar = nvgrammars."tree-sitter-grammar-${name}";
-      sourceRoot =
-        if lib.hasAttr "location" nvgrammar
-        then nvgrammar.location
-        else ".";
-    in
+  treesitterGrammars = lib.mapAttrsToList (
+    name: attrs:
+    stdenv.mkDerivation (
+      let
+        nvgrammar = nvgrammars."tree-sitter-grammar-${name}";
+        sourceRoot = if lib.hasAttr "location" nvgrammar then nvgrammar.location else ".";
+      in
       {
         inherit (nvgrammar) pname version src;
 
-        buildInputs = [tree-sitter];
+        buildInputs = [ tree-sitter ];
 
-        CFLAGS = ["-Isrc" "-O2"];
-        CXXFLAGS = ["-Isrc" "-O2"];
+        CFLAGS = [
+          "-Isrc"
+          "-O2"
+        ];
+        CXXFLAGS = [
+          "-Isrc"
+          "-O2"
+        ];
 
         dontConfigure = true;
 
@@ -116,10 +125,11 @@
           runHook postFixup
         '';
       }
-      // attrs.overrides or {}))
-  grammars;
+      // attrs.overrides or { }
+    )
+  ) grammars;
 in
-  symlinkJoin {
-    name = "nvim-tree-sitter";
-    paths = [nvim-treesitter.src] ++ treesitterGrammars;
-  }
+symlinkJoin {
+  name = "nvim-tree-sitter";
+  paths = [ nvim-treesitter.src ] ++ treesitterGrammars;
+}
