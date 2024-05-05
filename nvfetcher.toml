@@ -134,11 +134,6 @@ src.git = "https://github.com/nvim-lualine/lualine.nvim"
 fetch.github = "L3MON4D3/LuaSnip"
 src.git = "https://github.com/L3MON4D3/LuaSnip"
 
-[markdown-preview]
-extract = ["app/yarn.lock"]
-fetch.github = "iamcco/markdown-preview.nvim"
-src.git = "https://github.com/iamcco/markdown-preview.nvim"
-
 [neoconf]
 fetch.github = "folke/neoconf.nvim"
 src.git = "https://github.com/folke/neoconf.nvim"
@@ -220,10 +215,6 @@ src.git = "https://github.com/kylechui/nvim-surround"
 fetch.github = "nvim-tree/nvim-tree.lua"
 src.git = "https://github.com/nvim-tree/nvim-tree.lua"
 
-[nvim-treesitter]
-fetch.github = "nvim-treesitter/nvim-treesitter"
-src.git = "https://github.com/nvim-treesitter/nvim-treesitter"
-
 [nvim-treesitter-context]
 fetch.github = "nvim-treesitter/nvim-treesitter-context"
 src.git = "https://github.com/nvim-treesitter/nvim-treesitter-context"
@@ -283,10 +274,6 @@ src.git = "https://github.com/GustavoKatel/telescope-asynctasks.nvim"
 [telescope-file-browser]
 fetch.github = "nvim-telescope/telescope-file-browser.nvim"
 src.git = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
-
-[telescope-fzf-native]
-fetch.github = "nvim-telescope/telescope-fzf-native.nvim"
-src.git = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
 
 [telescope-project]
 fetch.github = "nvim-telescope/telescope-project.nvim"

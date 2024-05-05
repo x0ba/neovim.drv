@@ -679,28 +679,6 @@
         },
         "version": "b152822e1a4bafb6bdf11a16cc26525cbd95ee00"
     },
-    "markdown-preview": {
-        "cargoLocks": null,
-        "date": "2023-10-17",
-        "extract": {
-            "app/yarn.lock": "./markdown-preview-a923f5fc5ba36a3b17e289dc35dc17f66d0548ee/app/yarn.lock"
-        },
-        "name": "markdown-preview",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "iamcco",
-            "repo": "markdown-preview.nvim",
-            "rev": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee",
-            "sha256": "sha256-TBXdG/Ih5DusAYZJyn37zVqHcMD85VkjrCoLyTo/KBg=",
-            "type": "github"
-        },
-        "version": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee"
-    },
     "neoconf": {
         "cargoLocks": null,
         "date": "2024-05-03",
@@ -1101,26 +1079,6 @@
         },
         "version": "64f61e4c913047a045ff90bd188dd3b54ee443cf"
     },
-    "nvim-treesitter": {
-        "cargoLocks": null,
-        "date": "2024-05-04",
-        "extract": null,
-        "name": "nvim-treesitter",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "nvim-treesitter",
-            "repo": "nvim-treesitter",
-            "rev": "4e21361e15b1d4147830c5fe571556eb1b14e6f9",
-            "sha256": "sha256-3Ae3ieCqckVAElTufJxgBRNXdWg81++oI0qesKevcb4=",
-            "type": "github"
-        },
-        "version": "4e21361e15b1d4147830c5fe571556eb1b14e6f9"
-    },
     "nvim-treesitter-context": {
         "cargoLocks": null,
         "date": "2024-05-02",
@@ -1420,26 +1378,6 @@
             "type": "github"
         },
         "version": "4d5fd21bae12ee6e9a79232e1c377f43c419d0c5"
-    },
-    "telescope-fzf-native": {
-        "cargoLocks": null,
-        "date": "2024-03-05",
-        "extract": null,
-        "name": "telescope-fzf-native",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "nvim-telescope",
-            "repo": "telescope-fzf-native.nvim",
-            "rev": "9ef21b2e6bb6ebeaf349a0781745549bbb870d27",
-            "sha256": "sha256-rycebls3g0JCHM2+aG7xlJnX7ZPowqviaLbQrFSdflM=",
-            "type": "github"
-        },
-        "version": "9ef21b2e6bb6ebeaf349a0781745549bbb870d27"
     },
     "telescope-project": {
         "cargoLocks": null,

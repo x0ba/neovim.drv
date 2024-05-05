@@ -409,19 +409,6 @@
     };
     date = "2024-04-30";
   };
-  markdown-preview = {
-    pname = "markdown-preview";
-    version = "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee";
-    src = fetchFromGitHub {
-      owner = "iamcco";
-      repo = "markdown-preview.nvim";
-      rev = "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee";
-      fetchSubmodules = false;
-      sha256 = "sha256-TBXdG/Ih5DusAYZJyn37zVqHcMD85VkjrCoLyTo/KBg=";
-    };
-    "app/yarn.lock" = builtins.readFile ./markdown-preview-a923f5fc5ba36a3b17e289dc35dc17f66d0548ee/app/yarn.lock;
-    date = "2023-10-17";
-  };
   neoconf = {
     pname = "neoconf";
     version = "d4a48c2a6fdeec138605cee4eb6f8c6fafd0b3ed";
@@ -662,18 +649,6 @@
     };
     date = "2024-05-04";
   };
-  nvim-treesitter = {
-    pname = "nvim-treesitter";
-    version = "4e21361e15b1d4147830c5fe571556eb1b14e6f9";
-    src = fetchFromGitHub {
-      owner = "nvim-treesitter";
-      repo = "nvim-treesitter";
-      rev = "4e21361e15b1d4147830c5fe571556eb1b14e6f9";
-      fetchSubmodules = false;
-      sha256 = "sha256-3Ae3ieCqckVAElTufJxgBRNXdWg81++oI0qesKevcb4=";
-    };
-    date = "2024-05-04";
-  };
   nvim-treesitter-context = {
     pname = "nvim-treesitter-context";
     version = "2650e6431f7daba5d9c2c64134fa5eb2312eb3d7";
@@ -853,18 +828,6 @@
       sha256 = "sha256-P6WR6AohLALn4aU4vPnoBO7QDoRcfcAj51E0K1ldtwU=";
     };
     date = "2024-04-23";
-  };
-  telescope-fzf-native = {
-    pname = "telescope-fzf-native";
-    version = "9ef21b2e6bb6ebeaf349a0781745549bbb870d27";
-    src = fetchFromGitHub {
-      owner = "nvim-telescope";
-      repo = "telescope-fzf-native.nvim";
-      rev = "9ef21b2e6bb6ebeaf349a0781745549bbb870d27";
-      fetchSubmodules = false;
-      sha256 = "sha256-rycebls3g0JCHM2+aG7xlJnX7ZPowqviaLbQrFSdflM=";
-    };
-    date = "2024-03-05";
   };
   telescope-project = {
     pname = "telescope-project";

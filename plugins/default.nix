@@ -120,7 +120,7 @@ rec {
   };
 
   markdown-preview = {
-    package = pkgs.callPackage ../pkgs/markdown-preview { };
+    package = pkgs.vimPlugins.markdown-preview-nvim;
     ft = "markdown";
   };
   vim-gnupg = {
@@ -534,7 +534,7 @@ rec {
       inherit plenary nvim-web-devicons;
       telescope-asynctasks.src = srcs.telescope-asynctasks;
       telescope-file-browser.src = srcs.telescope-file-browser;
-      telescope-fzf-native.package = pkgs.callPackage ../pkgs/telescope-fzf-native { };
+      telescope-fzf-native.package = pkgs.vimPlugins.telescope-fzf-native-nvim;
       telescope-project.src = srcs.telescope-project;
       telescope-ui-select.src = srcs.telescope-ui-select;
       octo = {

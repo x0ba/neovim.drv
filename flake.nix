@@ -100,8 +100,6 @@
                   NEOVIM_BIN = "${neovim}/bin/nvim";
                 };
               };
-              telescope-fzf-native = pkgs.callPackage ./pkgs/telescope-fzf-native { };
-              markdown-preview = pkgs.callPackage ./pkgs/markdown-preview { };
               docker = pkgs.dockerTools.buildImage {
                 name = "nekowinston-nvim";
                 copyToRoot =
