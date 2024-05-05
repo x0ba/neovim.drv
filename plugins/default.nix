@@ -38,7 +38,7 @@ rec {
   };
 
   nvim-treesitter = {
-    package = (pkgs.callPackage ../pkgs/nvim-treesitter { }).override {
+    package = pkgs.vimPlugins.nvim-treesitter.override {
       grammars = [
         "arduino"
         "astro"

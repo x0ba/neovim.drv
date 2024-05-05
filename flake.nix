@@ -15,10 +15,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.pre-commit-nix.follows = "pre-commit-hooks-nix";
     };
+    nvim-treesitter-nix = {
+      url = "github:nekowinston/nvim-treesitter-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     pre-commit-hooks-nix = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.flake-compat.follows = "";
       inputs.flake-utils.follows = "flake-utils";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixd = {
+      url = "github:nix-community/nixd";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -49,11 +57,8 @@
             inherit system;
             config.allowUnfree = true;
             overlays = [
-              (_: _: {
-                repos = {
-                  nekowinston = import inputs.nekowinston-nur { inherit pkgs; };
-                };
-              })
+              inputs.nixd.overlays.default
+              inputs.nvim-treesitter-nix.overlays.default
             ];
           };
 
@@ -95,7 +100,6 @@
                   NEOVIM_BIN = "${neovim}/bin/nvim";
                 };
               };
-              nvim-treesitter = pkgs.callPackage ./pkgs/nvim-treesitter { };
               telescope-fzf-native = pkgs.callPackage ./pkgs/telescope-fzf-native { };
               markdown-preview = pkgs.callPackage ./pkgs/markdown-preview { };
               docker = pkgs.dockerTools.buildImage {
