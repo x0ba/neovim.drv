@@ -19,8 +19,6 @@
             # lua
             stylua
             lua-language-server
-            luaPackages.tl
-            luaPackages.teal-language-server
 
             # webdev
             nodePackages.nodejs

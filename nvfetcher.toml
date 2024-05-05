@@ -150,6 +150,7 @@ src.git = "https://github.com/folke/neodev.nvim"
 [neogit]
 fetch.github = "NeogitOrg/neogit"
 src.git = "https://github.com/NeogitOrg/neogit"
+src.branch = "nightly"
 
 [neorepl]
 fetch.github = "ii14/neorepl.nvim"
