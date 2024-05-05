@@ -1,55 +1,39 @@
 return function()
-	local C = require("catppuccin.palettes").get_palette()
-
-	local devicons = require("nvim-web-devicons")
+	local ctp = require("catppuccin.palettes").get_palette()
 	local justfile = {
 		icon = "󱚣",
 		name = "Justfile",
-		color = C.peach,
+		color = ctp.peach,
 	}
-	devicons.setup({
+
+	require("nvim-web-devicons").setup({
 		override_by_extension = {
-			["astro"] = {
-				icon = "",
-				name = "Astro",
-				color = C.red,
-			},
-			["dt"] = {
-				icon = "",
-				name = "Diet",
-				color = "#427819",
-			},
 			["norg"] = {
 				icon = "",
 				name = "Neorg",
-				color = C.green,
+				color = ctp.green,
 			},
-		},
-		override_by_filename = {
-			[".ecrc"] = {
-				icon = "",
-				name = "EditorConfigChecker",
-				color = C.green,
+			override_by_filename = {
+				[".ecrc"] = {
+					icon = "",
+					name = "EditorConfigChecker",
+					color = ctp.green,
+				},
+				[".envrc"] = {
+					icon = "",
+					name = "envrc",
+					color = ctp.yellow,
+				},
+				[".luacheckrc"] = {
+					icon = "󰢱",
+					name = "LuacheckRC",
+					color = ctp.blue,
+				},
+				[".Justfile"] = justfile,
+				[".justfile"] = justfile,
+				["Justfile"] = justfile,
+				["justfile"] = justfile,
 			},
-			[".envrc"] = {
-				icon = "",
-				name = "envrc",
-				color = C.yellow,
-			},
-			[".editorconfig"] = {
-				icon = "",
-				name = "EditorConfig",
-				color = C.green,
-			},
-			[".luacheckrc"] = {
-				icon = "󰢱",
-				name = "LuacheckRC",
-				color = C.blue,
-			},
-			[".Justfile"] = justfile,
-			[".justfile"] = justfile,
-			["Justfile"] = justfile,
-			["justfile"] = justfile,
 		},
 	})
 end
