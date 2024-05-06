@@ -1,10 +1,12 @@
 return function()
+	local js_fmt = { { "deno_fmt", "prettier" } }
+
 	require("conform").setup({
 		formatters_by_ft = {
 			d = { "dfmt" },
-			go = { "gofumpt", "gofmt" },
+			go = { { "gofumpt", "gofmt" } },
 			lua = { "stylua" },
-			python = { "ruff_format", "black" },
+			python = { { "ruff_format", "black" } },
 			rust = { "rustfmt" },
 
 			-- shell
@@ -13,16 +15,16 @@ return function()
 
 			-- data
 			json = { "prettier" },
-			nix = { "nixfmt", "alejandra" },
+			nix = { { "nixfmt", "alejandra" } },
 			toml = { "taplo" },
 			yaml = { "prettier" },
 
 			-- webdev
 			astro = { "prettier" },
-			javascript = { "deno_fmt", "prettier" },
-			javascriptreact = { "deno_fmt", "prettier" },
-			typescript = { "deno_fmt", "prettier" },
-			typescriptreact = { "deno_fmt", "prettier" },
+			javascript = js_fmt,
+			javascriptreact = js_fmt,
+			typescript = js_fmt,
+			typescriptreact = js_fmt,
 		},
 		format_on_save = function(bufnr)
 			if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
