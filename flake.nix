@@ -47,6 +47,7 @@
       ];
       perSystem =
         {
+          self',
           config,
           pkgs,
           system,
@@ -78,13 +79,14 @@
 
           devShells.default = pkgs.mkShell {
             inherit (config.pre-commit.devShell) shellHook;
-            buildInputs = with pkgs; [
-              just
+            packages = with pkgs; [
+              self'.formatter
               nix-tree
+              nvfetcher
             ];
           };
 
-          formatter = pkgs.alejandra;
+          formatter = pkgs.nixfmt-rfc-style;
 
           packages =
             let
