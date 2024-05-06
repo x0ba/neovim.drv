@@ -222,6 +222,7 @@ local servers = {
 		},
 	},
 	helm_ls = {},
+	hls = {},
 	jqls = {},
 	jsonls = {
 		settings = {
