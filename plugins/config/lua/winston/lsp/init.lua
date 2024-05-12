@@ -177,7 +177,7 @@ pcall(require("py_lsp").setup, common)
 pcall(require("typescript-tools").setup, {
 	single_file_support = false,
 	root_dir = function(fname)
-		local root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git")(fname)
+		local root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json")(fname)
 
 		-- this is needed to make sure we don't pick up root_dir inside node_modules
 		local node_modules_index = root_dir and root_dir:find("node_modules", 1, true)
@@ -207,7 +207,7 @@ local servers = {
 	bashls = {},
 	cssls = {},
 	denols = {
-		root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc", ".git"),
+		root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
 		single_file_support = false,
 	},
 	dockerls = {},
