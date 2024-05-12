@@ -346,7 +346,7 @@ rec {
   presence = {
     src = srcs.presence;
     config = ./presence.lua;
-    event = "VeryLazy";
+    event = "UIEnter";
   };
 
   wakatime = {
