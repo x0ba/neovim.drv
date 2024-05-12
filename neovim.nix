@@ -1,49 +1,53 @@
 {
   config = {
     perSystem =
-      { pkgs, inputs', ... }:
+      { pkgs, ... }:
       {
         neovim = {
-          package = inputs'.neovim.packages.neovim;
+          package = pkgs.neovim-nightly;
           paths = with pkgs; [
-            # external deps
             fd
             git
             gh
             ripgrep
 
-            # python
-            ruff
-            nodePackages.pyright
-
             # lua
             stylua
             lua-language-server
 
+            # nix
+            nixd
+            nixfmt-rfc-style
+
+            # python
+            ruff
+            nodePackages.pyright
+
+            # shell scripting
+            nodePackages.bash-language-server
+            shellcheck
+            shfmt
+
             # webdev
-            nodePackages.nodejs
+            deno
+            emmet-ls
             nodePackages."@astrojs/language-server"
             nodePackages."@tailwindcss/language-server"
-            nodePackages.bash-language-server
-            nodePackages.dockerfile-language-server-nodejs
             nodePackages.graphql
             nodePackages.graphql-language-service-cli
             nodePackages.typescript
             nodePackages.typescript-language-server
             nodePackages.vscode-langservers-extracted
             nodePackages.yaml-language-server
+            nodejs
             phpactor
 
-            # etc
-            deno
-            emmet-ls
+            # data formats
+            dhall-lsp-server
             helm-ls
             jq-lsp
             ltex-ls
-            nixd
-            nixfmt-rfc-style
-            shellcheck
-            shfmt
+            nodePackages.dockerfile-language-server-nodejs
             taplo
           ];
 

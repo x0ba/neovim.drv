@@ -4,31 +4,18 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    flake-utils.url = "github:numtide/flake-utils";
-    neovim = {
-      url = "github:neovim/neovim?dir=contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     neovim-nix = {
       url = "github:nekowinston/neovim.nix/feat/add-pluginspec-main-field";
       inputs.flake-parts.follows = "flake-parts";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.pre-commit-nix.follows = "pre-commit-hooks-nix";
+      inputs.pre-commit-nix.follows = "git-hooks-nix";
     };
     nvim-treesitter-nix = {
       url = "github:nekowinston/nvim-treesitter-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    pre-commit-hooks-nix = {
-      url = "github:cachix/pre-commit-hooks.nix";
-      inputs.flake-compat.follows = "";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixd = {
-      url = "github:nix-community/nixd";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    git-hooks-nix.url = "github:cachix/git-hooks.nix";
   };
 
   outputs =
@@ -36,8 +23,8 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./neovim.nix
+        inputs.git-hooks-nix.flakeModule
         inputs.neovim-nix.flakeModule
-        inputs.pre-commit-hooks-nix.flakeModule
       ];
       systems = [
         "x86_64-linux"
@@ -58,8 +45,8 @@
             inherit system;
             config.allowUnfree = true;
             overlays = [
-              inputs.nixd.overlays.default
               inputs.nvim-treesitter-nix.overlays.default
+              inputs.neovim-nightly-overlay.overlays.default
             ];
           };
 
@@ -118,8 +105,12 @@
     };
 
   nixConfig = {
-    extra-substituters = [ "https://pre-commit-hooks.cachix.org" ];
+    extra-substituters = [
+      "https://nix-community.cachix.org"
+      "https://pre-commit-hooks.cachix.org"
+    ];
     extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "pre-commit-hooks.cachix.org-1:Pkk3Panw5AW24TOv6kz3PvLhlH8puAsJTBbOPmBo7Rc="
     ];
   };
