@@ -15,7 +15,7 @@ return function()
 
 			-- data
 			json = { "prettier" },
-			nix = { { "nixfmt", "alejandra" } },
+			nix = { { "alejandra", "nixfmt" } },
 			toml = { "taplo" },
 			yaml = { "prettier" },
 

@@ -55,16 +55,16 @@ return function()
 			notify = true,
 		},
 		highlight_overrides = {
-			all = function(colors)
+			all = function(C)
 				local overrides = {
 					-- borders
-					FloatBorder = { fg = colors.overlay0 },
+					FloatBorder = { fg = C.overlay0 },
 					LspInfoBorder = { link = "FloatBorder" },
 					NvimTreeWinSeparator = { link = "FloatBorder" },
 					WhichKeyBorder = { link = "FloatBorder" },
 					-- telescope
 					TelescopeBorder = { link = "FloatBorder" },
-					TelescopeTitle = { fg = colors.text },
+					TelescopeTitle = { fg = C.text },
 					TelescopeSelection = { link = "Selection" },
 					TelescopeSelectionCaret = { link = "Selection" },
 					-- pmenu
@@ -73,12 +73,23 @@ return function()
 					BufferLineTabSeparator = { link = "FloatBorder" },
 					BufferLineSeparator = { link = "FloatBorder" },
 					BufferLineOffsetSeparator = { link = "FloatBorder" },
+
+					-- tokens!
+					["@property"] = { fg = C.blue },
+					["@function.builtin"] = { fg = C.blue },
+
+					["@module.builtin"] = { fg = C.maroon },
+					["@module.builtin.lua"] = { fg = C.maroon },
+					["@lsp.typemod.variable.defaultLibrary.lua"] = { fg = C.maroon },
+
+					tomlTable = { fg = C.yellow },
+					tomlKey = { link = "@property" },
 				}
 
 				local U = require("catppuccin.utils.colors")
 				for i = 1, 20, 1 do
 					overrides = vim.tbl_extend("keep", overrides, {
-						["AlphaHeaderGradient" .. i] = { fg = U.blend(colors.sky, colors.pink, i / 20) },
+						["AlphaHeaderGradient" .. i] = { fg = U.blend(C.sky, C.pink, i / 20) },
 					})
 				end
 				return overrides

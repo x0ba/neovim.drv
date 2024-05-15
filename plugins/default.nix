@@ -79,6 +79,7 @@ rec {
         "nix"
         "norg"
         "norg_meta"
+        "nu"
         "php"
         "php_only"
         "pug"
@@ -350,6 +351,11 @@ rec {
   };
 
   wakatime = {
+    enabled = ''
+      function()
+        return vim.fn.glob("~/.wakatime.cfg") ~= ""
+      end
+    '';
     src = pkgs.vimPlugins.vim-wakatime;
     paths = [ pkgs.wakatime ];
     event = "VeryLazy";

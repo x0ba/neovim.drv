@@ -252,6 +252,7 @@ local servers = {
 		},
 	},
 	nixd = {},
+	nushell = {},
 	phpactor = {},
 	rust_analyzer = {
 		settings = {

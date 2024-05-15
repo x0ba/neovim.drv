@@ -269,16 +269,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1713535889,
-        "narHash": "sha256-Hr6/nhqJZLbmkDWa57F0NXmAK1azDOyppIvBB8SSPIQ=",
+        "lastModified": 1715615951,
+        "narHash": "sha256-VeiCMSzS5eInPQAkBUVp1S2m+RaDVm1sWCQlNYNU42M=",
         "owner": "nekowinston",
         "repo": "neovim.nix",
-        "rev": "e4717ef5ac7548edca7b483c0ffb96f1566f603a",
+        "rev": "bf298204939f998413ed55abc2d621d33fec95f0",
         "type": "github"
       },
       "original": {
         "owner": "nekowinston",
-        "ref": "feat/add-pluginspec-main-field",
+        "ref": "dev",
         "repo": "neovim.nix",
         "type": "github"
       }
@@ -366,11 +366,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714590494,
-        "narHash": "sha256-z2AUKXQpxnO+E9qV40RUfCDUr3EjH87me0p1VQ7XN2Q=",
+        "lastModified": 1715631504,
+        "narHash": "sha256-FsTafOvxBS4ayngSlBTXQRzDMl7viTpPTysMN/fhfoY=",
         "owner": "nekowinston",
         "repo": "nvim-treesitter-nix",
-        "rev": "7237c46c5505f16a5007193363299727de7c762c",
+        "rev": "8ff60f9d601e8c12a8a6971f69d47d31c0ac48dd",
         "type": "github"
       },
       "original": {

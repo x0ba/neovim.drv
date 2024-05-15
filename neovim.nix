@@ -52,7 +52,10 @@
           ];
 
           lazy = {
-            settings.install.colorscheme = [ "catppuccin" ];
+            settings = {
+              dev.path = "~/Code/neovim";
+              install.colorscheme = [ "catppuccin" ];
+            };
             plugins = import ./plugins { inherit pkgs; };
           };
         };
