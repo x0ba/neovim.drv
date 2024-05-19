@@ -4,7 +4,6 @@
       { pkgs, ... }:
       {
         neovim = {
-          package = pkgs.neovim-nightly;
           paths = with pkgs; [
             fd
             git

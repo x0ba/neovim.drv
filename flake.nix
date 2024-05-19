@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     neovim-nix = {
       url = "github:nekowinston/neovim.nix/dev";
       inputs.flake-parts.follows = "flake-parts";
@@ -46,7 +46,7 @@
             config.allowUnfree = true;
             overlays = [
               inputs.nvim-treesitter-nix.overlays.default
-              inputs.neovim-nightly-overlay.overlays.default
+              # inputs.neovim-nightly-overlay.overlays.default
             ];
           };
 
