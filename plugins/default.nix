@@ -1,6 +1,7 @@
 { pkgs }:
 let
-  srcs = builtins.mapAttrs (_: pkg: pkg.src) (pkgs.callPackage ../_sources/generated.nix { });
+  nvfetcher = pkgs.callPackage ../_sources/generated.nix { };
+  srcs = builtins.mapAttrs (_: pkg: pkg.src) nvfetcher;
   inherit (pkgs.lib.generators) mkLuaInline;
 in
 rec {
@@ -200,7 +201,10 @@ rec {
         ignore = [ "copilot" ];
         display.done_icon = "󰗡";
       };
-      notification.override_vim_notify = true;
+      notification = {
+        override_vim_notify = true;
+        window.winblend = 0;
+      };
     };
     event = "VeryLazy";
   };
@@ -562,15 +566,10 @@ rec {
 
   spectre = {
     src = srcs.nvim-spectre;
-    config.replace_engine.sed.cmd = "sed";
+    config.replace_engine.sed.cmd = "${pkgs.gnused}/bin/sed";
     dependencies = {
       inherit plenary;
     };
-    paths = [
-      pkgs.gnused
-      # alias for darwin
-      (pkgs.writeShellScriptBin "gsed" "exec ${pkgs.gnused}/bin/sed")
-    ];
     event = "VeryLazy";
   };
 
