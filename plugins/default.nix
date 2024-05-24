@@ -1,7 +1,6 @@
 { pkgs }:
 let
-  nvfetcher = pkgs.callPackage ../_sources/generated.nix { };
-  srcs = builtins.mapAttrs (_: pkg: pkg.src) nvfetcher;
+  plugins = pkgs.callPackage ../pkgs/plugins { };
   inherit (pkgs.lib.generators) mkLuaInline;
 in
 rec {
@@ -11,13 +10,13 @@ rec {
     priority = 1000;
   };
 
-  plenary.src = srcs.plenary;
+  plenary.package = plugins.plenary;
   which-key = {
-    src = srcs.which-key;
+    package = plugins.which-key;
     config = ./which-key.lua;
   };
   nvim-tree = {
-    src = srcs.nvim-tree-lua;
+    package = plugins.nvim-tree-lua;
     config = {
       sync_root_with_cwd = true;
       diagnostics.enable = true;
@@ -30,7 +29,7 @@ rec {
     event = "VeryLazy";
   };
   nvim-web-devicons = {
-    src = srcs.nvim-web-devicons;
+    package = plugins.nvim-web-devicons;
     config = ./nvim-web-devicons.lua;
     dependencies = {
       inherit catppuccin;
@@ -100,24 +99,24 @@ rec {
     config = ./nvim-treesitter.lua;
     dependencies = {
       nvim-treesitter-context = {
-        src = srcs.nvim-treesitter-context;
+        package = plugins.nvim-treesitter-context;
         config = {
           enable = false;
           mode = "topline";
         };
       };
-      nvim-treesitter-textobjects.src = srcs.nvim-treesitter-textobjects;
-      nvim-ts-autotag.src = srcs.nvim-ts-autotag;
-      rainbow-delimiters.src = srcs.rainbow-delimiters;
+      nvim-treesitter-textobjects.package = plugins.nvim-treesitter-textobjects;
+      nvim-ts-autotag.package = plugins.nvim-ts-autotag;
+      rainbow-delimiters.package = plugins.rainbow-delimiters;
       headlines = {
-        src = srcs.headlines;
+        package = plugins.headlines;
         config = true;
       };
     };
     event = "VeryLazy";
   };
   vim-helm = {
-    src = srcs.vim-helm;
+    package = plugins.vim-helm;
     event = "VeryLazy";
   };
 
@@ -126,11 +125,11 @@ rec {
     ft = "markdown";
   };
   vim-gnupg = {
-    src = srcs.vim-gnupg;
+    package = plugins.vim-gnupg;
     event = "VeryLazy";
   };
   vim-table-mode = {
-    src = srcs.vim-table-mode;
+    package = plugins.vim-table-mode;
     config = ''
       function()
         vim.cmd([[autocmd FileType markdown let g:table_mode_corner='|']])
@@ -140,30 +139,30 @@ rec {
   };
 
   dressing = {
-    src = srcs.dressing;
+    package = plugins.dressing;
     event = "VeryLazy";
   };
   glance = {
-    src = srcs.glance;
+    package = plugins.glance;
     config = true;
     event = "VeryLazy";
   };
 
   asyncrun-vim = {
-    src = srcs.asyncrun-vim;
+    package = plugins.asyncrun-vim;
     event = "VeryLazy";
   };
   asynctasks-vim = {
-    src = srcs.asynctasks-vim;
+    package = plugins.asynctasks-vim;
     event = "VeryLazy";
   };
 
   alpha = {
-    src = srcs.alpha-nvim;
+    package = plugins.alpha-nvim;
     config = ./alpha.lua;
     dependencies = {
       neovim-session-manager = {
-        src = srcs.neovim-session-manager;
+        package = plugins.neovim-session-manager;
         main = "session_manager";
         config.autoload_mode = "CurrentDir";
         dependencies = {
@@ -173,20 +172,20 @@ rec {
     };
   };
   catppuccin = {
-    src = srcs.catppuccin;
+    package = plugins.catppuccin;
     config = ./catppuccin.lua;
     lazy = false;
     priority = 1000;
   };
   auto-dark-mode = {
-    src = srcs.auto-dark-mode;
+    package = plugins.auto-dark-mode;
     config = true;
     lazy = false;
     priority = 1000;
   };
 
   flash = {
-    src = srcs.flash;
+    package = plugins.flash;
     config = ./flash.lua;
     dependencies = {
       inherit which-key;
@@ -195,7 +194,7 @@ rec {
   };
 
   fidget = {
-    src = srcs.fidget;
+    package = plugins.fidget;
     config = {
       progress = {
         ignore = [ "copilot" ];
@@ -210,7 +209,7 @@ rec {
   };
 
   bufferline = {
-    src = srcs.bufferline;
+    package = plugins.bufferline;
     config = ./bufferline.lua;
     dependencies = {
       inherit catppuccin;
@@ -219,7 +218,7 @@ rec {
   };
 
   nvim-colorizer = {
-    src = srcs.nvim-colorizer-lua;
+    package = plugins.nvim-colorizer-lua;
     config = {
       user_default_options = {
         RGB = true;
@@ -249,18 +248,18 @@ rec {
     event = "VeryLazy";
   };
   color-picker = {
-    src = srcs.color-picker;
+    package = plugins.color-picker;
     config = true;
     event = "VeryLazy";
   };
 
   comment = {
-    src = srcs.comment;
+    package = plugins.comment;
     config = true;
     event = "VeryLazy";
   };
   indent-blankline = {
-    src = srcs.indent-blankline;
+    package = plugins.indent-blankline;
     main = "ibl";
     config.exclude.filetypes = [
       "alpha"
@@ -277,12 +276,12 @@ rec {
     event = "VeryLazy";
   };
   nvim-surround = {
-    src = srcs.nvim-surround;
+    package = plugins.nvim-surround;
     config = true;
     event = "VeryLazy";
   };
   tagalong-vim = {
-    src = srcs.tagalong-vim;
+    package = plugins.tagalong-vim;
     config = ''
       function()
         vim.g.tagalong_filetypes = {
@@ -302,13 +301,13 @@ rec {
     event = "VeryLazy";
   };
   todo-comments = {
-    src = srcs.todo-comments;
+    package = plugins.todo-comments;
     config = true;
     event = "VeryLazy";
   };
 
   copilot = {
-    src = srcs.copilot-lua;
+    package = plugins.copilot-lua;
     config = {
       panel.enabled = false;
       suggestion = {
@@ -327,11 +326,11 @@ rec {
   };
 
   fugitive = {
-    src = srcs.vim-fugitive;
+    package = plugins.vim-fugitive;
     event = "VeryLazy";
   };
   gitsigns = {
-    src = srcs.gitsigns;
+    package = plugins.gitsigns;
     config = ./gitsigns.lua;
     dependencies = {
       inherit which-key;
@@ -339,17 +338,17 @@ rec {
     event = "VeryLazy";
   };
   neogit = {
-    src = srcs.neogit;
+    package = plugins.neogit;
     config.integrations.diffview = true;
     dependencies = {
       inherit plenary;
-      diffview.src = srcs.diffview;
+      diffview.package = plugins.diffview;
     };
     event = "VeryLazy";
   };
 
   presence = {
-    src = srcs.presence;
+    package = plugins.presence;
     config = ./presence.lua;
     event = "UIEnter";
   };
@@ -360,21 +359,21 @@ rec {
         return vim.fn.glob("~/.wakatime.cfg") ~= "" or vim.fn.glob("$WAKATIME_HOME/.wakatime.cfg") ~= ""
       end
     '';
-    src = pkgs.vimPlugins.vim-wakatime;
+    package = pkgs.vimPlugins.vim-wakatime;
     paths = [ pkgs.wakatime ];
     event = "VeryLazy";
   };
 
   vim-dadbod = {
-    src = srcs.vim-dadbod;
+    package = plugins.vim-dadbod;
     event = "VeryLazy";
   };
   vim-dadbod-completion = {
-    src = srcs.vim-dadbod-completion;
+    package = plugins.vim-dadbod-completion;
     event = "VeryLazy";
   };
   vim-dadbod-ui = {
-    src = srcs.vim-dadbod-ui;
+    package = plugins.vim-dadbod-ui;
     config = ''
       function()
         vim.g.db_ui_use_nerd_fonts = true
@@ -386,7 +385,7 @@ rec {
   };
 
   lualine = {
-    src = srcs.lualine;
+    package = plugins.lualine;
     config = {
       options = {
         icons_enabled = true;
@@ -424,7 +423,7 @@ rec {
     };
     dependencies = {
       navic = {
-        src = srcs.nvim-navic;
+        package = plugins.nvim-navic;
         config = {
           highlight = true;
           separator = " ";
@@ -465,37 +464,37 @@ rec {
   };
 
   nvim-lspconfig = {
-    src = srcs.nvim-lspconfig;
+    package = plugins.nvim-lspconfig;
     config = ''
       function()
         require("winston.lsp")
       end
     '';
     dependencies = {
-      cmp.src = srcs.nvim-cmp;
-      cmp-buffer.src = srcs.cmp-buffer;
-      cmp-cmdline.src = srcs.cmp-cmdline;
-      cmp-nvim-lsp.src = srcs.cmp-nvim-lsp;
-      cmp-path.src = srcs.cmp-path;
+      cmp.package = plugins.nvim-cmp;
+      cmp-buffer.package = plugins.cmp-buffer;
+      cmp-cmdline.package = plugins.cmp-cmdline;
+      cmp-nvim-lsp.package = plugins.cmp-nvim-lsp;
+      cmp-path.package = plugins.cmp-path;
       luasnip = {
-        src = srcs.luasnip;
-        dependencies.friendly-snippets.src = srcs.friendly-snippets;
+        package = plugins.luasnip;
+        dependencies.friendly-snippets.package = plugins.friendly-snippets;
       };
-      cmp_luasnip.src = srcs.cmp_luasnip;
-      cmp-git.src = srcs.cmp-git;
-      lspkind.src = srcs.lspkind;
+      cmp_luasnip.package = plugins.cmp_luasnip;
+      cmp-git.package = plugins.cmp-git;
+      lspkind.package = plugins.lspkind;
       trouble = {
-        src = srcs.trouble;
+        package = plugins.trouble;
         config.padding = false;
       };
-      neoconf.src = srcs.neoconf;
+      neoconf.package = plugins.neoconf;
       neodev = {
-        src = srcs.neodev;
+        package = plugins.neodev;
         config = true;
       };
-      neorepl.src = srcs.neorepl;
+      neorepl.package = plugins.neorepl;
       nvim-autopairs = {
-        src = srcs.nvim-autopairs;
+        package = plugins.nvim-autopairs;
         config = ''
           function()
           	require("nvim-autopairs").setup()
@@ -506,16 +505,16 @@ rec {
           end
         '';
       };
-      lsp-status.src = srcs.lsp-status;
-      ltex-extra.src = srcs.ltex-extra;
-      schemastore.src = srcs.schemastore;
-      py_lsp.src = srcs.py_lsp;
-      typescript-tools.src = srcs.typescript-tools;
+      lsp-status.package = plugins.lsp-status;
+      ltex-extra.package = plugins.ltex-extra;
+      schemastore.package = plugins.schemastore;
+      py_lsp.package = plugins.py_lsp;
+      typescript-tools.package = plugins.typescript-tools;
       nvim-dap = {
-        src = srcs.nvim-dap;
+        package = plugins.nvim-dap;
         dependencies = {
-          nvim-dap-ui.src = srcs.nvim-dap-ui;
-          nvim-dap-virtual-text.src = srcs.nvim-dap-virtual-text;
+          nvim-dap-ui.package = plugins.nvim-dap-ui;
+          nvim-dap-virtual-text.package = plugins.nvim-dap-virtual-text;
         };
       };
     };
@@ -523,29 +522,29 @@ rec {
   };
 
   crates = {
-    src = srcs.crates;
+    package = plugins.crates;
     config = true;
     event = "BufRead Cargo.toml";
   };
 
   conform = {
-    src = srcs.conform-nvim;
+    package = plugins.conform-nvim;
     config = ./conform.lua;
     event = "BufWritePre";
   };
 
   telescope = {
-    src = srcs.telescope;
+    package = plugins.telescope;
     config = ./telescope.lua;
     dependencies = {
       inherit plenary nvim-web-devicons;
-      telescope-asynctasks.src = srcs.telescope-asynctasks;
-      telescope-file-browser.src = srcs.telescope-file-browser;
+      telescope-asynctasks.package = plugins.telescope-asynctasks;
+      telescope-file-browser.package = plugins.telescope-file-browser;
       telescope-fzf-native.package = pkgs.vimPlugins.telescope-fzf-native-nvim;
-      telescope-project.src = srcs.telescope-project;
-      telescope-ui-select.src = srcs.telescope-ui-select;
+      telescope-project.package = plugins.telescope-project;
+      telescope-ui-select.package = plugins.telescope-ui-select;
       octo = {
-        src = srcs.octo;
+        package = plugins.octo;
         config = true;
       };
     };
@@ -553,7 +552,7 @@ rec {
   };
 
   toggleterm = {
-    src = srcs.toggleterm;
+    package = plugins.toggleterm;
     config = {
       open_mapping = "<C-t>";
       shade_terminals = false;
@@ -562,7 +561,7 @@ rec {
   };
 
   spectre = {
-    src = srcs.nvim-spectre;
+    package = plugins.nvim-spectre;
     config.replace_engine.sed.cmd = "${pkgs.gnused}/bin/sed";
     dependencies = {
       inherit plenary;
@@ -571,7 +570,7 @@ rec {
   };
 
   neorg = {
-    src = srcs.neorg;
+    package = plugins.neorg;
     config = {
       load = {
         "core.defaults" = { };
@@ -591,17 +590,17 @@ rec {
     };
     dependencies = {
       inherit plenary;
-      lua-utils.src = srcs.lua-utils;
-      nui.src = srcs.nui;
-      nvim-nio.src = srcs.nvim-nio;
-      pathlib-nvim.src = srcs.pathlib-nvim;
-      neorg-telescope.src = srcs.neorg-telescope;
+      lua-utils.package = plugins.lua-utils;
+      nui.package = plugins.nui;
+      nvim-nio.package = plugins.nvim-nio;
+      pathlib-nvim.package = plugins.pathlib-nvim;
+      neorg-telescope.package = plugins.neorg-telescope;
     };
     event = "VeryLazy";
   };
 
   direnv = {
-    src = srcs.direnv-vim;
+    package = plugins.direnv-vim;
     event = "VeryLazy";
   };
 }
