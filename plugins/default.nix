@@ -562,7 +562,7 @@ rec {
 
   spectre = {
     package = plugins.nvim-spectre;
-    config.replace_engine.sed.cmd = "${pkgs.gnused}/bin/sed";
+    config.default.replace.cmd = "oxi";
     dependencies = {
       inherit plenary;
     };

@@ -1020,7 +1020,12 @@
         "version": "632024157d01e8bc48fd7df6a7de8ffe3fdd4f3a"
     },
     "nvim-spectre": {
-        "cargoLocks": null,
+        "cargoLocks": {
+            "spectre_oxi/Cargo.lock": [
+                "./nvim-spectre-5690ea46baf08bbc1623980012e14b6239ce582e/spectre_oxi/Cargo.lock",
+                {}
+            ]
+        },
         "date": "2024-05-22",
         "extract": null,
         "name": "nvim-spectre",

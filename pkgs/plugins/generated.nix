@@ -9,6 +9,10 @@ let
     vimUtils.buildVimPlugin {
       inherit (v) pname version src;
       leaveDotGit = true;
+
+      passthru = {
+        inherit (v) cargoLock;
+      };
     }
   ) nvfetcher;
 in

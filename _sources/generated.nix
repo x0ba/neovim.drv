@@ -623,6 +623,12 @@
       fetchSubmodules = false;
       sha256 = "sha256-AQ+HLIboYtYRWCu6S3Czi5DpcZRhAkI1bhSfnM+FqZI=";
     };
+    cargoLock."spectre_oxi/Cargo.lock" = {
+      lockFile = ./nvim-spectre-5690ea46baf08bbc1623980012e14b6239ce582e/spectre_oxi/Cargo.lock;
+      outputHashes = {
+        
+      };
+    };
     date = "2024-05-22";
   };
   nvim-surround = {

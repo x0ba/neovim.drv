@@ -205,6 +205,7 @@ src.git = "https://github.com/nvim-neotest/nvim-nio"
 [nvim-spectre]
 fetch.github = "nvim-pack/nvim-spectre"
 src.git = "https://github.com/nvim-pack/nvim-spectre"
+cargo_locks = ["spectre_oxi/Cargo.lock"]
 
 [nvim-surround]
 fetch.github = "kylechui/nvim-surround"
