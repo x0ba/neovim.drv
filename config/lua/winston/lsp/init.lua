@@ -54,9 +54,7 @@ cmp.setup({
 				if luasnip.expandable() then
 					luasnip.expand()
 				else
-					cmp.confirm({
-						select = true,
-					})
+					cmp.confirm({ select = true })
 				end
 			else
 				fallback()
@@ -210,9 +208,9 @@ pcall(require("typescript-tools").setup, {
 			"fix_all",
 			"remove_unused",
 		},
-      -- Nix silliness
-      -- stylua: ignore
-      tsserver_path = vim.fn.resolve(vim.fn.exepath("tsserver") .. "/../../lib/node_modules/typescript/bin/tsserver"),
+    -- Nix silliness
+    -- stylua: ignore
+    tsserver_path = vim.fn.resolve(vim.fn.exepath("tsserver") .. "/../../lib/node_modules/typescript/bin/tsserver"),
 	},
 })
 
