@@ -67,8 +67,6 @@ return function()
 					TelescopeTitle = { fg = C.text },
 					TelescopeSelection = { link = "Selection" },
 					TelescopeSelectionCaret = { link = "Selection" },
-					-- pmenu
-					PmenuSel = { link = "Selection" },
 					-- bufferline
 					BufferLineTabSeparator = { link = "FloatBorder" },
 					BufferLineSeparator = { link = "FloatBorder" },

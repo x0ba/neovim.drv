@@ -57,7 +57,7 @@ local borderchars = {
 }
 
 -- my custom borderchars
-vim.g.bc = borderchars.double
+vim.g.bc = borderchars.rounded
 vim.opt.fillchars:append({
 	horiz = vim.g.bc.horiz,
 	horizup = vim.g.bc.horizup,
