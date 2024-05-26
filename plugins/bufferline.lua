@@ -25,39 +25,38 @@ return function()
 		},
 	})
 
-	local nmap = function(key, cmd)
-		vim.api.nvim_set_keymap("n", key, cmd, { noremap = true, silent = true })
-	end
+	local opts = { noremap = true, silent = true }
+	local map = vim.api.nvim_set_keymap
 
 	-- hop between buffers in order of the bar
-	nmap("<A-,>", "<Cmd>BufferLineCyclePrev<CR>")
-	nmap("<A-.>", "<Cmd>BufferLineCycleNext<CR>")
+	map("n", "<A-,>", "<Cmd>BufferLineCyclePrev<CR>", opts)
+	map("n", "<A-.>", "<Cmd>BufferLineCycleNext<CR>", opts)
 	-- Re-order to previous/next
-	nmap("<A-<>", "<Cmd>BufferLineMovePrev<CR>")
-	nmap("<A->>", "<Cmd>BufferLineMoveNext<CR>")
+	map("n", "<A-<>", "<Cmd>BufferLineMovePrev<CR>", opts)
+	map("n", "<A->>", "<Cmd>BufferLineMoveNext<CR>", opts)
   -- stylua: ignore start
 	-- Goto buffer in position...
-	nmap("<A-1>", "<cmd>lua require('bufferline').go_to(1, true)<cr>")
-	nmap("<A-2>", "<cmd>lua require('bufferline').go_to(2, true)<cr>")
-	nmap("<A-3>", "<cmd>lua require('bufferline').go_to(3, true)<cr>")
-	nmap("<A-4>", "<cmd>lua require('bufferline').go_to(4, true)<cr>")
-	nmap("<A-5>", "<cmd>lua require('bufferline').go_to(5, true)<cr>")
-	nmap("<A-6>", "<cmd>lua require('bufferline').go_to(6, true)<cr>")
-	nmap("<A-7>", "<cmd>lua require('bufferline').go_to(7, true)<cr>")
-	nmap("<A-8>", "<cmd>lua require('bufferline').go_to(8, true)<cr>")
-	nmap("<A-9>", "<cmd>lua require('bufferline').go_to(9, true)<cr>")
-	nmap("<A-0>", "<cmd>lua require('bufferline').go_to(-1, true)<cr>")
+	map("n", "<A-1>", "<cmd>lua require('bufferline').go_to(1, true)<cr>", opts)
+	map("n", "<A-2>", "<cmd>lua require('bufferline').go_to(2, true)<cr>", opts)
+	map("n", "<A-3>", "<cmd>lua require('bufferline').go_to(3, true)<cr>", opts)
+	map("n", "<A-4>", "<cmd>lua require('bufferline').go_to(4, true)<cr>", opts)
+	map("n", "<A-5>", "<cmd>lua require('bufferline').go_to(5, true)<cr>", opts)
+	map("n", "<A-6>", "<cmd>lua require('bufferline').go_to(6, true)<cr>", opts)
+	map("n", "<A-7>", "<cmd>lua require('bufferline').go_to(7, true)<cr>", opts)
+	map("n", "<A-8>", "<cmd>lua require('bufferline').go_to(8, true)<cr>", opts)
+	map("n", "<A-9>", "<cmd>lua require('bufferline').go_to(9, true)<cr>", opts)
+	map("n", "<A-0>", "<cmd>lua require('bufferline').go_to(-1, true)<cr>", opts)
 	-- stylua: ignore end
 	-- Pin/unpin buffer
-	nmap("<A-p>", "<Cmd>BufferLineTogglePin<CR>")
+	map("n", "<A-p>", "<Cmd>BufferLineTogglePin<CR>", opts)
 	-- Close buffer
-	nmap("<A-x>", "<Cmd>bdelete<CR>")
-	nmap("<A-X>", "<Cmd>bdelete!<CR>")
+	map("n", "<A-x>", "<Cmd>bdelete<CR>", opts)
+	map("n", "<A-X>", "<Cmd>bdelete!<CR>", opts)
 	-- create new buffer
-	nmap("<A-c>", "<Cmd>enew<CR>")
+	map("n", "<A-c>", "<Cmd>enew<CR>", opts)
 	-- pick buffer
-	nmap("<A-space>", "<Cmd>BufferLinePick<CR>")
+	map("n", "<A-space>", "<Cmd>BufferLinePick<CR>", opts)
 	-- Sort automatically by...
-	nmap("<Space>bd", "<Cmd>BufferLineSortByDirectory<CR>")
-	nmap("<Space>bl", "<Cmd>BufferLineSortByExtension<CR>")
+	map("n", "<Space>bd", "<Cmd>BufferLineSortByDirectory<CR>", opts)
+	map("n", "<Space>bl", "<Cmd>BufferLineSortByExtension<CR>", opts)
 end
