@@ -20,7 +20,6 @@ return function()
 
 	local telescope = require("telescope")
 
-	telescope.load_extension("asynctasks")
 	telescope.load_extension("file_browser")
 	telescope.load_extension("fzf")
 	telescope.load_extension("project")
@@ -71,7 +70,6 @@ return function()
 			g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
 			h = { "<cmd>Telescope help_tags<cr>", "Help tags" },
 			p = { "<cmd>Telescope project<cr>", "Project" },
-			r = { "<cmd>Telescope asynctasks all<cr>", "Run asynctasks" },
 			s = { "<cmd>SessionManager load_session<cr>", "Show sessions" },
 		},
 	})

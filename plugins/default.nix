@@ -108,10 +108,6 @@ rec {
       nvim-treesitter-textobjects.package = plugins.nvim-treesitter-textobjects;
       nvim-ts-autotag.package = plugins.nvim-ts-autotag;
       rainbow-delimiters.package = plugins.rainbow-delimiters;
-      headlines = {
-        package = plugins.headlines;
-        config = true;
-      };
     };
     event = "VeryLazy";
   };
@@ -138,22 +134,9 @@ rec {
     ft = "markdown";
   };
 
-  dressing = {
-    package = plugins.dressing;
-    event = "VeryLazy";
-  };
   glance = {
     package = plugins.glance;
     config = true;
-    event = "VeryLazy";
-  };
-
-  asyncrun-vim = {
-    package = plugins.asyncrun-vim;
-    event = "VeryLazy";
-  };
-  asynctasks-vim = {
-    package = plugins.asynctasks-vim;
     event = "VeryLazy";
   };
 
@@ -325,10 +308,6 @@ rec {
     event = "InsertEnter";
   };
 
-  fugitive = {
-    package = plugins.vim-fugitive;
-    event = "VeryLazy";
-  };
   gitsigns = {
     package = plugins.gitsigns;
     config = ./gitsigns.lua;
@@ -487,7 +466,10 @@ rec {
         package = plugins.trouble;
         config.padding = false;
       };
-      neoconf.package = plugins.neoconf;
+      neoconf = {
+        package = plugins.neoconf;
+        dev = true;
+      };
       neodev = {
         package = plugins.neodev;
         config = true;
@@ -505,7 +487,6 @@ rec {
           end
         '';
       };
-      lsp-status.package = plugins.lsp-status;
       ltex-extra.package = plugins.ltex-extra;
       schemastore.package = plugins.schemastore;
       py_lsp.package = plugins.py_lsp;
@@ -538,7 +519,6 @@ rec {
     config = ./telescope.lua;
     dependencies = {
       inherit plenary nvim-web-devicons;
-      telescope-asynctasks.package = plugins.telescope-asynctasks;
       telescope-file-browser.package = plugins.telescope-file-browser;
       telescope-fzf-native.package = pkgs.vimPlugins.telescope-fzf-native-nvim;
       telescope-project.package = plugins.telescope-project;
@@ -565,36 +545,6 @@ rec {
     config.default.replace.cmd = "oxi";
     dependencies = {
       inherit plenary;
-    };
-    event = "VeryLazy";
-  };
-
-  neorg = {
-    package = plugins.neorg;
-    config = {
-      load = {
-        "core.defaults" = { };
-        "core.completion".config = {
-          engine = "nvim-cmp";
-        };
-        "core.concealer" = { };
-        "core.dirman".config = {
-          workspaces = {
-            notes = "~/notes";
-          };
-        };
-        "core.export" = { };
-        "core.export.markdown" = { };
-        "core.integrations.telescope" = { };
-      };
-    };
-    dependencies = {
-      inherit plenary;
-      lua-utils.package = plugins.lua-utils;
-      nui.package = plugins.nui;
-      nvim-nio.package = plugins.nvim-nio;
-      pathlib-nvim.package = plugins.pathlib-nvim;
-      neorg-telescope.package = plugins.neorg-telescope;
     };
     event = "VeryLazy";
   };
