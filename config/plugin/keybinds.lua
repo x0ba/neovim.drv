@@ -11,10 +11,6 @@ map("n", "<C-H>", "<C-W>h")
 map("n", "<C-W>\\", ":vsplit<CR>")
 map("n", "<C-W>-", ":split<CR>")
 map("n", "<C-W>x", ":q<CR>")
--- merge conflicts
-map("n", "gd", ":diffget")
-map("n", "gdh", ":diffget //2<CR>")
-map("n", "gdl", ":diffget //3<CR>")
 -- escape :terminal easier
 map("t", "<Esc>", "<C-\\><C-n>")
 -- keep cursor in the middle when scrolling and searching
