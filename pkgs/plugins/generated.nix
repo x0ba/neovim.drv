@@ -7,8 +7,8 @@ let
   plugins = builtins.mapAttrs (
     k: v:
     vimUtils.buildVimPlugin {
-      inherit (v) pname version src;
-      leaveDotGit = true;
+      inherit (v) pname src;
+      version = v.date;
 
       passthru = {
         inherit (v) cargoLock;

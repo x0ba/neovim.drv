@@ -23,7 +23,6 @@ return function()
 	telescope.load_extension("file_browser")
 	telescope.load_extension("fzf")
 	telescope.load_extension("project")
-	telescope.load_extension("ui-select")
 
 	telescope.setup({
 		defaults = {
@@ -51,7 +50,6 @@ return function()
 				override_file_sorter = true,
 				case_mode = "smart_case",
 			},
-			["ui-select"] = no_preview(),
 		},
 	})
 

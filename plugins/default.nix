@@ -10,9 +10,9 @@ rec {
     priority = 1000;
   };
 
-  plenary.package = plugins.plenary;
+  plenary.package = plugins.plenary-nvim;
   which-key = {
-    package = plugins.which-key;
+    package = plugins.which-key-nvim;
     config = ./which-key.lua;
   };
   nvim-tree = {
@@ -135,7 +135,7 @@ rec {
   };
 
   glance = {
-    package = plugins.glance;
+    package = plugins.glance-nvim;
     config = true;
     event = "VeryLazy";
   };
@@ -161,14 +161,14 @@ rec {
     priority = 1000;
   };
   auto-dark-mode = {
-    package = plugins.auto-dark-mode;
+    package = plugins.auto-dark-mode-nvim;
     config = true;
     lazy = false;
     priority = 1000;
   };
 
   flash = {
-    package = plugins.flash;
+    package = plugins.flash-nvim;
     config = ./flash.lua;
     dependencies = {
       inherit which-key;
@@ -176,8 +176,12 @@ rec {
     event = "VeryLazy";
   };
 
+  dressing = {
+    package = plugins.dressing-nvim;
+    event = "VeryLazy";
+  };
   fidget = {
-    package = plugins.fidget;
+    package = plugins.fidget-nvim;
     config = {
       progress = {
         ignore = [ "copilot" ];
@@ -192,7 +196,7 @@ rec {
   };
 
   bufferline = {
-    package = plugins.bufferline;
+    package = plugins.bufferline-nvim;
     config = ./bufferline.lua;
     dependencies = {
       inherit catppuccin;
@@ -231,18 +235,18 @@ rec {
     event = "VeryLazy";
   };
   color-picker = {
-    package = plugins.color-picker;
+    package = plugins.color-picker-nvim;
     config = true;
     event = "VeryLazy";
   };
 
   comment = {
-    package = plugins.comment;
+    package = plugins.comment-nvim;
     config = true;
     event = "VeryLazy";
   };
   indent-blankline = {
-    package = plugins.indent-blankline;
+    package = plugins.indent-blankline-nvim;
     main = "ibl";
     config.exclude.filetypes = [
       "alpha"
@@ -284,7 +288,7 @@ rec {
     event = "VeryLazy";
   };
   todo-comments = {
-    package = plugins.todo-comments;
+    package = plugins.todo-comments-nvim;
     config = true;
     event = "VeryLazy";
   };
@@ -309,7 +313,7 @@ rec {
   };
 
   gitsigns = {
-    package = plugins.gitsigns;
+    package = plugins.gitsigns-nvim;
     config = ./gitsigns.lua;
     dependencies = {
       inherit which-key;
@@ -321,13 +325,13 @@ rec {
     config.integrations.diffview = true;
     dependencies = {
       inherit plenary;
-      diffview.package = plugins.diffview;
+      diffview.package = plugins.diffview-nvim;
     };
     event = "VeryLazy";
   };
 
   presence = {
-    package = plugins.presence;
+    package = plugins.presence-nvim;
     config = ./presence.lua;
     event = "UIEnter";
   };
@@ -364,7 +368,7 @@ rec {
   };
 
   lualine = {
-    package = plugins.lualine;
+    package = plugins.lualine-nvim;
     config = {
       options = {
         icons_enabled = true;
@@ -461,20 +465,20 @@ rec {
       };
       cmp_luasnip.package = plugins.cmp_luasnip;
       cmp-git.package = plugins.cmp-git;
-      lspkind.package = plugins.lspkind;
+      lspkind.package = plugins.lspkind-nvim;
       trouble = {
-        package = plugins.trouble;
+        package = plugins.trouble-nvim;
         config.padding = false;
       };
       neoconf = {
-        package = plugins.neoconf;
+        package = plugins.neoconf-nvim;
         dev = true;
       };
       neodev = {
-        package = plugins.neodev;
+        package = plugins.neodev-nvim;
         config = true;
       };
-      neorepl.package = plugins.neorepl;
+      neorepl.package = plugins.neorepl-nvim;
       nvim-autopairs = {
         package = plugins.nvim-autopairs;
         config = ''
@@ -487,10 +491,10 @@ rec {
           end
         '';
       };
-      ltex-extra.package = plugins.ltex-extra;
-      schemastore.package = plugins.schemastore;
-      py_lsp.package = plugins.py_lsp;
-      typescript-tools.package = plugins.typescript-tools;
+      ltex-extra.package = plugins.ltex-extra-nvim;
+      schemastore.package = plugins.schemastore-nvim;
+      py_lsp.package = plugins.py_lsp-nvim;
+      typescript-tools.package = plugins.typescript-tools-nvim;
       nvim-dap = {
         package = plugins.nvim-dap;
         dependencies = {
@@ -503,7 +507,7 @@ rec {
   };
 
   crates = {
-    package = plugins.crates;
+    package = plugins.crates-nvim;
     config = true;
     event = "BufRead Cargo.toml";
   };
@@ -515,16 +519,15 @@ rec {
   };
 
   telescope = {
-    package = plugins.telescope;
+    package = plugins.telescope-nvim;
     config = ./telescope.lua;
     dependencies = {
       inherit plenary nvim-web-devicons;
-      telescope-file-browser.package = plugins.telescope-file-browser;
+      telescope-file-browser.package = plugins.telescope-file-browser-nvim;
       telescope-fzf-native.package = pkgs.vimPlugins.telescope-fzf-native-nvim;
-      telescope-project.package = plugins.telescope-project;
-      telescope-ui-select.package = plugins.telescope-ui-select;
+      telescope-project.package = plugins.telescope-project-nvim;
       octo = {
-        package = plugins.octo;
+        package = plugins.octo-nvim;
         config = true;
       };
     };
@@ -532,7 +535,7 @@ rec {
   };
 
   toggleterm = {
-    package = plugins.toggleterm;
+    package = plugins.toggleterm-nvim;
     config = {
       open_mapping = "<C-t>";
       shade_terminals = false;

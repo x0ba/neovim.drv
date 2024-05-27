@@ -54,7 +54,6 @@
             settings = {
               excludes = [ "_sources/.+" ];
               hooks = {
-                deadnix.enable = true;
                 nixfmt = {
                   enable = true;
                   package = pkgs.nixfmt-rfc-style;
