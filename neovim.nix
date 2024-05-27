@@ -29,7 +29,7 @@
 
             # webdev
             deno
-            emmet-ls
+            emmet-language-server
             nodePackages."@astrojs/language-server"
             nodePackages."@tailwindcss/language-server"
             nodePackages.graphql

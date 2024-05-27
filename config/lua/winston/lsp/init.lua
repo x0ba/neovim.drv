@@ -225,7 +225,21 @@ local servers = {
 		single_file_support = false,
 	},
 	dockerls = {},
-	emmet_ls = {},
+	emmet_language_server = {
+		filetypes = {
+			"astro",
+			"css",
+			"eruby",
+			"html",
+			"javascript",
+			"javascriptreact",
+			"less",
+			"sass",
+			"scss",
+			"pug",
+			"typescriptreact",
+		},
+	},
 	gopls = {},
 	graphql = {
 		filetypes = {
