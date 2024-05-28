@@ -28,14 +28,11 @@
             shfmt
 
             # webdev
-            deno
             emmet-language-server
             nodePackages."@astrojs/language-server"
             nodePackages."@tailwindcss/language-server"
-            nodePackages.graphql
             nodePackages.graphql-language-service-cli
             nodePackages.typescript
-            nodePackages.typescript-language-server
             nodePackages.vscode-langservers-extracted
             nodePackages.yaml-language-server
             nodejs

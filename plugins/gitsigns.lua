@@ -1,88 +1,60 @@
 return function()
-	local present, wk = pcall(require, "which-key")
+	local gitsigns = require("gitsigns")
 
-	if not present then
-		vim.notify("which-key not found", vim.log.levels.ERROR)
-		return
-	end
-
-	local gs = require("gitsigns")
-
-	gs.setup({
-		on_attach = function(_)
-			-- Gitsigns
-			wk.register({
-				["<leader>h"] = {
-					name = "+Gitsigns",
-					s = { "<cmd>Gitsigns stage_hunk<CR>", "Stage Hunk" },
-					r = { "<cmd>Gitsigns reset_hunk<CR>", "Reset Hunk" },
-				},
-			}, { mode = { "n", "v" } })
-
-			wk.register({
-				["<leader>h"] = {
-					name = "+Gitsigns",
-					s = { gs.stage_buffer, "Stage Buffer" },
-					u = { gs.undo_stage_hunk, "Undo Stage Hunk" },
-					R = { gs.reset_buffer, "Reset Buffer" },
-					p = { gs.preview_hunk, "Preview Hunk" },
-					b = {
-						function()
-							gs.blame_line({ full = true })
-						end,
-						"Blame line",
-					},
-					d = { gs.diffthis, "Diff current buffer" },
-					D = {
-						function()
-							gs.diffthis("~")
-						end,
-						"Diff against last commit",
-					},
-				},
-			})
-
-			wk.register({
-				["<leader>t"] = {
-					name = "+Toggle settings",
-					b = { gs.toggle_current_line_blame, "Toggle blame lines" },
-					d = { gs.toggle_deleted, "Toggle deleted lines" },
-				},
-			})
-
-			wk.register({
-				["[c"] = {
-					function()
-						if vim.wo.diff then
-							return "[c"
-						end
-						vim.schedule(function()
-							gs.prev_hunk()
-						end)
-						return "<Ignore>"
-					end,
-					"Go to previous hunk",
-				},
-				["]c"] = {
-					function()
-						if vim.wo.diff then
-							return "]c"
-						end
-						vim.schedule(function()
-							gs.next_hunk()
-						end)
-						return "<Ignore>"
-					end,
-					"Go to next hunk",
-				},
-			}, { expr = true })
-
-			-- Text object
-			wk.register({
-				["ih"] = { ":<C-U>Gitsigns select_hunk<CR>", "Select inside Hunk" },
-			}, { mode = { "o", "x" } })
-		end,
+	gitsigns.setup({
 		current_line_blame = true,
 		current_line_blame_formatter = "<author>, <author_time:%R> - <summary> | <abbrev_sha>",
+
+		on_attach = function(bufnr)
+			local function map(mode, lhs, rhs, opts)
+				opts = opts or {}
+				opts.buffer = bufnr
+				vim.keymap.set(mode, lhs, rhs, opts)
+			end
+
+			-- Navigation
+			map("n", "]c", function()
+				if vim.wo.diff then
+					vim.cmd.normal({ "]c", bang = true })
+				else
+					gitsigns.nav_hunk("next")
+				end
+			end, { desc = "Go to next hunk" })
+
+			map("n", "[c", function()
+				if vim.wo.diff then
+					vim.cmd.normal({ "[c", bang = true })
+				else
+					gitsigns.nav_hunk("prev")
+				end
+			end, { desc = "Go to previous hunk" })
+
+			-- Actions
+			map("n", "<leader>hs", gitsigns.stage_hunk, { desc = "Stage Hunk" })
+			map("n", "<leader>hr", gitsigns.reset_hunk, { desc = "Reset Hunk" })
+			map("v", "<leader>hs", function()
+				gitsigns.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+			end, { desc = "Stage Hunk" })
+			map("v", "<leader>hr", function()
+				gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+			end, { desc = "Reset Hunk" })
+
+			map("n", "<leader>hS", gitsigns.stage_buffer, { desc = "Stage buffer" })
+			map("n", "<leader>hu", gitsigns.undo_stage_hunk, { desc = "Undo stage hunk" })
+			map("n", "<leader>hR", gitsigns.reset_buffer, { desc = "Reset buffer" })
+			map("n", "<leader>hp", gitsigns.preview_hunk, { desc = "Preview hunk" })
+			map("n", "<leader>hb", function()
+				gitsigns.blame_line({ full = true })
+			end, { desc = "Blame line" })
+			map("n", "<leader>hd", gitsigns.diffthis, { desc = "Diff current buffer" })
+			map("n", "<leader>hD", function()
+				gitsigns.diffthis("~")
+			end, { desc = "Diff against last commit" })
+
+			map("n", "<leader>tb", gitsigns.toggle_current_line_blame, { desc = "Toggle blame lines" })
+			map("n", "<leader>td", gitsigns.toggle_deleted, { desc = "Toggle deleted lines" })
+
+			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", { desc = "Select inside Hunk" })
+		end,
 	})
 end

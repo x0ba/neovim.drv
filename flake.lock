@@ -106,11 +106,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1715615951,
-        "narHash": "sha256-VeiCMSzS5eInPQAkBUVp1S2m+RaDVm1sWCQlNYNU42M=",
+        "lastModified": 1716847783,
+        "narHash": "sha256-CVebsLDw+WWoM+bMefNpc1NZ6HSJnvKJtGemrRVohgI=",
         "owner": "nekowinston",
         "repo": "neovim.nix",
-        "rev": "bf298204939f998413ed55abc2d621d33fec95f0",
+        "rev": "80cdf1480b9bfcd2c8b744a6fcb229b62fb2eb0a",
         "type": "github"
       },
       "original": {

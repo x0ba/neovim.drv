@@ -265,18 +265,6 @@
     };
     date = "2024-05-23";
   };
-  glance-nvim = {
-    pname = "glance-nvim";
-    version = "51059bcf21016387b6233c89eed220cf47fca752";
-    src = fetchFromGitHub {
-      owner = "dnlhc";
-      repo = "glance.nvim";
-      rev = "51059bcf21016387b6233c89eed220cf47fca752";
-      fetchSubmodules = false;
-      sha256 = "sha256-ZlOdvtTv5pgdmqhDPQioNs/M07lHu+koEjGzwe+IOqE=";
-    };
-    date = "2024-03-31";
-  };
   indent-blankline-nvim = {
     pname = "indent-blankline-nvim";
     version = "d98f537c3492e87b6dc6c2e3f66ac517528f406f";
@@ -397,6 +385,42 @@
     };
     date = "2024-04-21";
   };
+  neotest = {
+    pname = "neotest";
+    version = "6f35d797882c6ce0ab7c87dc86561512dc3d7aba";
+    src = fetchFromGitHub {
+      owner = "nvim-neotest";
+      repo = "neotest";
+      rev = "6f35d797882c6ce0ab7c87dc86561512dc3d7aba";
+      fetchSubmodules = false;
+      sha256 = "sha256-Dj6ev2d2Pbdq4ulc1RrMq5uBQTO3P3S5i9fveNPUMcU=";
+    };
+    date = "2024-05-22";
+  };
+  neotest-deno = {
+    pname = "neotest-deno";
+    version = "7136b9342aeecb675c7c16a0bde327d7fcb00a1c";
+    src = fetchFromGitHub {
+      owner = "MarkEmmons";
+      repo = "neotest-deno";
+      rev = "7136b9342aeecb675c7c16a0bde327d7fcb00a1c";
+      fetchSubmodules = false;
+      sha256 = "sha256-jEksgs7BDNsi8pKeZ6wEDA+pytT9oSKWbs4d0s30PuM=";
+    };
+    date = "2022-12-09";
+  };
+  neotest-go = {
+    pname = "neotest-go";
+    version = "92950ad7be2ca02a41abca5c6600ff6ffaf5b5d6";
+    src = fetchFromGitHub {
+      owner = "nvim-neotest";
+      repo = "neotest-go";
+      rev = "92950ad7be2ca02a41abca5c6600ff6ffaf5b5d6";
+      fetchSubmodules = false;
+      sha256 = "sha256-BEq6hX7TbGQV899kgzrFnSNrPUUXiPudyFrKb8COvXI=";
+    };
+    date = "2024-05-19";
+  };
   neovim-session-manager = {
     pname = "neovim-session-manager";
     version = "b552ee8667037be5d0291229279a35af25e515fb";
@@ -504,6 +528,18 @@
       sha256 = "sha256-0p5n/V8Jlj9XyxV/fuMwsbQ7oV5m9H2GqZZEA/njxCQ=";
     };
     date = "2023-11-30";
+  };
+  nvim-nio = {
+    pname = "nvim-nio";
+    version = "632024157d01e8bc48fd7df6a7de8ffe3fdd4f3a";
+    src = fetchFromGitHub {
+      owner = "nvim-neotest";
+      repo = "nvim-nio";
+      rev = "632024157d01e8bc48fd7df6a7de8ffe3fdd4f3a";
+      fetchSubmodules = false;
+      sha256 = "sha256-UffuTu7mF96LHk0MQRNrsgDyo1QWa/1i5eJKjZkuG8k=";
+    };
+    date = "2024-05-22";
   };
   nvim-spectre = {
     pname = "nvim-spectre";
@@ -655,6 +691,18 @@
     };
     date = "2024-05-24";
   };
+  rustaceanvim = {
+    pname = "rustaceanvim";
+    version = "691901d6e241382261c1a99da4e8180e5563d8af";
+    src = fetchFromGitHub {
+      owner = "mrcjkb";
+      repo = "rustaceanvim";
+      rev = "691901d6e241382261c1a99da4e8180e5563d8af";
+      fetchSubmodules = false;
+      sha256 = "sha256-W7hDkHfr9JVlMPTB4L4oUZV4AsYtg7TDieAalbRgvRQ=";
+    };
+    date = "2024-05-27";
+  };
   schemastore-nvim = {
     pname = "schemastore-nvim";
     version = "931f9f3b7b60ec976159cb01b4a40da3829ac2fd";
@@ -751,18 +799,6 @@
     };
     date = "2024-05-19";
   };
-  true-zen-nvim = {
-    pname = "true-zen-nvim";
-    version = "2b9e210e0d1a735e1fa85ec22190115dffd963aa";
-    src = fetchFromGitHub {
-      owner = "pocco81";
-      repo = "true-zen.nvim";
-      rev = "2b9e210e0d1a735e1fa85ec22190115dffd963aa";
-      fetchSubmodules = false;
-      sha256 = "sha256-euaxTWS98i14wvuKrFvdCRigsKqrSUwZpMEmYtUBBss=";
-    };
-    date = "2023-06-09";
-  };
   typescript-tools-nvim = {
     pname = "typescript-tools-nvim";
     version = "c43d9580c3ff5999a1eabca849f807ab33787ea7";
@@ -858,5 +894,17 @@
       sha256 = "sha256-uvghPj/teWrRMm09Gh8iQ/LV2nYJw0lmoiZK6L4+1cY=";
     };
     date = "2023-10-20";
+  };
+  zen-mode-nvim = {
+    pname = "zen-mode-nvim";
+    version = "78557d972b4bfbb7488e17b5703d25164ae64e6a";
+    src = fetchFromGitHub {
+      owner = "folke";
+      repo = "zen-mode.nvim";
+      rev = "78557d972b4bfbb7488e17b5703d25164ae64e6a";
+      fetchSubmodules = false;
+      sha256 = "sha256-G5/AskXEA0vl9GGUR8NG8PmL/HFcItZJWB+LyKd3R2k=";
+    };
+    date = "2024-01-21";
   };
 }

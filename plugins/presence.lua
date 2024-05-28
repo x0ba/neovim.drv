@@ -5,7 +5,6 @@ return function()
 		[vim.fn.expand("~/Code/freelance")] = "Using nvim to freelance.",
 		[vim.fn.expand("~/Code/work")] = "Using nvim at work.",
 	}
-	local v = vim.version()
 
 	---@param activity string?
 	---@param info string?
@@ -22,6 +21,8 @@ return function()
 		end
 		return { text = activity, state = false }
 	end
+
+	local v = vim.version()
 
 	presence:setup({
 		auto_update = true,

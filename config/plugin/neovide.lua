@@ -18,16 +18,15 @@ if vim.loop.os_uname().sysname == "Darwin" then
 	vim.g.neovide_window_blurred = true
 end
 
-vim.keymap.set("n", "<M-CR>", ":let g:neovide_fullscreen = !g:neovide_fullscreen<CR>", {
-	noremap = true,
-	silent = true,
-})
+vim.keymap.set("n", "<M-CR>", function()
+	vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen
+end)
 
 vim.g.neovide_scale_factor = 1.0
 
 local change_scale_factor = function(delta)
 	vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
-	vim.cmd("redraw!")
+	vim.cmd.redraw()
 end
 
 vim.keymap.set("n", "<D-=>", function()

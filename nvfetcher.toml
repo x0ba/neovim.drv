@@ -86,10 +86,6 @@ src.git = "https://github.com/rafamadriz/friendly-snippets"
 fetch.github = "lewis6991/gitsigns.nvim"
 src.git = "https://github.com/lewis6991/gitsigns.nvim"
 
-[glance-nvim]
-fetch.github = "dnlhc/glance.nvim"
-src.git = "https://github.com/dnlhc/glance.nvim"
-
 [indent-blankline-nvim]
 fetch.github = "lukas-reineke/indent-blankline.nvim"
 src.git = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -130,6 +126,18 @@ src.git = "https://github.com/NeogitOrg/neogit"
 fetch.github = "ii14/neorepl.nvim"
 src.git = "https://github.com/ii14/neorepl.nvim"
 
+[neotest]
+fetch.github = "nvim-neotest/neotest"
+src.git = "https://github.com/nvim-neotest/neotest"
+
+[neotest-deno]
+fetch.github = "MarkEmmons/neotest-deno"
+src.git = "https://github.com/MarkEmmons/neotest-deno"
+
+[neotest-go]
+fetch.github = "nvim-neotest/neotest-go"
+src.git = "https://github.com/nvim-neotest/neotest-go"
+
 [neovim-session-manager]
 fetch.github = "Shatur/neovim-session-manager"
 src.git = "https://github.com/Shatur/neovim-session-manager"
@@ -165,6 +173,10 @@ src.git = "https://github.com/neovim/nvim-lspconfig"
 [nvim-navic]
 fetch.github = "SmiteshP/nvim-navic"
 src.git = "https://github.com/SmiteshP/nvim-navic"
+
+[nvim-nio]
+fetch.github = "nvim-neotest/nvim-nio"
+src.git = "https://github.com/nvim-neotest/nvim-nio"
 
 [nvim-spectre]
 fetch.github = "nvim-pack/nvim-spectre"
@@ -215,6 +227,10 @@ src.git = "https://github.com/hallerpatrick/py_lsp.nvim"
 fetch.github = "hiphish/rainbow-delimiters.nvim"
 src.git = "https://github.com/hiphish/rainbow-delimiters.nvim"
 
+[rustaceanvim]
+fetch.github = "mrcjkb/rustaceanvim"
+src.git = "https://github.com/mrcjkb/rustaceanvim"
+
 [schemastore-nvim]
 fetch.github = "b0o/schemastore.nvim"
 src.git = "https://github.com/b0o/schemastore.nvim"
@@ -247,10 +263,6 @@ src.git = "https://github.com/akinsho/toggleterm.nvim"
 fetch.github = "folke/trouble.nvim"
 src.git = "https://github.com/folke/trouble.nvim"
 
-[true-zen-nvim]
-fetch.github = "pocco81/true-zen.nvim"
-src.git = "https://github.com/pocco81/true-zen.nvim"
-
 [typescript-tools-nvim]
 fetch.github = "pmizio/typescript-tools.nvim"
 src.git = "https://github.com/pmizio/typescript-tools.nvim"
@@ -282,3 +294,7 @@ src.git = "https://github.com/dhruvasagar/vim-table-mode"
 [which-key-nvim]
 fetch.github = "folke/which-key.nvim"
 src.git = "https://github.com/folke/which-key.nvim"
+
+[zen-mode-nvim]
+fetch.github = "folke/zen-mode.nvim"
+src.git = "https://github.com/folke/zen-mode.nvim"

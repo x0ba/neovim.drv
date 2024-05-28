@@ -1,7 +1,7 @@
 return function()
 	local bc = vim.g.bc
 
-	local no_preview = function(opts)
+	local custom_picker = function(opts)
 		local defaults = require("telescope.themes").get_dropdown({
       -- stylua: ignore
       borderchars = {
@@ -33,11 +33,9 @@ return function()
       borderchars = { bc.horiz, bc.vert, bc.horiz, bc.vert, bc.topleft, bc.topright, bc.botright, bc.botleft },
 		},
 		pickers = {
-			find_files = no_preview(),
-			live_grep = no_preview({
-				previewer = true,
-			}),
-			load_session = no_preview(),
+			find_files = custom_picker(),
+			live_grep = custom_picker({ previewer = true }),
+			load_session = custom_picker(),
 		},
 		extensions = {
 			file_browser = {
@@ -50,25 +48,6 @@ return function()
 				override_file_sorter = true,
 				case_mode = "smart_case",
 			},
-		},
-	})
-
-	local wk_present, wk = pcall(require, "which-key")
-	if not wk_present then
-		return
-	end
-	wk.register({
-		["<leader>f"] = {
-			name = "+Telescope",
-			b = {
-				"<cmd>Telescope file_browser grouped=true<cr>",
-				"File browser",
-			},
-			d = { "<cmd>Telescope find_files<cr>", "Find file" },
-			g = { "<cmd>Telescope live_grep<cr>", "Live grep" },
-			h = { "<cmd>Telescope help_tags<cr>", "Help tags" },
-			p = { "<cmd>Telescope project<cr>", "Project" },
-			s = { "<cmd>SessionManager load_session<cr>", "Show sessions" },
 		},
 	})
 end

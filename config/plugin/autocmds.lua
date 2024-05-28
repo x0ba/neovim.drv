@@ -62,7 +62,7 @@ vim.api.nvim_create_autocmd({ "CmdlineEnter", "CmdlineLeave" }, {
 	callback = function(data)
 		ft_guard(function()
 			vim.opt.rnu = data.event == "CmdlineLeave"
-			vim.cmd("redraw")
+			vim.cmd.redraw()
 		end)
 	end,
 	group = numbertoggle,
