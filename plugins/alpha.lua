@@ -1,17 +1,17 @@
 return function()
-	local function apply_gradient_hl(text)
+	--- @type fun(text: string[]): { type: string, val: table, opts: table }
+	local function render_header(text)
 		local lines = {}
-		for i, line in ipairs(text) do
-			local tbl = {
+		for _, line in pairs(text) do
+			table.insert(lines, {
 				type = "text",
 				val = line,
 				opts = {
-					hl = "AlphaHeaderGradient" .. i,
+					hl = "AlphaHeader",
 					shrink_margin = false,
 					position = "center",
 				},
-			}
-			table.insert(lines, tbl)
+			})
 		end
 
 		return {
@@ -26,26 +26,20 @@ return function()
 	local dashboard = require("alpha.themes.dashboard")
 
 	local header = {
-		"          ':::::    ':::::.  ::::'         ",
-		"            :::::     '::::.:::::          ",
-		"      .......:::::..... ::::::::           ",
-		"     ::::::::::::::::::. ::::::    ::::.   ",
-		"    ::::::::::::::::::::: :::::.  .::::'   ",
-		"           .....           ::::' :::::'    ",
-		"          :::::            '::' :::::'     ",
-		" ........:::::               ' :::::::::::.",
-		":::::::::::::                 :::::::::::::",
-		" ::::::::::: ..              :::::         ",
-		"     .::::: .:::            :::::          ",
-		"    .:::::  :::::          '''''    .....  ",
-		"    :::::   ':::::.  ......:::::::::::::'  ",
-		"     :::     ::::::. ':::::::::::::::::'   ",
-		"            .:::::::: '::::::::::          ",
-		"           .::::''::::.     '::::.         ",
-		"          .::::'   ::::.     '::::.        ",
-		"         .::::      ::::      '::::.       ",
-		" ",
-		"nix geht mehr",
+		[[            ____             ]],
+		[[           /\   \            ]],
+		[[          /  \   \           ]],
+		[[         /    \   \          ]],
+		[[        /      \   \         ]],
+		[[       /   /\   \   \        ]],
+		[[      /   /  \   \   \       ]],
+		[[     /   /    \   \   \      ]],
+		[[    /   /    / \   \   \     ]],
+		[[   /   /    /   \   \   \    ]],
+		[[  /   /    /---------'   \   ]],
+		[[ /   /    /_______________\  ]],
+		[[ \  /                     /  ]],
+		[[  \/_____________________/   ]],
 	}
 
 	local buttons = {
@@ -83,7 +77,7 @@ return function()
 
 	theta.config.layout = {
 		{ type = "padding", val = 4 },
-		apply_gradient_hl(header),
+		render_header(header),
 		{ type = "padding", val = 1 },
 		buttons,
 		{ type = "padding", val = 1 },

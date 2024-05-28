@@ -49,10 +49,7 @@
 
           lazy = {
             package = (pkgs.callPackage ./pkgs/plugins { }).lazy-nvim;
-            settings = {
-              dev.path = "~/Code/neovim";
-              install.colorscheme = [ "catppuccin" ];
-            };
+            settings.dev.path = "~/Code/neovim";
             plugins = import ./plugins { inherit pkgs; };
           };
         };

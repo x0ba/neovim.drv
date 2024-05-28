@@ -17,5 +17,5 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to clipboard" })
-vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from clipboard" })
+vim.keymap.set({ "n", "v" }, "<space>y", '"+y', { desc = "Copy to clipboard" })
+vim.keymap.set({ "n", "v" }, "<space>p", '"+p', { desc = "Paste from clipboard" })

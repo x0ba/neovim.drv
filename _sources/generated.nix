@@ -37,18 +37,6 @@
     };
     date = "2024-05-24";
   };
-  catppuccin = {
-    pname = "catppuccin";
-    version = "5215ea59df6d0a7e27da9a5cd1165e06d1b04cbe";
-    src = fetchFromGitHub {
-      owner = "catppuccin";
-      repo = "nvim";
-      rev = "5215ea59df6d0a7e27da9a5cd1165e06d1b04cbe";
-      fetchSubmodules = false;
-      sha256 = "sha256-UDPS+1o8FQGkfqiG4GX4DNUI2pU5hIvagmfnWTKDb44=";
-    };
-    date = "2024-05-26";
-  };
   cmp-buffer = {
     pname = "cmp-buffer";
     version = "3022dbc9166796b644a841a02de8dd1cc1d311fa";
@@ -337,6 +325,18 @@
     };
     date = "2024-05-24";
   };
+  milspec-nvim = {
+    pname = "milspec-nvim";
+    version = "66a3dcec7cc59f83f20b4b5bb545bcd5760974f4";
+    src = fetchFromGitHub {
+      owner = "nekowinston";
+      repo = "milspec.nvim";
+      rev = "66a3dcec7cc59f83f20b4b5bb545bcd5760974f4";
+      fetchSubmodules = false;
+      sha256 = "sha256-vt0BcKD+lSoJDs2mQbYAa6Pk4y3SXCvzrrVJdihCBPQ=";
+    };
+    date = "2024-05-28";
+  };
   neoconf-nvim = {
     pname = "neoconf-nvim";
     version = "4e204e0d423e70293b81ba1655ed17e1f3c97986";
@@ -543,21 +543,21 @@
   };
   nvim-spectre = {
     pname = "nvim-spectre";
-    version = "5690ea46baf08bbc1623980012e14b6239ce582e";
+    version = "366f46fdd4a1593cc237aea13d5ef113739a472c";
     src = fetchFromGitHub {
       owner = "nvim-pack";
       repo = "nvim-spectre";
-      rev = "5690ea46baf08bbc1623980012e14b6239ce582e";
+      rev = "366f46fdd4a1593cc237aea13d5ef113739a472c";
       fetchSubmodules = false;
-      sha256 = "sha256-AQ+HLIboYtYRWCu6S3Czi5DpcZRhAkI1bhSfnM+FqZI=";
+      sha256 = "sha256-JS0kfM+uxwC/z8bdkdkaC+MAJIyvlvXsi3BDJuBxADA=";
     };
     cargoLock."spectre_oxi/Cargo.lock" = {
-      lockFile = ./nvim-spectre-5690ea46baf08bbc1623980012e14b6239ce582e/spectre_oxi/Cargo.lock;
+      lockFile = ./nvim-spectre-366f46fdd4a1593cc237aea13d5ef113739a472c/spectre_oxi/Cargo.lock;
       outputHashes = {
         
       };
     };
-    date = "2024-05-22";
+    date = "2024-05-27";
   };
   nvim-surround = {
     pname = "nvim-surround";

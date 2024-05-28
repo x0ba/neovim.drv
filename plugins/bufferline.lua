@@ -1,15 +1,14 @@
 return function()
 	local bufferline = require("bufferline")
-	local ctp = require("catppuccin.groups.integrations.bufferline").get()
 
 	local v = vim.version()
 	local vStr = string.format("v%d.%d.%d", v.major, v.minor, v.patch)
 
 	bufferline.setup({
-		highlights = ctp,
+		highlights = require("milspec.utils.bufferline").get(),
 		options = {
-			show_close_icon = false,
-			show_buffer_close_icons = false,
+			show_close_icon = true,
+			show_buffer_close_icons = true,
 			offsets = {
 				{
 					filetype = "NvimTree",

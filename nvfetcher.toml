@@ -10,10 +10,6 @@ src.git = "https://github.com/f-person/auto-dark-mode.nvim"
 fetch.github = "akinsho/bufferline.nvim"
 src.git = "https://github.com/akinsho/bufferline.nvim"
 
-[catppuccin]
-fetch.github = "catppuccin/nvim"
-src.git = "https://github.com/catppuccin/nvim"
-
 [cmp-buffer]
 fetch.github = "hrsh7th/cmp-buffer"
 src.git = "https://github.com/hrsh7th/cmp-buffer"
@@ -109,6 +105,10 @@ src.git = "https://github.com/nvim-lualine/lualine.nvim"
 [luasnip]
 fetch.github = "L3MON4D3/LuaSnip"
 src.git = "https://github.com/L3MON4D3/LuaSnip"
+
+[milspec-nvim]
+fetch.github = "nekowinston/milspec.nvim"
+src.git = "https://github.com/nekowinston/milspec.nvim"
 
 [neoconf-nvim]
 fetch.github = "folke/neoconf.nvim"

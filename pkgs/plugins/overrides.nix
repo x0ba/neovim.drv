@@ -16,7 +16,6 @@ self: super: {
         sourceRoot = "${old.src.name}/spectre_oxi";
 
         cargoLock = old.passthru.cargoLock."spectre_oxi/Cargo.lock";
-        RUSTFLAGS = lib.optionalString stdenv.isDarwin "-C link-arg=-undefined -C link-arg=dynamic_lookup";
 
         preCheck = "mkdir tests/tmp/";
       };

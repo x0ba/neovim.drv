@@ -53,7 +53,6 @@ in
   };
   nvim-web-devicons = {
     package = plugins.nvim-web-devicons;
-    config = ./nvim-web-devicons.lua;
     lazy = true;
   };
 
@@ -178,15 +177,15 @@ in
       };
     };
   };
-  catppuccin = {
-    package = plugins.catppuccin;
-    config = ./catppuccin.lua;
-    lazy = false;
-    priority = 1000;
-  };
   auto-dark-mode = {
     package = plugins.auto-dark-mode-nvim;
     config = true;
+    lazy = false;
+    priority = 1000;
+  };
+  milspec = {
+    package = plugins.milspec-nvim;
+    config = "function() vim.cmd.colorscheme('milspec') end";
     lazy = false;
     priority = 1000;
   };
@@ -422,7 +421,7 @@ in
     config = {
       options = {
         icons_enabled = true;
-        theme = "catppuccin";
+        theme = "milspec";
         disabled_filetypes =
           let
             ft = [ "alpha" ];

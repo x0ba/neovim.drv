@@ -59,26 +59,6 @@
         },
         "version": "99337f63f0a3c3ab9519f3d1da7618ca4f91cffe"
     },
-    "catppuccin": {
-        "cargoLocks": null,
-        "date": "2024-05-26",
-        "extract": null,
-        "name": "catppuccin",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "catppuccin",
-            "repo": "nvim",
-            "rev": "5215ea59df6d0a7e27da9a5cd1165e06d1b04cbe",
-            "sha256": "sha256-UDPS+1o8FQGkfqiG4GX4DNUI2pU5hIvagmfnWTKDb44=",
-            "type": "github"
-        },
-        "version": "5215ea59df6d0a7e27da9a5cd1165e06d1b04cbe"
-    },
     "cmp-buffer": {
         "cargoLocks": null,
         "date": "2022-08-10",
@@ -559,6 +539,26 @@
         },
         "version": "878ace11983444d865a72e1759dbcc331d1ace4c"
     },
+    "milspec-nvim": {
+        "cargoLocks": null,
+        "date": "2024-05-28",
+        "extract": null,
+        "name": "milspec-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "nekowinston",
+            "repo": "milspec.nvim",
+            "rev": "66a3dcec7cc59f83f20b4b5bb545bcd5760974f4",
+            "sha256": "sha256-vt0BcKD+lSoJDs2mQbYAa6Pk4y3SXCvzrrVJdihCBPQ=",
+            "type": "github"
+        },
+        "version": "66a3dcec7cc59f83f20b4b5bb545bcd5760974f4"
+    },
     "neoconf-nvim": {
         "cargoLocks": null,
         "date": "2024-05-26",
@@ -902,11 +902,11 @@
     "nvim-spectre": {
         "cargoLocks": {
             "spectre_oxi/Cargo.lock": [
-                "./nvim-spectre-5690ea46baf08bbc1623980012e14b6239ce582e/spectre_oxi/Cargo.lock",
+                "./nvim-spectre-366f46fdd4a1593cc237aea13d5ef113739a472c/spectre_oxi/Cargo.lock",
                 {}
             ]
         },
-        "date": "2024-05-22",
+        "date": "2024-05-27",
         "extract": null,
         "name": "nvim-spectre",
         "passthru": null,
@@ -918,11 +918,11 @@
             "name": null,
             "owner": "nvim-pack",
             "repo": "nvim-spectre",
-            "rev": "5690ea46baf08bbc1623980012e14b6239ce582e",
-            "sha256": "sha256-AQ+HLIboYtYRWCu6S3Czi5DpcZRhAkI1bhSfnM+FqZI=",
+            "rev": "366f46fdd4a1593cc237aea13d5ef113739a472c",
+            "sha256": "sha256-JS0kfM+uxwC/z8bdkdkaC+MAJIyvlvXsi3BDJuBxADA=",
             "type": "github"
         },
-        "version": "5690ea46baf08bbc1623980012e14b6239ce582e"
+        "version": "366f46fdd4a1593cc237aea13d5ef113739a472c"
     },
     "nvim-surround": {
         "cargoLocks": null,

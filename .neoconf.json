@@ -5,6 +5,9 @@
     }
   },
   "lspconfig": {
-    "sumneko_lua": {}
+    "lua_ls": {
+      "Lua.runtime.version": "LuaJIT",
+      "Lua.workspace.checkThirdParty": false
+    }
   }
 }
