@@ -421,7 +421,7 @@ in
     config = {
       options = {
         icons_enabled = true;
-        theme = "milspec";
+        theme = "onedark";
         disabled_filetypes =
           let
             ft = [ "alpha" ];

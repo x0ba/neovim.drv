@@ -5,7 +5,6 @@ return function()
 	local vStr = string.format("v%d.%d.%d", v.major, v.minor, v.patch)
 
 	bufferline.setup({
-		highlights = require("milspec.utils.bufferline").get(),
 		options = {
 			show_close_icon = true,
 			show_buffer_close_icons = true,
