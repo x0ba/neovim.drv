@@ -13,18 +13,6 @@
     };
     date = "2024-02-25";
   };
-  auto-dark-mode-nvim = {
-    pname = "auto-dark-mode-nvim";
-    version = "2b8c938da9a7c9432120266b92936b2c22e8cfb8";
-    src = fetchFromGitHub {
-      owner = "f-person";
-      repo = "auto-dark-mode.nvim";
-      rev = "2b8c938da9a7c9432120266b92936b2c22e8cfb8";
-      fetchSubmodules = false;
-      sha256 = "sha256-ZRaJbIuQJmh6MoWjRwNK8n0dmd5Cv/BoXGovNhggcnQ=";
-    };
-    date = "2024-05-18";
-  };
   bufferline-nvim = {
     pname = "bufferline-nvim";
     version = "99337f63f0a3c3ab9519f3d1da7618ca4f91cffe";

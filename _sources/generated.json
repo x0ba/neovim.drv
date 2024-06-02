@@ -19,26 +19,6 @@
         },
         "version": "41283fb402713fc8b327e60907f74e46166f4cfd"
     },
-    "auto-dark-mode-nvim": {
-        "cargoLocks": null,
-        "date": "2024-05-18",
-        "extract": null,
-        "name": "auto-dark-mode-nvim",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "f-person",
-            "repo": "auto-dark-mode.nvim",
-            "rev": "2b8c938da9a7c9432120266b92936b2c22e8cfb8",
-            "sha256": "sha256-ZRaJbIuQJmh6MoWjRwNK8n0dmd5Cv/BoXGovNhggcnQ=",
-            "type": "github"
-        },
-        "version": "2b8c938da9a7c9432120266b92936b2c22e8cfb8"
-    },
     "bufferline-nvim": {
         "cargoLocks": null,
         "date": "2024-05-24",

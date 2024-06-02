@@ -177,13 +177,8 @@ in
       };
     };
   };
-  auto-dark-mode = {
-    package = plugins.auto-dark-mode-nvim;
-    config = true;
-    lazy = false;
-    priority = 1000;
-  };
-  milspec = {
+
+  onedark = {
     package = plugins.onedark-nvim;
     config = "function() vim.cmd.colorscheme('onedark') end";
     lazy = false;

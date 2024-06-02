@@ -2,10 +2,6 @@
 fetch.github = "goolord/alpha-nvim"
 src.git = "https://github.com/goolord/alpha-nvim"
 
-[auto-dark-mode-nvim]
-fetch.github = "f-person/auto-dark-mode.nvim"
-src.git = "https://github.com/f-person/auto-dark-mode.nvim"
-
 [bufferline-nvim]
 fetch.github = "akinsho/bufferline.nvim"
 src.git = "https://github.com/akinsho/bufferline.nvim"
