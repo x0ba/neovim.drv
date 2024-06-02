@@ -184,8 +184,8 @@ in
     priority = 1000;
   };
   milspec = {
-    package = plugins.milspec-nvim;
-    config = "function() vim.cmd.colorscheme('milspec') end";
+    package = plugins.onedark-nvim;
+    config = "function() vim.cmd.colorscheme('onedark') end";
     lazy = false;
     priority = 1000;
   };
