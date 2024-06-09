@@ -173,7 +173,6 @@ in
       neovim-session-manager = {
         package = plugins.neovim-session-manager;
         main = "session_manager";
-        config.autoload_mode = "CurrentDir";
       };
     };
   };
