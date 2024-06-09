@@ -169,12 +169,6 @@ in
   alpha = {
     package = plugins.alpha-nvim;
     config = ./alpha.lua;
-    dependencies = {
-      neovim-session-manager = {
-        package = plugins.neovim-session-manager;
-        main = "session_manager";
-      };
-    };
   };
 
   catppuccin = {

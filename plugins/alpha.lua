@@ -49,7 +49,6 @@ return function()
 			dashboard.button("n", "  New file", ":ene <bar> startinsert <cr>"),
 			dashboard.button("SPC fd", "  Find file", ":Telescope find_files<cr>"),
 			dashboard.button("SPC fg", "  Live grep", ":Telescope live_grep<cr>"),
-			dashboard.button("s", "  Show sessions", ":SessionManager load_session<cr>"),
 			dashboard.button("SPC fp", "  Projects", ":Telescope project<CR>"),
 			dashboard.button("q", "  Quit", ":qa<CR>"),
 		},
