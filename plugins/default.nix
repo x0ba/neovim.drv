@@ -171,9 +171,9 @@ in
     config = ./alpha.lua;
   };
 
-  catppuccin = {
-    package = plugins.catppuccin-nvim;
-    config = "function() vim.cmd.colorscheme('catppuccin-mocha') end";
+  onedark = {
+    package = plugins.onedark-nvim;
+    config = "function() vim.cmd.colorscheme('onedark') end";
     lazy = false;
     priority = 1000;
   };
