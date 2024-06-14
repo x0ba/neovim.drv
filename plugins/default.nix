@@ -409,7 +409,7 @@ in
     config = {
       options = {
         icons_enabled = true;
-        theme = "catppuccin-mocha";
+        theme = "onedark";
         disabled_filetypes =
           let
             ft = [ "alpha" ];
