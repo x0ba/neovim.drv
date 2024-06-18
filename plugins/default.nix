@@ -171,9 +171,9 @@ in
     config = ./alpha.lua;
   };
 
-  onedark = {
-    package = plugins.onedark-nvim;
-    config = "function() vim.cmd.colorscheme('onedark') end";
+  catppuccin = {
+    package = plugins.catppuccin-nvim;
+    config = "function() vim.cmd.colorscheme('catppuccin') end";
     lazy = false;
     priority = 1000;
   };
@@ -409,7 +409,7 @@ in
     config = {
       options = {
         icons_enabled = true;
-        theme = "onedark";
+        theme = "catppuccin";
         disabled_filetypes =
           let
             ft = [ "alpha" ];
