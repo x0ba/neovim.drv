@@ -171,9 +171,9 @@ in
     config = ./alpha.lua;
   };
 
-  base16 = {
-    package = plugins.base16-nvim;
-    config = "function() vim.cmd.colorscheme('base16-tomorrow-night') end";
+  flexoki = {
+    package = plugins.flexoki-nvim;
+    config = "function() vim.cmd.colorscheme('flexoki-dark') end";
     lazy = false;
     priority = 1000;
   };

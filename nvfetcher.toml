@@ -102,9 +102,9 @@ src.git = "https://github.com/nvim-lualine/lualine.nvim"
 fetch.github = "L3MON4D3/LuaSnip"
 src.git = "https://github.com/L3MON4D3/LuaSnip"
 
-[base16-nvim]
-fetch.github = "RRethy/base16-nvim"
-src.git = "https://github.com/RRethy/base16-nvim"
+[flexoki-nvim]
+fetch.github = "kepano/flexoki-neovim"
+src.git = "https://github.com/kepano/flexoki-neovim"
 
 [neoconf-nvim]
 fetch.github = "folke/neoconf.nvim"

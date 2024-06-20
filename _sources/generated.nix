@@ -13,18 +13,6 @@
     };
     date = "2024-02-25";
   };
-  base16-nvim = {
-    pname = "base16-nvim";
-    version = "6ac181b5733518040a33017dde654059cd771b7c";
-    src = fetchFromGitHub {
-      owner = "RRethy";
-      repo = "base16-nvim";
-      rev = "6ac181b5733518040a33017dde654059cd771b7c";
-      fetchSubmodules = false;
-      sha256 = "sha256-GRF/6AobXHamw8TZ3FjL7SI6ulcpwpcohsIuZeCSh2A=";
-    };
-    date = "2024-05-23";
-  };
   bufferline-nvim = {
     pname = "bufferline-nvim";
     version = "99337f63f0a3c3ab9519f3d1da7618ca4f91cffe";
@@ -135,13 +123,13 @@
   };
   conform-nvim = {
     pname = "conform-nvim";
-    version = "bde3bee1773c96212b6c49f009e05174f932c23a";
+    version = "9a06e83527407a7600a2fe4e0d10adf432b6215e";
     src = fetchFromGitHub {
       owner = "stevearc";
       repo = "conform.nvim";
-      rev = "bde3bee1773c96212b6c49f009e05174f932c23a";
+      rev = "9a06e83527407a7600a2fe4e0d10adf432b6215e";
       fetchSubmodules = false;
-      sha256 = "sha256-EwvWzKRXVgqO0PmvisUwCapqtomQSWV7DvIDMekzaiA=";
+      sha256 = "sha256-asrh5jqQ7N3oQwT5idGeiHJeWZ0ovHFHIcs2KbXznfs=";
     };
     date = "2024-06-19";
   };
@@ -228,6 +216,18 @@
       sha256 = "sha256-W9QB0zR7Bl7zvL0s34YmjEuKK2jDBoG9BNXiRqZnZ0U=";
     };
     date = "2024-06-04";
+  };
+  flexoki-nvim = {
+    pname = "flexoki-nvim";
+    version = "975654bce67514114db89373539621cff42befb5";
+    src = fetchFromGitHub {
+      owner = "kepano";
+      repo = "flexoki-neovim";
+      rev = "975654bce67514114db89373539621cff42befb5";
+      fetchSubmodules = false;
+      sha256 = "sha256-D8FZXkeoyOzIHjvT/0ubMfLPk691s8xDcAiCagEtMro=";
+    };
+    date = "2024-02-07";
   };
   friendly-snippets = {
     pname = "friendly-snippets";

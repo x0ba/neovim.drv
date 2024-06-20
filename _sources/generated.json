@@ -19,26 +19,6 @@
         },
         "version": "41283fb402713fc8b327e60907f74e46166f4cfd"
     },
-    "base16-nvim": {
-        "cargoLocks": null,
-        "date": "2024-05-23",
-        "extract": null,
-        "name": "base16-nvim",
-        "passthru": null,
-        "pinned": false,
-        "src": {
-            "deepClone": false,
-            "fetchSubmodules": false,
-            "leaveDotGit": false,
-            "name": null,
-            "owner": "RRethy",
-            "repo": "base16-nvim",
-            "rev": "6ac181b5733518040a33017dde654059cd771b7c",
-            "sha256": "sha256-GRF/6AobXHamw8TZ3FjL7SI6ulcpwpcohsIuZeCSh2A=",
-            "type": "github"
-        },
-        "version": "6ac181b5733518040a33017dde654059cd771b7c"
-    },
     "bufferline-nvim": {
         "cargoLocks": null,
         "date": "2024-05-24",
@@ -233,11 +213,11 @@
             "name": null,
             "owner": "stevearc",
             "repo": "conform.nvim",
-            "rev": "bde3bee1773c96212b6c49f009e05174f932c23a",
-            "sha256": "sha256-EwvWzKRXVgqO0PmvisUwCapqtomQSWV7DvIDMekzaiA=",
+            "rev": "9a06e83527407a7600a2fe4e0d10adf432b6215e",
+            "sha256": "sha256-asrh5jqQ7N3oQwT5idGeiHJeWZ0ovHFHIcs2KbXznfs=",
             "type": "github"
         },
-        "version": "bde3bee1773c96212b6c49f009e05174f932c23a"
+        "version": "9a06e83527407a7600a2fe4e0d10adf432b6215e"
     },
     "copilot-lua": {
         "cargoLocks": null,
@@ -378,6 +358,26 @@
             "type": "github"
         },
         "version": "43f67935d388fbb540f8b40e8cbfd80de54f978a"
+    },
+    "flexoki-nvim": {
+        "cargoLocks": null,
+        "date": "2024-02-07",
+        "extract": null,
+        "name": "flexoki-nvim",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "kepano",
+            "repo": "flexoki-neovim",
+            "rev": "975654bce67514114db89373539621cff42befb5",
+            "sha256": "sha256-D8FZXkeoyOzIHjvT/0ubMfLPk691s8xDcAiCagEtMro=",
+            "type": "github"
+        },
+        "version": "975654bce67514114db89373539621cff42befb5"
     },
     "friendly-snippets": {
         "cargoLocks": null,
