@@ -171,8 +171,8 @@ in
     config = ./alpha.lua;
   };
 
-  colorscheme-sync = {
-    package = plugins.colorscheme-sync-nvim;
+  auto-dark-mode = {
+    package = plugins.auto-dark-mode-nvim;
     config = ''
       function()
       local auto_dark_mode = require('auto-dark-mode')
